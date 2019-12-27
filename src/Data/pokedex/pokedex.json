@@ -1,0 +1,130 @@
+[
+    {
+        "speciesId": "sandslash_alolan",
+        "id": 28,
+        "types": ["ice", "steel"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/sandslash-alola.png"
+        }
+    },
+    {
+        "speciesId": "marowak_alolan",
+        "id": 105,
+        "types": ["fire", "ghost"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/marowak-alola.png"
+        }
+    },
+    {
+        "speciesId": "muk_alolan",
+        "id": 89,
+        "types": ["poison", "dark"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/muk-alola.png"
+        }
+    },
+    {
+        "speciesId": "ninetales_alolan",
+        "id": 38,
+        "types": ["ice", "fairy"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/ninetales-alola.png"
+        }
+    },
+    {
+        "speciesId": "gastrodon_west_sea",
+        "id": 423,
+        "types": ["water", "ground"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/423.png"
+        }
+    },
+    {
+        "speciesId": "gastrodon_east_sea",
+        "id": 423,
+        "types": ["water", "ground"],
+        "sprites": {
+            "front_default": "https://img.pokemondb.net/sprites/black-white/normal/gastrodon-east.png"
+        }
+    },
+    {
+        "speciesId": "raticate_alolan",
+        "id": 20,
+        "types": ["dark", "normal"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/raticate-alola.png"
+        }
+    },
+    {
+        "speciesId": "exeggutor_alolan",
+        "id": 103,
+        "types": ["grass", "dragon"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/exeggutor-alola.png"
+        }
+    },
+    {
+        "speciesId": "sandshrew_alolan",
+        "id": 27,
+        "types": ["ice", "steel"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/sandshrew-alola.png"
+        }
+    },
+    {
+        "speciesId": "graveler_alolan",
+        "id": 75,
+        "types": ["rock", "electric"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/graveler-alola.png"
+        }
+    },
+    {
+        "speciesId": "golem_alolan",
+        "id": 76,
+        "types": ["rock", "electric"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/golem-alola.png"
+        }
+    },
+    {
+        "speciesId": "grimer_alolan",
+        "id": 88,
+        "types": ["poison", "dark"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/grimer-alola.png"
+        }
+    },
+    {
+        "speciesId": "raichu_alolan",
+        "id": 26,
+        "types": ["electric", "psychic"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/raichu-alola.png"
+        }
+    },
+    {
+        "speciesId": "dugtrio_alolan",
+        "id": 51,
+        "types": ["ground", "steel"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/dugtrio-alola.png"
+        }
+    },
+    {
+        "speciesId": "geodude_alolan",
+        "id": 74,
+        "types": ["rock", "electric"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/geodude-alola.png"
+        }
+    },
+    {
+        "speciesId": "weezing_galarian",
+        "id": 110,
+        "types": ["poison", "fairy"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/weezing-galar.png"
+        }
+    }
+]
