@@ -139,7 +139,10 @@
       "BONE_CLUB": "Bone Club",
       "SLUDGE_WAVE": "Sludge Wave",
       "THUNDER_PUNCH": "Thunder Punch",
-      "SLUDGE": "Sludge"
+      "SLUDGE": "Sludge",
+      "NIGHT_SHADE": "Night Shade",
+      "FOCUS_BLAST": "Focus Blast",
+      "BUG_BUZZ": "Bug Buzz"
     }
   },
   "types": {
