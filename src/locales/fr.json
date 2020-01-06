@@ -139,7 +139,10 @@
       "BONE_CLUB": "Massd’Os",
       "SLUDGE_WAVE": "Cradovague",
       "THUNDER_PUNCH": "Poing-Éclair",
-      "SLUDGE": "Détritus"
+      "SLUDGE": "Détritus",
+      "NIGHT_SHADE": "Ombre Nocturne",
+      "FOCUS_BLAST": "Exploforce",
+      "BUG_BUZZ": "Bourdon"
     }
   },
   "types": {

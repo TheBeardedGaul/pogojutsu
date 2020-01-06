@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Pokemon, PokemonProps, PokemonFlux, PokemonBackUpFlux } from "./Pokemon.model";
 import axios from "axios";
 import { Meta } from "../Data/SilphRoad/Meta/Meta";
-import { TimelessPokemons } from "../Data/SilphRoad/Meta/Timeless/Overall";
+import { TimelessPokemons } from "../Data/SilphRoad/Meta/Timeless/Overall1500";
 import { FusionPokemons } from "../Data/SilphRoad/Meta/Fusion/Overall1500";
 import { Type } from "./Type/TypeModel";
 import backUpApi from "../Data/pokedex/pokedex.json"
