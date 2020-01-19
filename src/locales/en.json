@@ -45,7 +45,16 @@
       "HIDDEN_POWER_FLYING": "Hidden Power Flying",
       "BULLET_SEED": "Bullet Seed",
       "PECK": "Peck",
-      "TACKLE": "Tackle"
+      "TACKLE": "Tackle",
+      "LICK": "Lick",
+      "POUND": "Pound",
+      "EXTRASENSORY": "Extrasensory",
+      "LOCK_ON": "Lock On",
+      "BULLET_PUNCH": "Bullet Punch",
+      "LOW_KICK": "Low Kick",
+      "HIDDEN_POWER_GROUND": "Hidden Power Ground",
+      "SCRATCH": "Scratch",
+      "ZEN_HEADBUTT": "Zen Headbutt"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -142,7 +151,22 @@
       "SLUDGE": "Sludge",
       "NIGHT_SHADE": "Night Shade",
       "FOCUS_BLAST": "Focus Blast",
-      "BUG_BUZZ": "Bug Buzz"
+      "BUG_BUZZ": "Bug Buzz",
+      "CROSS_CHOP": "Cross Chop",
+      "METEOR_MASH": "Meteo Mash",
+      "MOONBLAST": "Moonblast",
+      "FIRE_PUNCH": "Fire Punch",
+      "POWER_UP_PUNCH": "Power up Punch",
+      "SOLAR_BEAM": "Solar Beam",
+      "WEATHER_BALL_ROCK": "Weather Ball Rock",
+      "DISARMING_VOICE": "Disarming Voice",
+      "BRICK_BREAK": "Brick Break",
+      "ZAP_CANNON": "Zap Cannon",
+      "SAND_TOMB": "Sand Tomb",
+      "FUTURE_SIGHT": "Future Sight",
+      "HORN_ATTACK": "Horn Attack",
+      "GYRO_BALL": "Gyro Ball",
+      "WEATHER_BALL_FIRE": "Weather Ball [Fire]"
     }
   },
   "types": {

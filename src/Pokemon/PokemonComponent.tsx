@@ -40,7 +40,7 @@ export const PokemonComponent: React.FC<LocalProps> = ({pokemon, rank}) => {
         <>
           <div className="badge-container">
             <span className="badge">
-              {data.score}
+              {(data.score.toString().length !==2) ? data.score : `${data.score}.0`}
             </span>
           </div>
           <h1>

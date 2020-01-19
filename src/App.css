@@ -1,8 +1,8 @@
 .App {
-  text-align: center;
+  /* text-align: center;
   font-family: "IBM Plex Mono,monospace";
   font-feature-settings: "liga" 0;
-  line-height: 1.7;
+  line-height: 1.7; */
 }
 
 .App-header, .App-body {
@@ -11,7 +11,12 @@
   align-items: center;
   justify-content: center;
   color: white;
+  text-align: center;
+  font-family: "IBM Plex Mono,monospace";
+  font-feature-settings: "liga" 0;
+  line-height: 1.7;
 }
+
 
 .App-body {
   padding-bottom: 1em;

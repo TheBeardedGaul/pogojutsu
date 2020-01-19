@@ -126,5 +126,53 @@
         "sprites": {
             "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/weezing-galar.png"
         }
+    },
+    {
+        "speciesId": "castform_sunny",
+        "id": 351,
+        "types": ["fire"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/castform-sunny.png"
+        }
+    },
+    {
+        "speciesId": "wormadam_trash",
+        "id": 413,
+        "types": ["bug", "steel"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/wormadam-trash.png"
+        }
+    },
+    {
+        "speciesId": "cherrim_overcast",
+        "id": 421,
+        "types": ["grass"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/cherrim-overcast.png"
+        }
+    },
+    {
+        "speciesId": "cherrim_sunny",
+        "id": 421,
+        "types": ["grass"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/cherrim-sunshine.png"
+        }
+    },
+    {
+        "speciesId": "mr_mime",
+        "id": 122,
+        "types": ["psychic", "fairy"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/122.png"
+        }
+    },
+    {
+        "speciesId": "porygon_z",
+        "id": 474,
+        "types": ["normal"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/474.png"
+        }
     }
 ]

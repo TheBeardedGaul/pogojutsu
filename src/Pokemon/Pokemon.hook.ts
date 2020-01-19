@@ -4,6 +4,7 @@ import axios from "axios";
 import { Meta } from "../Data/SilphRoad/Meta/Meta";
 import { TimelessPokemons } from "../Data/SilphRoad/Meta/Timeless/Overall1500";
 import { FusionPokemons } from "../Data/SilphRoad/Meta/Fusion/Overall1500";
+import { RosePokemons } from "../Data/SilphRoad/Meta/Rose/Overall1500";
 import { Type } from "./Type/TypeModel";
 import backUpApi from "../Data/pokedex/pokedex.json"
 
@@ -131,6 +132,9 @@ export function useMetaRankedPokemon(meta: Meta) {
           break;
         case Meta.Fusion:
           setData(parseFlux(FusionPokemons));
+          break;
+          case Meta.Rose:
+          setData(parseFlux(RosePokemons));
           break;
         default:
           setError(`The current Meta ${meta} is not allowed`);
