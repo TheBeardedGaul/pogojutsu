@@ -45,7 +45,16 @@
       "HIDDEN_POWER_FLYING": "Puissance Cachée",
       "BULLET_SEED": "Balle Graine",
       "PECK": "Picpic",
-      "TACKLE": "Charge"
+      "TACKLE": "Charge",
+      "LICK": "Léchouille",
+      "POUND": "Écras’Face",
+      "EXTRASENSORY": "Extrasenseur",
+      "LOCK_ON": "Verrouillage",
+      "BULLET_PUNCH": "Pisto-Poing",
+      "LOW_KICK": "Balayage",
+      "HIDDEN_POWER_GROUND": "Puissance Cachée",
+      "SCRATCH": "Griffe",
+      "ZEN_HEADBUTT": "Psykoud’Boul"
     },
     "chargedMoves": {
       "label": "Attaques chargées",
@@ -142,7 +151,22 @@
       "SLUDGE": "Détritus",
       "NIGHT_SHADE": "Ombre Nocturne",
       "FOCUS_BLAST": "Exploforce",
-      "BUG_BUZZ": "Bourdon"
+      "BUG_BUZZ": "Bourdon",
+      "CROSS_CHOP": "Coup-Croix",
+      "METEOR_MASH": "Poing Météore",
+      "MOONBLAST": "Pouvoir Lunaire",
+      "FIRE_PUNCH": "Poing de Feu",
+      "POWER_UP_PUNCH": "Poing Boost",
+      "SOLAR_BEAM": "Lance-Soleil",
+      "WEATHER_BALL_ROCK": "Ball’Météo",
+      "DISARMING_VOICE": "Voix Enjôleuse",
+      "BRICK_BREAK": "Casse-Brique",
+      "ZAP_CANNON": "Élecanon",
+      "SAND_TOMB": "Tourbi-Sable",
+      "FUTURE_SIGHT": "Prescience",
+      "HORN_ATTACK": "Koud’Korne",
+      "GYRO_BALL": "Gyroballe",
+      "WEATHER_BALL_FIRE": "Ball’Météo [Feu]"
     }
   },
   "types": {
