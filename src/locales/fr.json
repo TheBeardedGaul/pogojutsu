@@ -42,7 +42,7 @@
       "AIR_SLASH": "Lame d’Air",
       "METAL_CLAW": "Griffe Acier",
       "FEINT_ATTACK": "Feinte",
-      "HIDDEN_POWER_FLYING": "Puissance Cachée",
+      "HIDDEN_POWER_FLYING": "Puissance Cachée [Vol]",
       "BULLET_SEED": "Balle Graine",
       "PECK": "Picpic",
       "TACKLE": "Charge",
@@ -52,7 +52,7 @@
       "LOCK_ON": "Verrouillage",
       "BULLET_PUNCH": "Pisto-Poing",
       "LOW_KICK": "Balayage",
-      "HIDDEN_POWER_GROUND": "Puissance Cachée",
+      "HIDDEN_POWER_GROUND": "Puissance Cachée [Sol]",
       "SCRATCH": "Griffe",
       "ZEN_HEADBUTT": "Psykoud’Boul"
     },

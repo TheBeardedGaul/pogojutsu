@@ -42,7 +42,7 @@
       "AIR_SLASH": "Air Slash",
       "METAL_CLAW": "Metal Claw",
       "FEINT_ATTACK": "Feint Attack",
-      "HIDDEN_POWER_FLYING": "Hidden Power Flying",
+      "HIDDEN_POWER_FLYING": "Hidden Power [Flying]",
       "BULLET_SEED": "Bullet Seed",
       "PECK": "Peck",
       "TACKLE": "Tackle",
@@ -52,7 +52,7 @@
       "LOCK_ON": "Lock On",
       "BULLET_PUNCH": "Bullet Punch",
       "LOW_KICK": "Low Kick",
-      "HIDDEN_POWER_GROUND": "Hidden Power Ground",
+      "HIDDEN_POWER_GROUND": "Hidden Power [Ground]",
       "SCRATCH": "Scratch",
       "ZEN_HEADBUTT": "Zen Headbutt"
     },

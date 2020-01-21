@@ -6,6 +6,7 @@ import { PokemonListComponent } from './Pokemon/PokemonListComponent';
 
 const messages = {
   en: require("./locales/en"),
+  es: require("./locales/es"),
   fr: require("./locales/fr")
 };
 
