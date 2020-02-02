@@ -17,8 +17,9 @@ const LanguageSwitcher: React.FC = () => {
         "selectedButton": selected
     });
 
-  return componentClasses;
-}
+    return componentClasses;
+  }
+  
   return (
     <div className="languageButtonContainer">
       {Object.keys(langs).map((langKey: string) => (

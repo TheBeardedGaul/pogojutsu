@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { Pokemon, PokemonProps, PokemonFlux, PokemonBackUpFlux } from "./Pokemon.model";
 import axios from "axios";
-import { Meta } from "../Data/SilphRoad/Meta/Meta";
+import { Meta } from "../Meta/Meta";
+import { Pokemons } from "../Data/Niantic/GreatLeague/Overall1500";
 import { TimelessPokemons } from "../Data/SilphRoad/Meta/Timeless/Overall1500";
 import { FusionPokemons } from "../Data/SilphRoad/Meta/Fusion/Overall1500";
 import { RosePokemons } from "../Data/SilphRoad/Meta/Rose/Overall1500";
@@ -133,8 +134,11 @@ export function useMetaRankedPokemon(meta: Meta) {
         case Meta.Fusion:
           setData(parseFlux(FusionPokemons));
           break;
-          case Meta.Rose:
+        case Meta.Rose:
           setData(parseFlux(RosePokemons));
+          break;
+        case Meta.GoBattleLeague:
+          setData(parseFlux(Pokemons));
           break;
         default:
           setError(`The current Meta ${meta} is not allowed`);
