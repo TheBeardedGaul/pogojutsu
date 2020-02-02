@@ -55,7 +55,14 @@
       "HIDDEN_POWER_GROUND": "Hidden Power [Ground]",
       "SCRATCH": "Scratch",
       "ZEN_HEADBUTT": "Zen Headbutt",
-      "VOLT_SWITCH": "Volt Switch"
+      "VOLT_SWITCH": "Volt Switch",
+      "HIDDEN_POWER_FIRE": "Hidden Power [Fire]",
+      "ASTONISH": "Astonish",
+      "ACID": "Acid",
+      "ROCK_SMASH": "Rock Smash",
+      "HIDDEN_POWER_ELECTRIC": "Hidden Power [Electric]",
+      "YAWN": "Yawn",
+      "TAKE_DOWN": "Take Down"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -168,7 +175,24 @@
       "HORN_ATTACK": "Horn Attack",
       "GYRO_BALL": "Gyro Ball",
       "WEATHER_BALL_FIRE": "Weather Ball [Fire]",
-      "FIRE_BLAST": "Fire Blast"
+      "FIRE_BLAST": "Fire Blast",
+      "PSYCHO_BOOST": "Psycho Boost",
+      "LAST_RESORT": "Last Resort",
+      "DOOM_DESIRE": "Doom Desire",
+      "SKULL_BASH": "Skull Bash",
+      "WEATHER_BALL_WATER": "Weather Ball [Water]",
+      "WEATHER_BALL_ICE": "Weather Ball [Ice]",
+      "SYNCHRONOISE": "Synchronoise",
+      "MIRROR_COAT": "Mirror Coat",
+      "LEAF_TORNADO": "Leaf Tornado",
+      "GUNK_SHOT": "Gunk Shot",
+      "CRABHAMMER": "Crabhammer",
+      "AQUA_JET": "Aqua Jet",
+      "FLAME_BURST": "Flame Burst",
+      "MUDDY_WATER": "Muddy Water",
+      "SWIFT": "Swift",
+      "DRACO_METEOR": "Draco Meteor",
+      "DRAINING_KISS": "Draining Kiss"
     }
   },
   "types": {

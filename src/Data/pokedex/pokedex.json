@@ -174,5 +174,109 @@
         "sprites": {
             "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/474.png"
         }
+    },
+    {
+        "speciesId": "darmanitan_standard",
+        "id": 555,
+        "types": ["fire"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/555.png"
+        }
+    },
+    {
+        "speciesId": "deoxys_defense",
+        "id": 386,
+        "types": ["psychic"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/deoxys-defense.png"
+        }
+    },
+    {
+        "speciesId": "deoxys_speed",
+        "id": 386,
+        "types": ["psychic"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/deoxys-speed.png"
+        }
+    },
+    {
+        "speciesId": "melmetal",
+        "id": 809,
+        "types": ["steel"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/809.png"
+        }
+    },
+    {
+        "speciesId": "castform_rainy",
+        "id": 351,
+        "types": ["water"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/castform-rainy.png"
+        }
+    },
+    {
+        "speciesId": "castform_snowy",
+        "id": 351,
+        "types": ["ice"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/castform-snowy.png"
+        }
+    },
+    {
+        "speciesId": "wormadam_sandy",
+        "id": 413,
+        "types": ["bug", "ground"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/wormadam-sandy.png"
+        }
+    },
+    {
+        "speciesId": "wormadam_plant",
+        "id": 413,
+        "types": ["bug", "grass"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/wormadam-plant.png"
+        }
+    },
+    {
+        "speciesId": "basculin",
+        "id": 550,
+        "types": ["water"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/550.png"
+        }
+    },
+    {
+        "speciesId": "persian_alolan",
+        "id": 53,
+        "types": ["dark"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/persian-alola.png"
+        }
+    },
+    {
+        "speciesId": "ho_oh",
+        "id": 250,
+        "types": ["fire", "flying"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/250.png"
+        }
+    },
+    {
+        "speciesId": "shellos_east_sea",
+        "id": 422,
+        "types": ["water"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/shellos-east-sea.png"
+        }
+    },
+    {
+        "speciesId": "shellos_west_sea",
+        "id": 422,
+        "types": ["water"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/shellos-west-sea.png"
+        }
     }
 ]

@@ -55,7 +55,14 @@
       "HIDDEN_POWER_GROUND": "Poder Oculto [Tierra]",
       "SCRATCH": "Arañazo",
       "ZEN_HEADBUTT": "Cabezazo Zen",
-      "VOLT_SWITCH": "Voltiocambio"
+      "VOLT_SWITCH": "Voltiocambio",
+      "HIDDEN_POWER_FIRE": "Poder Oculto [Fuego]",
+      "ASTONISH": "Impresionar",
+      "ACID": "Ácido",
+      "ROCK_SMASH": "Golpe Roca",
+      "HIDDEN_POWER_ELECTRIC": "Poder Oculto [Eléctrico]",
+      "YAWN": "Bostezo",
+      "TAKE_DOWN": "Derribo"
     },
     "chargedMoves": {
       "label": "Movimientos cargados",
@@ -168,7 +175,24 @@
       "HORN_ATTACK": "",
       "GYRO_BALL": "",
       "WEATHER_BALL_FIRE": "",
-      "FIRE_BLAST": "Llamarada"
+      "FIRE_BLAST": "Llamarada",
+      "PSYCHO_BOOST": "Psicoataque",
+      "LAST_RESORT": "Última Baza",
+      "DOOM_DESIRE": "Deseo Oculto",
+      "SKULL_BASH": "Cabezazo",
+      "WEATHER_BALL_WATER": "Meteorobola [Agua]",
+      "WEATHER_BALL_ICE": "Meteorobola [Hielo]",
+      "SYNCHRONOISE": "Sincrorruido",
+      "MIRROR_COAT": "Manto Espejo",
+      "LEAF_TORNADO": "Ciclón de Hojas",
+      "GUNK_SHOT": "Lanza Mugre",
+      "CRABHAMMER": "Martillazo",
+      "AQUA_JET": "Acua Jet",
+      "FLAME_BURST": "Pirotecnia",
+      "MUDDY_WATER": "Agua Lodosa",
+      "SWIFT": "Rapidez",
+      "DRACO_METEOR": "Cometa Draco",
+      "DRAINING_KISS": "Beso Drenaje"
     }
   },
   "types": {
