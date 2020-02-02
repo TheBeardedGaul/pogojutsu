@@ -1,11 +1,15 @@
 import React from "react";
 import { useMetaRankedPokemon } from "./Pokemon.hook";
-import { Meta } from "../Data/SilphRoad/Meta/Meta";
+import { Meta } from "../Meta/Meta";
 import { PokemonComponent } from "./PokemonComponent";
 
-export const PokemonListComponent: React.FC<any> = () => {
+export interface PokemonListComponentProps {
+  meta: Meta;
+}
+
+export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta}) => {
     // TODO hook for getting/setting the meta
-    const { data, error } = useMetaRankedPokemon(Meta.Rose);
+    const { data, error } = useMetaRankedPokemon(meta);
     
     return (
         <>

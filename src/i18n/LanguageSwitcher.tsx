@@ -4,6 +4,7 @@ import classNames from "classnames";
 
 const langs = {
   en: "English",
+  es: "Spanish",
   fr: "Français"
 };
 
@@ -16,16 +17,17 @@ const LanguageSwitcher: React.FC = () => {
         "selectedButton": selected
     });
 
-  return componentClasses;
-}
+    return componentClasses;
+  }
+  
   return (
     <div className="languageButtonContainer">
       {Object.keys(langs).map((langKey: string) => (
         <div
-          className={getClassNames(lang === (langKey as "fr" | "en") )}
+          className={getClassNames(lang === (langKey as  "fr" | "en" | "es") )}
           key={langKey}
           // style={{ borderStyle: lang === langKey ? "inset" : "outset" }}
-          onClick={() => setLang((langKey as "fr" | "en"))}
+          onClick={() => setLang((langKey as  "fr" | "en" | "es"))}
         >
           {(langs as any)[langKey]}
         </div>

@@ -3,7 +3,7 @@ export interface ITranslationsMap {
 }
 
 export interface I18nProviderProps {
-  defaultLang: "fr" | "en";
+  defaultLang: "fr" | "en" | "es";
   messages: {
     [lang: string]: ITranslationsMap;
   };
@@ -12,9 +12,9 @@ export interface I18nProviderProps {
 export type ITranslate = (id: string) => string;
 
 export interface IContextValue {
-  lang: "fr" | "en";
+  lang:  "fr" | "en" | "es";
   translate: ITranslate;
-  setLang: (lang: "fr" | "en") => void;
+  setLang: (lang:  "fr" | "en" | "es") => void;
 }
 
 export interface ITranslateProps {

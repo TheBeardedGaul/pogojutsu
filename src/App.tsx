@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { I18nProvider } from './i18n';
 import LanguageSwitcher from './i18n/LanguageSwitcher';
 import { PokemonListComponent } from './Pokemon/PokemonListComponent';
+import { Meta } from './Meta/Meta';
+import { MetaSwitcher } from './Meta/MetaSwitcher';
 
 const messages = {
   en: require("./locales/en"),
+  es: require("./locales/es"),
   fr: require("./locales/fr")
 };
 
 
 const App: React.FC = () => {
+  const [metaState, setMetaState] = useState<Meta>(Meta.Rose);
   return (
     <I18nProvider defaultLang="fr" messages={messages}>
     <div className="App">
@@ -25,7 +29,8 @@ const App: React.FC = () => {
       </header>
       <body className="App-body">
         <LanguageSwitcher />
-        <PokemonListComponent />
+        <MetaSwitcher meta={metaState} setMetaFct={setMetaState} />
+        <PokemonListComponent meta={metaState}/>
       </body>
     </div>
     <footer className="App-footer">

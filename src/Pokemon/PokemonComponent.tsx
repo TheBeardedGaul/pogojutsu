@@ -44,10 +44,10 @@ export const PokemonComponent: React.FC<LocalProps> = ({pokemon, rank}) => {
             </span>
           </div>
           <h1>
-            <Context.Consumer>{value => pokemonTranslate.getName(data.id, value.lang)}</Context.Consumer>
+            <Context.Consumer>{value => pokemonTranslate.getName(data.id, (value.lang === "es") ? "en" : value.lang)}</Context.Consumer>
           </h1>
           <div className="card-body">
-            <div className="card-image">
+            <div className="cardImage">
               <img src={data.sprites.front_default} alt="Sprite" />
             </div>
             <div className={styles.cardMoves}>
