@@ -54,7 +54,8 @@
       "LOW_KICK": "Low Kick",
       "HIDDEN_POWER_GROUND": "Hidden Power [Ground]",
       "SCRATCH": "Scratch",
-      "ZEN_HEADBUTT": "Zen Headbutt"
+      "ZEN_HEADBUTT": "Zen Headbutt",
+      "VOLT_SWITCH": "Volt Switch"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -166,7 +167,8 @@
       "FUTURE_SIGHT": "Future Sight",
       "HORN_ATTACK": "Horn Attack",
       "GYRO_BALL": "Gyro Ball",
-      "WEATHER_BALL_FIRE": "Weather Ball [Fire]"
+      "WEATHER_BALL_FIRE": "Weather Ball [Fire]",
+      "FIRE_BLAST": "Fire Blast"
     }
   },
   "types": {

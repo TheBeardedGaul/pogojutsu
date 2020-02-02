@@ -54,7 +54,8 @@
       "LOW_KICK": "Balayage",
       "HIDDEN_POWER_GROUND": "Puissance Cachée [Sol]",
       "SCRATCH": "Griffe",
-      "ZEN_HEADBUTT": "Psykoud’Boul"
+      "ZEN_HEADBUTT": "Psykoud’Boul",
+      "VOLT_SWITCH": "Change Éclair"
     },
     "chargedMoves": {
       "label": "Attaques chargées",
@@ -166,7 +167,8 @@
       "FUTURE_SIGHT": "Prescience",
       "HORN_ATTACK": "Koud’Korne",
       "GYRO_BALL": "Gyroballe",
-      "WEATHER_BALL_FIRE": "Ball’Météo [Feu]"
+      "WEATHER_BALL_FIRE": "Ball’Météo [Feu]",
+      "FIRE_BLAST": "Déflagration"
     }
   },
   "types": {
