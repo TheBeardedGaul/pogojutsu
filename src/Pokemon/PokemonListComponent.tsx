@@ -48,10 +48,10 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta}
             <Translate id={`leagues.ultra`} />
           </Tab>
           <TabPanel {...tab} stopId="1500" className="tabPanel">
-            {renderPokemons()}
+            {leagueState === League.Great && (renderPokemons())}
           </TabPanel>
           <TabPanel {...tab} stopId="2500" className="tabPanel">
-            {renderPokemons()}
+            {leagueState === League.Ultra && (renderPokemons())}
           </TabPanel>
           
         </TabList>

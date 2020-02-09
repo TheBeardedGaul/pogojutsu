@@ -278,5 +278,37 @@
         "sprites": {
             "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/shellos-west-sea.png"
         }
+    },
+    {
+        "speciesId": "giratina_altered",
+        "id": 487,
+        "types": ["ghost", "dragon"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/487.png"
+        }
+    },
+    {
+        "speciesId": "giratina_origin",
+        "id": 487,
+        "types": ["ghost", "dragon"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/giratina-origin.png"
+        }
+    },
+    {
+        "speciesId": "mewtwo_armored",
+        "id": 150,
+        "types": ["psychic"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/mewtwo-armor.png"
+        }
+    },
+    {
+        "speciesId": "tornadus_incarnate",
+        "id": 641,
+        "types": ["flying"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/641.png"
+        }
     }
 ]
