@@ -215,5 +215,10 @@
     "Fairy": "Fée",
     "Dark": "Ténèbre",
     "Unknown": "Inconnu"
+  },
+  "leagues": {
+    "great": "Ligue Super",
+    "ultra": "Ligue Hyper",
+    "master": "Ligue Master"
   }
 }

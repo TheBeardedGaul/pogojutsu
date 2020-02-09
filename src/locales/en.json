@@ -215,5 +215,10 @@
     "Fairy": "Fairy",
     "Dark": "Dark",
     "Unknown": "Unknown"
+  },
+  "leagues": {
+    "great": "Great League",
+    "ultra": "Ultra League",
+    "master": "Master League"
   }
 }
