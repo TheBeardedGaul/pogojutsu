@@ -2,12 +2,14 @@ import { useState, useEffect } from "react";
 import { Pokemon, PokemonProps, PokemonFlux, PokemonBackUpFlux } from "./Pokemon.model";
 import axios from "axios";
 import { Meta } from "../Meta/Meta";
-import { Pokemons } from "../Data/Niantic/GreatLeague/Overall1500";
+import { Pokemons as Pokemons1500 } from "../Data/Niantic/GreatLeague/Overall1500";
+import { Pokemons as Pokemons2500 } from "../Data/Niantic/GreatLeague/Overall2500";
 import { TimelessPokemons } from "../Data/SilphRoad/Meta/Timeless/Overall1500";
 import { FusionPokemons } from "../Data/SilphRoad/Meta/Fusion/Overall1500";
 import { RosePokemons } from "../Data/SilphRoad/Meta/Rose/Overall1500";
 import { Type } from "./Type/TypeModel";
 import backUpApi from "../Data/pokedex/pokedex.json"
+import { League } from "../League/League";
 
 function getPokemonType(apiTypes: any[]): Type[] {
   const result: Type[] = [];
@@ -119,7 +121,7 @@ export function usePokeApi(pokemon: PokemonProps) {
   return { data, error };
 }
 
-export function useMetaRankedPokemon(meta: Meta) {
+export function useMetaRankedPokemon(meta: Meta, league: League = League.Great) {
   const [data, setData] = useState<PokemonProps[]>([]);
   const [error, setError] = useState<string | null>(null);
 
@@ -138,12 +140,16 @@ export function useMetaRankedPokemon(meta: Meta) {
           setData(parseFlux(RosePokemons));
           break;
         case Meta.GoBattleLeague:
-          setData(parseFlux(Pokemons));
+          if (league === League.Great) {
+            setData(parseFlux(Pokemons1500));
+          } else {
+            setData(parseFlux(Pokemons2500));
+          }
           break;
         default:
           setError(`The current Meta ${meta} is not allowed`);
       }
-    }, [meta]
+    }, [meta, league]
   );
 
   return { data, error };

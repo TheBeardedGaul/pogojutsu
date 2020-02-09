@@ -62,7 +62,9 @@
       "ROCK_SMASH": "Éclate-Roc",
       "HIDDEN_POWER_ELECTRIC": "Puissance Cachée [Electrique]",
       "YAWN": "Bâillement",
-      "TAKE_DOWN": "Bélier"
+      "TAKE_DOWN": "Bélier",
+      "ICE_FANG": "Crocs Givre",
+      "HIDDEN_POWER_BUG": "Puissance Cachée [Insècte]"
     },
     "chargedMoves": {
       "label": "Attaques chargées",
@@ -192,7 +194,8 @@
       "MUDDY_WATER": "Ocroupi",
       "SWIFT": "Météores",
       "DRACO_METEOR": "Draco Météore",
-      "DRAINING_KISS": "Vampibaiser"
+      "DRAINING_KISS": "Vampibaiser",
+      "PSYSTRIKE": "Frappe Psy"
     }
   },
   "types": {
@@ -215,5 +218,10 @@
     "Fairy": "Fée",
     "Dark": "Ténèbre",
     "Unknown": "Inconnu"
+  },
+  "leagues": {
+    "great": "Ligue Super",
+    "ultra": "Ligue Hyper",
+    "master": "Ligue Master"
   }
 }

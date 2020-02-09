@@ -62,7 +62,9 @@
       "ROCK_SMASH": "Golpe Roca",
       "HIDDEN_POWER_ELECTRIC": "Poder Oculto [Eléctrico]",
       "YAWN": "Bostezo",
-      "TAKE_DOWN": "Derribo"
+      "TAKE_DOWN": "Derribo",
+      "ICE_FANG": "Colmillo Hielo",
+      "HIDDEN_POWER_BUG": "Poder Oculto [Bicho]"
     },
     "chargedMoves": {
       "label": "Movimientos cargados",
@@ -192,7 +194,8 @@
       "MUDDY_WATER": "Agua Lodosa",
       "SWIFT": "Rapidez",
       "DRACO_METEOR": "Cometa Draco",
-      "DRAINING_KISS": "Beso Drenaje"
+      "DRAINING_KISS": "Beso Drenaje",
+      "PSYSTRIKE": "Psystrike"
     }
   },
   "types": {
@@ -215,5 +218,10 @@
     "Dark": "Siniestro",
     "Fairy": "Hada",
     "Unknown": "Desconocido"
+  },
+  "leagues": {
+    "great": "Liga Super Ball",
+    "ultra": "Liga Ultra Ball",
+    "master": "Liga Master Ball"
   }
 }

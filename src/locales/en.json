@@ -62,7 +62,9 @@
       "ROCK_SMASH": "Rock Smash",
       "HIDDEN_POWER_ELECTRIC": "Hidden Power [Electric]",
       "YAWN": "Yawn",
-      "TAKE_DOWN": "Take Down"
+      "TAKE_DOWN": "Take Down",
+      "ICE_FANG": "Ice Fang",
+      "HIDDEN_POWER_BUG": "Hidden Power [Bug]"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -192,7 +194,8 @@
       "MUDDY_WATER": "Muddy Water",
       "SWIFT": "Swift",
       "DRACO_METEOR": "Draco Meteor",
-      "DRAINING_KISS": "Draining Kiss"
+      "DRAINING_KISS": "Draining Kiss",
+      "PSYSTRIKE": "Psystrike"
     }
   },
   "types": {
@@ -215,5 +218,10 @@
     "Fairy": "Fairy",
     "Dark": "Dark",
     "Unknown": "Unknown"
+  },
+  "leagues": {
+    "great": "Great League",
+    "ultra": "Ultra League",
+    "master": "Master League"
   }
 }
