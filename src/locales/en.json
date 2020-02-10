@@ -219,6 +219,14 @@
     "Dark": "Dark",
     "Unknown": "Unknown"
   },
+  "metas": {
+    "sinister": "Sinister Cup",
+    "ferocious": "Ferocious Cup",
+    "timeless": "Timeless Cup",
+    "fusion": "Fusion Cup",
+    "rose": "Rose Cup",
+    "gobattle": "Go Battle"
+  },
   "leagues": {
     "great": "Great League",
     "ultra": "Ultra League",

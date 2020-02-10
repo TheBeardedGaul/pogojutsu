@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 const langs = {
   en: "English",
-  es: "Spanish",
+  es: "Español",
   fr: "Français"
 };
 

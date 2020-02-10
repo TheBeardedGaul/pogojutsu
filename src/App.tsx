@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { I18nProvider } from './i18n';
 import LanguageSwitcher from './i18n/LanguageSwitcher';
 import { PokemonListComponent } from './Pokemon/PokemonListComponent';
 import { Meta } from './Meta/Meta';
-import { MetaSwitcher } from './Meta/MetaSwitcher';
 import GA from "./Analytics/GoogleAnalytics";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Switch, Redirect, Route } from "react-router-dom";
+import { League } from './League/League';
 
 const messages = {
   en: require("./locales/en"),
@@ -16,7 +16,6 @@ const messages = {
 
 
 const App: React.FC = () => {
-  const [metaState, setMetaState] = useState<Meta>(Meta.Rose);
   return (
     <>
       <BrowserRouter>
@@ -34,8 +33,32 @@ const App: React.FC = () => {
             </header>
             <body className="App-body">
               <LanguageSwitcher />
-              <MetaSwitcher meta={metaState} setMetaFct={setMetaState} />
-              <PokemonListComponent meta={metaState}/>
+              <Switch>
+                <Route exact path="/">
+                  <Redirect to="/home" />
+                </Route>
+                <Route exact path="/home">
+                  <PokemonListComponent />
+                </Route>
+                <Route exact path={`/${Meta.GoBattleLeague}`}>
+                  <PokemonListComponent meta={Meta.GoBattleLeague}/>
+                </Route>
+                <Route exact path={`/${Meta.GoBattleLeague}/${League.Great}`}>
+                  <PokemonListComponent meta={Meta.GoBattleLeague} league={League.Great}/>
+                </Route>
+                <Route exact path={`/${Meta.GoBattleLeague}/${League.Ultra}`}>
+                  <PokemonListComponent meta={Meta.GoBattleLeague} league={League.Ultra}/>
+                </Route>
+                <Route exact path={`/${Meta.Rose}`}>
+                  <PokemonListComponent meta={Meta.Rose}/>
+                </Route>
+                <Route exact path={`/${Meta.Rose}/${League.Great}`}>
+                  <PokemonListComponent meta={Meta.Rose} league={League.Great} />
+                </Route>
+                <Route exact path={`/${Meta.Rose}/${League.Great}`}>
+                  <PokemonListComponent meta={Meta.Rose} league={League.Ultra} />
+                </Route>
+              </Switch>
             </body>
           </div>
           <footer className="App-footer">
