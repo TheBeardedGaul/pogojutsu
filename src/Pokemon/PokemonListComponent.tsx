@@ -8,6 +8,7 @@ import { Translate } from "../i18n";
 import "./PokemonListComponent.scss";
 import { MetaSwitcher } from "../Meta/MetaSwitcher";
 import { useHistory } from "react-router-dom";
+import classNames from "classnames";
 
 export interface PokemonListComponentProps {
   meta?: Meta;
@@ -30,6 +31,20 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta 
     setLeagueState(league);
     history.push(`/${metaState}/${league}`);
   }
+
+  function isUltraTabDisabled() {
+    return metaState !== Meta.GoBattleLeague;
+  }
+
+  const getTabClassNames = (selected: boolean) => {
+    const componentClasses = classNames({
+        "languageButton": true,
+        "tab": true,
+        "ButtonDisabled": selected
+    });
+
+    return componentClasses;
+}
 
   function renderPokemons(): JSX.Element {
     return (
@@ -61,7 +76,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta 
             <Tab {...tab} stopId={League.Great} className="languageButton tab" onClick={() => leagueChangeHandler(League.Great)}>
               <Translate id={`leagues.great`} />
             </Tab>
-            <Tab {...tab} stopId={League.Ultra} className="languageButton tab" onClick={() => leagueChangeHandler(League.Ultra)} >
+            <Tab {...tab} stopId={League.Ultra} className={getTabClassNames(metaState !== Meta.GoBattleLeague)} onClick={() => leagueChangeHandler(League.Ultra)} disabled={isUltraTabDisabled()}>
               <Translate id={`leagues.ultra`} />
             </Tab>
             <TabPanel {...tab} stopId={League.Great} className="tabPanel">

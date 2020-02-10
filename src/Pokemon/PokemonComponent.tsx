@@ -38,7 +38,7 @@ export const PokemonComponent: React.FC<LocalProps> = ({pokemon, rank}) => {
 
       {data !== undefined && (
         <>
-          <div className="badge-container">
+          <div className="BadgeContainer">
             <span className="badge">
               {(data.score.toString().length !==2) ? data.score : `${data.score}.0`}
             </span>
@@ -46,7 +46,7 @@ export const PokemonComponent: React.FC<LocalProps> = ({pokemon, rank}) => {
           <h1>
             <Context.Consumer>{value => pokemonTranslate.getName(data.id, (value.lang === "es") ? "en" : value.lang)}</Context.Consumer>
           </h1>
-          <div className="card-body">
+          <div className="CardBody">
             <div className="cardImage">
               <img src={data.sprites.front_default} alt="Sprite" />
             </div>

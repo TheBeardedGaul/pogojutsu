@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { I18nProvider } from './i18n';
 import LanguageSwitcher from './i18n/LanguageSwitcher';
 import { PokemonListComponent } from './Pokemon/PokemonListComponent';
@@ -22,8 +22,8 @@ const App: React.FC = () => {
         { GA.init() && <GA.RouteTracker /> }
         <I18nProvider defaultLang="fr" messages={messages}>
           <div className="App">
-            <header className="App-header">
-              <div className="App-logo">
+            <header className="AppHeader">
+              <div className="AppLogo">
                 <h1>
                   PogoJutsu
                 </h1>
@@ -31,7 +31,7 @@ const App: React.FC = () => {
               <div />
               <div />
             </header>
-            <body className="App-body">
+            <body className="AppBody">
               <LanguageSwitcher />
               <Switch>
                 <Route exact path="/">
@@ -41,7 +41,7 @@ const App: React.FC = () => {
                   <PokemonListComponent />
                 </Route>
                 <Route exact path={`/${Meta.GoBattleLeague}`}>
-                  <PokemonListComponent meta={Meta.GoBattleLeague}/>
+                  <Redirect to={`/${Meta.GoBattleLeague}/${League.Great}`} />
                 </Route>
                 <Route exact path={`/${Meta.GoBattleLeague}/${League.Great}`}>
                   <PokemonListComponent meta={Meta.GoBattleLeague} league={League.Great}/>
@@ -50,33 +50,33 @@ const App: React.FC = () => {
                   <PokemonListComponent meta={Meta.GoBattleLeague} league={League.Ultra}/>
                 </Route>
                 <Route exact path={`/${Meta.Rose}`}>
-                  <PokemonListComponent meta={Meta.Rose}/>
+                  <Redirect to={`/${Meta.Rose}/${League.Great}`} />
                 </Route>
                 <Route exact path={`/${Meta.Rose}/${League.Great}`}>
-                  <PokemonListComponent meta={Meta.Rose} league={League.Great} />
+                  <PokemonListComponent meta={Meta.Rose} league={League.Great}/>
                 </Route>
-                <Route exact path={`/${Meta.Rose}/${League.Great}`}>
-                  <PokemonListComponent meta={Meta.Rose} league={League.Ultra} />
+                <Route exact path={`/${Meta.Rose}/${League.Ultra}`}>
+                  <Redirect to={`/${Meta.Rose}/${League.Great}`} />
                 </Route>
               </Switch>
             </body>
           </div>
-          <footer className="App-footer">
-            <div className="footer-credits">
-              <div className="credits-part-one">
+          <footer className="AppFooter">
+            <div className="FooterCredits">
+              <div className="CreditsPartOne">
                 <p>
-                  Data from <a className="App-link" href="https://pvpoke.com">PvPoke.com</a> <a className="App-link" href="https://github.com/pvpoke/pvpoke">https://github.com/pvpoke/pvpoke</a>
+                  Data from <a className="AppLink" href="https://pvpoke.com">PvPoke.com</a> <a className="AppLink" href="https://github.com/pvpoke/pvpoke">https://github.com/pvpoke/pvpoke</a>
                 </p>
                 <p>
-                  Images from <a className="App-link" href="https://pokeapi.co/" >PokéAPI</a> & <a className="App-link" href="https://thesilphroad.com/" >thesilphroad.com</a>
+                  Images from <a className="AppLink" href="https://pokeapi.co/" >PokéAPI</a> & <a className="AppLink" href="https://thesilphroad.com/" >thesilphroad.com</a>
                 </p>
               </div>
-              <div className="credits-part-two">
+              <div className="CreditsPartTwo">
               </div>
-              <div className="credits-part-three">
+              <div className="CreditsPartThree">
               </div>
             </div>
-            <div className="footer-bottom">
+            <div className="FooterBottom">
               © 2019 PogoJutsu
             </div>
           </footer>
