@@ -1,6 +1,7 @@
 import React from "react";
 import { Meta } from "./Meta";
 import classNames from "classnames";
+import { Translate } from "../i18n";
 
 export interface MetaSwitcherProps {
     meta: Meta;
@@ -21,12 +22,12 @@ export const MetaSwitcher: React.FC<MetaSwitcherProps> = ({meta, setMetaFct}) =>
             <div className={getClassNames(meta === Meta.GoBattleLeague)}
                 onClick={() => setMetaFct(Meta.GoBattleLeague)}
             >
-                {Meta.GoBattleLeague}
+                {<Translate id={`metas.${Meta.GoBattleLeague}`} />}
             </div>
             <div className={getClassNames(meta === Meta.Rose)}
                 onClick={() => setMetaFct(Meta.Rose)}
             >
-                {Meta.Rose}
+                {<Translate id={`metas.${Meta.Rose}`} />}
             </div>
         </div>
     );

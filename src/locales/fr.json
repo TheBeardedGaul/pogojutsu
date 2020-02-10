@@ -219,6 +219,14 @@
     "Dark": "Ténèbre",
     "Unknown": "Inconnu"
   },
+  "metas": {
+    "sinister": "Coupe Sinistre",
+    "ferocious": "Coupe Féroce",
+    "timeless": "Coupe Intemporelle",
+    "fusion": "Coupe Fusion",
+    "rose": "Coupe Rose",
+    "gobattle": "Go Battle"
+  },
   "leagues": {
     "great": "Ligue Super",
     "ultra": "Ligue Hyper",

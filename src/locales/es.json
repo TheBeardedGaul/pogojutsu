@@ -219,6 +219,14 @@
     "Fairy": "Hada",
     "Unknown": "Desconocido"
   },
+  "metas": {
+    "sinister": "Sinister Cup",
+    "ferocious": "Ferocious Cup",
+    "timeless": "Timeless Cup",
+    "fusion": "Fusion Cup",
+    "rose": "Rose Cup",
+    "gobattle": "Go Battle"
+  },
   "leagues": {
     "great": "Liga Super Ball",
     "ultra": "Liga Ultra Ball",

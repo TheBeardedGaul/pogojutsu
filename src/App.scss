@@ -5,7 +5,7 @@
   line-height: 1.7; */
 }
 
-.App-header, .App-body {
+.AppHeader, .AppBody {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,12 +18,12 @@
 }
 
 
-.App-body {
+.AppBody {
   padding-bottom: 1em;
   background-color: #282c34;
 }
 
-.App-header {
+.AppHeader {
   background-color: #61dafb;
   color: #282c34;
   height: 3em;
@@ -31,20 +31,20 @@
   grid-template-columns: repeat(5, 1fr);
 }
 
-.App-header h1 {
+.AppHeader h1 {
   color: #282c34;
   margin: 0em;
 }
 
-.App-logo {
+.AppLogo {
   float: left;
 }
 
-.App-link, h1 {
+.AppLink, h1 {
   color: #61dafb;
 }
 
-.App-footer {
+.AppFooter {
   color: white;
   height: fit-content;
   background-color: black;
@@ -54,25 +54,25 @@
   
 }
 
-.footer-credits {
+.FooterCredits {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
 
-.footer-bottom {
+.FooterBottom {
   text-align: center;
   height: 2em;
   width: 100%;
 }
 
-.credits-part-one, .credits-part-two, .credits-part-three {
+.CreditsPartOne, .CreditsPartTwo, .CreditsPartThree {
   height: 12em;
   margin-top: 1em;
   margin-bottom: 1em;
   margin-left: 5em;
 }
 
-.credits-part-one, .credits-part-two {
+.CreditsPartOne, .CreditsPartTwo {
   border-right: #61dafb dashed 0.5px;
 }
 
@@ -84,7 +84,7 @@
 }
 
 @media (max-width: 800px) {
-  .App-logo h1 {margin-left: 1em;}
+  .AppLogo h1 {margin-left: 1em;}
 }
 
 @media (min-width: 800px) {
@@ -99,7 +99,7 @@
   .pokemonCardList {grid-template-columns: repeat(4, 1fr);}
 }
 
-.badge-container {
+.BadgeContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,11 +121,11 @@
   font-size: smaller;
 }
 
-.rank-data {
+.RankData {
   color: white;
 }
 
-.card-body {
+.CardBody {
   display: grid;
   /* grid-auto-columns: 100px; */
   text-align: left;
@@ -143,9 +143,13 @@
   border: 0.5px solid #282c34;
   cursor: pointer;
   border-radius: 10px;
-  width: 6.5em;
+  width: 7.5em;
   font-size: smaller;
   color: #282c34;
+}
+
+.ButtonDisabled {
+  background-color: rgba(75, 75, 75, 0.87);
 }
 
 .selectedButton {
