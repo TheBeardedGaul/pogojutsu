@@ -15,7 +15,7 @@ export interface PokemonListComponentProps {
   league?: League;
 }
 
-export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta = Meta.GoBattleLeague, league = League.Great}) => {
+export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta = Meta.GoBattleLeague, league = League.Ultra}) => {
   const [metaState, setMetaState] = useState<Meta>(meta);
   const [leagueState, setLeagueState] = useState<League>(league);
   const { data, error } = useMetaRankedPokemon(metaState, leagueState);
