@@ -64,7 +64,8 @@
       "YAWN": "Bâillement",
       "TAKE_DOWN": "Bélier",
       "ICE_FANG": "Crocs Givre",
-      "HIDDEN_POWER_BUG": "Puissance Cachée [Insècte]"
+      "HIDDEN_POWER_BUG": "Puissance Cachée [Insècte]",
+      "HIDDEN_POWER_FIGHTING": "Puissance Cachée [Combat]"
     },
     "chargedMoves": {
       "label": "Attaques chargées",
@@ -196,7 +197,9 @@
       "DRACO_METEOR": "Draco Météore",
       "DRAINING_KISS": "Vampibaiser",
       "PSYSTRIKE": "Frappe Psy",
-      "SHADOW_SNEAK": "Ombre Portée"
+      "SHADOW_SNEAK": "Ombre Portée",
+      "ROCK_WRECKER": "Roc-Boulet",
+      "WRAP": "Ligotage"
     }
   },
   "types": {
@@ -226,6 +229,7 @@
     "timeless": "Coupe Intemporelle",
     "fusion": "Coupe Fusion",
     "rose": "Coupe Rose",
+    "toxic": "Coupe Toxique",
     "gobattle": "Go Battle"
   },
   "leagues": {

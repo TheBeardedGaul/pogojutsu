@@ -64,7 +64,8 @@
       "YAWN": "Yawn",
       "TAKE_DOWN": "Take Down",
       "ICE_FANG": "Ice Fang",
-      "HIDDEN_POWER_BUG": "Hidden Power [Bug]"
+      "HIDDEN_POWER_BUG": "Hidden Power [Bug]",
+      "HIDDEN_POWER_FIGHTING": "Hidden Power [Fighting]"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -196,7 +197,9 @@
       "DRACO_METEOR": "Draco Meteor",
       "DRAINING_KISS": "Draining Kiss",
       "PSYSTRIKE": "Psystrike",
-      "SHADOW_SNEAK": "Shadow Sneak"
+      "SHADOW_SNEAK": "Shadow Sneak",
+      "ROCK_WRECKER": "Rock Wrecker",
+      "WRAP": "Wrap"
     }
   },
   "types": {
@@ -226,6 +229,7 @@
     "timeless": "Timeless Cup",
     "fusion": "Fusion Cup",
     "rose": "Rose Cup",
+    "toxic": "Toxic Cup",
     "gobattle": "Go Battle"
   },
   "leagues": {

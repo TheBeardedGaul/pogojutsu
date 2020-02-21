@@ -58,6 +58,16 @@ const App: React.FC = () => {
                 <Route exact path={`/${Meta.Rose}/${League.Ultra}`}>
                   <Redirect to={`/${Meta.Rose}/${League.Great}`} />
                 </Route>
+
+                <Route exact path={`/${Meta.Toxic}`}>
+                  <Redirect to={`/${Meta.Toxic}/${League.Great}`} />
+                </Route>
+                <Route exact path={`/${Meta.Toxic}/${League.Great}`}>
+                  <PokemonListComponent meta={Meta.Toxic} league={League.Great}/>
+                </Route>
+                <Route exact path={`/${Meta.Toxic}/${League.Ultra}`}>
+                  <Redirect to={`/${Meta.Toxic}/${League.Great}`} />
+                </Route>
               </Switch>
             </body>
           </div>
