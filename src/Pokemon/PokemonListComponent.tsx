@@ -59,7 +59,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta 
 
         {error !== null && (
           <div className="error">
-            <strong>Error loading Pokemons from Meta {Meta.Rose.toString()}.</strong>
+            <strong>Error loading Pokemons from Meta {meta.toString()}.</strong>
             <br />
             {error}
           </div>

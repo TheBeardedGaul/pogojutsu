@@ -7,6 +7,7 @@ import { Pokemons as Pokemons2500 } from "../Data/Niantic/GreatLeague/Overall250
 import { TimelessPokemons } from "../Data/SilphRoad/Meta/Timeless/Overall1500";
 import { FusionPokemons } from "../Data/SilphRoad/Meta/Fusion/Overall1500";
 import { RosePokemons } from "../Data/SilphRoad/Meta/Rose/Overall1500";
+import { ToxicPokemons } from "../Data/SilphRoad/Meta/Toxic/Overall1500";
 import { Type } from "./Type/TypeModel";
 import backUpApi from "../Data/pokedex/pokedex.json"
 import { League } from "../League/League";
@@ -138,6 +139,9 @@ export function useMetaRankedPokemon(meta: Meta, league: League = League.Great) 
           break;
         case Meta.Rose:
           setData(parseFlux(RosePokemons));
+          break;
+        case Meta.Toxic:
+          setData(parseFlux(ToxicPokemons));
           break;
         case Meta.GoBattleLeague:
           if (league === League.Great) {

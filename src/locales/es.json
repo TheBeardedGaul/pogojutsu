@@ -64,7 +64,8 @@
       "YAWN": "Bostezo",
       "TAKE_DOWN": "Derribo",
       "ICE_FANG": "Colmillo Hielo",
-      "HIDDEN_POWER_BUG": "Poder Oculto [Bicho]"
+      "HIDDEN_POWER_BUG": "Poder Oculto [Bicho]",
+      "HIDDEN_POWER_FIGHTING": "Poder Oculto [Lucha]"
     },
     "chargedMoves": {
       "label": "Movimientos cargados",
@@ -196,7 +197,9 @@
       "DRACO_METEOR": "Cometa Draco",
       "DRAINING_KISS": "Beso Drenaje",
       "PSYSTRIKE": "Psystrike",
-      "SHADOW_SNEAK": "Sombra Vil"
+      "SHADOW_SNEAK": "Sombra Vil",
+      "ROCK_WRECKER": "Romperrocas",
+      "WRAP": "Constricción"
     }
   },
   "types": {
@@ -226,6 +229,7 @@
     "timeless": "Timeless Cup",
     "fusion": "Fusion Cup",
     "rose": "Rose Cup",
+    "toxic": "Toxic Cup",
     "gobattle": "Go Battle"
   },
   "leagues": {

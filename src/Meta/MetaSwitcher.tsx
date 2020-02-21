@@ -29,6 +29,11 @@ export const MetaSwitcher: React.FC<MetaSwitcherProps> = ({meta, setMetaFct}) =>
             >
                 {<Translate id={`metas.${Meta.Rose}`} />}
             </div>
+            <div className={getClassNames(meta === Meta.Toxic)}
+                onClick={() => setMetaFct(Meta.Toxic)}
+            >
+                {<Translate id={`metas.${Meta.Toxic}`} />}
+            </div>
         </div>
     );
 }
