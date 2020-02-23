@@ -4,6 +4,7 @@ import axios from "axios";
 import { Meta } from "../Meta/Meta";
 import { Pokemons as Pokemons1500 } from "../Data/Niantic/GreatLeague/Overall1500";
 import { Pokemons as Pokemons2500 } from "../Data/Niantic/GreatLeague/Overall2500";
+import { Pokemons as Pokemons10000 } from "../Data/Niantic/GreatLeague/Overall10000";
 import { TimelessPokemons } from "../Data/SilphRoad/Meta/Timeless/Overall1500";
 import { FusionPokemons } from "../Data/SilphRoad/Meta/Fusion/Overall1500";
 import { RosePokemons } from "../Data/SilphRoad/Meta/Rose/Overall1500";
@@ -146,8 +147,10 @@ export function useMetaRankedPokemon(meta: Meta, league: League = League.Great) 
         case Meta.GoBattleLeague:
           if (league === League.Great) {
             setData(parseFlux(Pokemons1500));
-          } else {
+          } else if (league === League.Master) {
             setData(parseFlux(Pokemons2500));
+          } else {
+            setData(parseFlux(Pokemons10000));
           }
           break;
         default:
