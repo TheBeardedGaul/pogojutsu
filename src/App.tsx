@@ -41,13 +41,16 @@ const App: React.FC = () => {
                   <PokemonListComponent />
                 </Route>
                 <Route exact path={`/${Meta.GoBattleLeague}`}>
-                  <Redirect to={`/${Meta.GoBattleLeague}/${League.Ultra}`} />
+                  <Redirect to={`/${Meta.GoBattleLeague}/${League.Master}`} />
                 </Route>
                 <Route exact path={`/${Meta.GoBattleLeague}/${League.Great}`}>
                   <PokemonListComponent meta={Meta.GoBattleLeague} league={League.Great}/>
                 </Route>
                 <Route exact path={`/${Meta.GoBattleLeague}/${League.Ultra}`}>
                   <PokemonListComponent meta={Meta.GoBattleLeague} league={League.Ultra}/>
+                </Route>
+                <Route exact path={`/${Meta.GoBattleLeague}/${League.Master}`}>
+                  <PokemonListComponent meta={Meta.GoBattleLeague} league={League.Master}/>
                 </Route>
                 <Route exact path={`/${Meta.Rose}`}>
                   <Redirect to={`/${Meta.Rose}/${League.Great}`} />

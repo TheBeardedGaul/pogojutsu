@@ -15,7 +15,7 @@ export interface PokemonListComponentProps {
   league?: League;
 }
 
-export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta = Meta.GoBattleLeague, league = League.Ultra}) => {
+export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta = Meta.GoBattleLeague, league = League.Master}) => {
   const [metaState, setMetaState] = useState<Meta>(meta);
   const [leagueState, setLeagueState] = useState<League>(league);
   const { data, error } = useMetaRankedPokemon(metaState, leagueState);
@@ -79,13 +79,18 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta 
             <Tab {...tab} stopId={League.Ultra} className={getTabClassNames(metaState !== Meta.GoBattleLeague)} onClick={() => leagueChangeHandler(League.Ultra)} disabled={isUltraTabDisabled()}>
               <Translate id={`leagues.ultra`} />
             </Tab>
+            <Tab {...tab} stopId={League.Master} className={getTabClassNames(metaState !== Meta.GoBattleLeague)} onClick={() => leagueChangeHandler(League.Master)} disabled={isUltraTabDisabled()}>
+              <Translate id={`leagues.master`} />
+            </Tab>
             <TabPanel {...tab} stopId={League.Great} className="tabPanel">
               {leagueState === League.Great && (renderPokemons())}
             </TabPanel>
             <TabPanel {...tab} stopId={League.Ultra} className="tabPanel">
               {leagueState === League.Ultra && (renderPokemons())}
             </TabPanel>
-            
+            <TabPanel {...tab} stopId={League.Master} className="tabPanel">
+              {leagueState === League.Master && (renderPokemons())}
+            </TabPanel>
           </TabList>
         </div>
       </>
