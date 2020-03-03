@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useMetaRankedPokemon } from "./Pokemon.hook";
+import { usePvpokeData } from "./Pokemon.hook";
 import { Meta } from "../Meta/Meta";
 import { League } from "../League/League";
 import { PokemonComponent } from "./PokemonComponent";
@@ -18,7 +18,7 @@ export interface PokemonListComponentProps {
 export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta = Meta.GoBattleLeague, league = League.Master}) => {
   const [metaState, setMetaState] = useState<Meta>(meta);
   const [leagueState, setLeagueState] = useState<League>(league);
-  const { data, error } = useMetaRankedPokemon(metaState, leagueState);
+  const { data, error } = usePvpokeData(metaState, leagueState);
   const tab = useTabState({ selectedId: leagueState.toString() });
   const history = useHistory();
 
