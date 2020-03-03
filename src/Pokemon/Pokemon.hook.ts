@@ -2,13 +2,6 @@ import { useState, useEffect } from "react";
 import { Pokemon, PokemonProps, PokemonFlux, PokemonBackUpFlux } from "./Pokemon.model";
 import axios from "axios";
 import { Meta } from "../Meta/Meta";
-import { Pokemons as Pokemons1500 } from "../Data/Niantic/GreatLeague/Overall1500";
-import { Pokemons as Pokemons2500 } from "../Data/Niantic/GreatLeague/Overall2500";
-import { Pokemons as Pokemons10000 } from "../Data/Niantic/GreatLeague/Overall10000";
-import { TimelessPokemons } from "../Data/SilphRoad/Meta/Timeless/Overall1500";
-import { FusionPokemons } from "../Data/SilphRoad/Meta/Fusion/Overall1500";
-import { RosePokemons } from "../Data/SilphRoad/Meta/Rose/Overall1500";
-import { ToxicPokemons } from "../Data/SilphRoad/Meta/Toxic/Overall1500";
 import { Type } from "./Type/TypeModel";
 import backUpApi from "../Data/pokedex/pokedex.json"
 import { League } from "../League/League";
@@ -119,47 +112,28 @@ export function usePokeApi(pokemon: PokemonProps) {
     },
     [pokemon]
   );
-
   return { data, error };
 }
 
-export function useMetaRankedPokemon(meta: Meta, league: League = League.Great) {
+export function usePvpokeData(meta: Meta, league: League = League.Great) {
   const [data, setData] = useState<PokemonProps[]>([]);
   const [error, setError] = useState<string | null>(null);
+
+  const leagueStr = (league === League.Great) ? "1500" : (league === League.Ultra) ? "2500" : "10000";
+  const metaStr = (meta === Meta.GoBattleLeague) ? "all" : meta;
 
   useEffect(
     () => {
       setData([]);
       setError(null);
-      switch (meta) {
-        case Meta.Timeless:
-          setData(parseFlux(TimelessPokemons));
-          break;
-        case Meta.Fusion:
-          setData(parseFlux(FusionPokemons));
-          break;
-        case Meta.Rose:
-          setData(parseFlux(RosePokemons));
-          break;
-        case Meta.Toxic:
-          setData(parseFlux(ToxicPokemons));
-          break;
-        case Meta.GoBattleLeague:
-          if (league === League.Great) {
-            setData(parseFlux(Pokemons1500));
-          } else if (league === League.Master) {
-            setData(parseFlux(Pokemons2500));
-          } else {
-            setData(parseFlux(Pokemons10000));
-          }
-          break;
-        default:
-          setError(`The current Meta ${meta} is not allowed`);
-      }
-    }, [meta, league]
+      axios.get(`https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/${metaStr}/overall/rankings-${leagueStr}.json`).then(apiResult => {
+        setData(parseFlux(apiResult.data))
+      }).catch(apiError => {
+        setError(apiError.message);
+      })
+    }, [metaStr, leagueStr]
   );
-
-  return { data, error };
+  return {data, error};
 }
 
 export function useFormatedTypes(types: Type[]): string {
