@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { usePvpokeData } from "./Pokemon.hook";
 import { Meta } from "../Meta/Meta";
 import { League } from "../League/League";
-import { PokemonComponent } from "./PokemonComponent";
 import { useTabState, Tab, TabList, TabPanel } from "reakit/Tab";
 import { Translate } from "../i18n";
 import "./PokemonListComponent.scss";
 import { MetaSwitcher } from "../Meta/MetaSwitcher";
 import { useHistory } from "react-router-dom";
 import classNames from "classnames";
+import { PokemonCard } from "./PokemonCard";
 
 export interface PokemonListComponentProps {
   meta?: Meta;
@@ -52,7 +52,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta 
         {data.length > 0 && error === null && (
           <div className={"pokemonCardList"}>
           {data.map((element, index) => {
-            return <PokemonComponent key={`${element.speciesId}-${index}`} pokemon={element} rank={index+1} />
+            return <PokemonCard key={`${element.speciesId}-${index}`} pokemon={element} rank={index+1} />
           })}
           </div>
         )}
