@@ -310,5 +310,21 @@
         "sprites": {
             "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/641.png"
         }
+    },
+    {
+        "speciesId": "thundurus_incarnate",
+        "id": 642,
+        "types": ["electric", "flying"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/642.png"
+        }
+    },
+    {
+        "speciesId": "deoxys",
+        "id": 386,
+        "types": ["psychic"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/386.png"
+        }
     }
 ]
