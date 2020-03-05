@@ -23,6 +23,7 @@ export interface Pokemon {
   },
   fastMove: Move;
   chargedMoves: Move[];
+  shadow?: boolean;
 }
 
 export interface PokemonFlux {

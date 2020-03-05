@@ -37,6 +37,7 @@ export const PokemonCard: React.FC<LocalProps> = ({pokemon, rank}) => {
             <div className={styles.cardText}>
               <h1>
                 <Context.Consumer>{value => pokemonTranslate.getName(data.id, (value.lang === "es") ? "en" : value.lang)}</Context.Consumer>
+                {data.shadow && <Translate id="form.Shadow" />}
               </h1>
               <div className={styles.cardMoves}>
                 <Typography className={`${styles.CardMove} ${styles.FirstMove}`}>
