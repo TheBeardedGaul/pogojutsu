@@ -1,6 +1,8 @@
 import React from "react";
 import { useI18n } from "./hooks";
+import Select from '@material-ui/core/Select';
 import classNames from "classnames";
+import { MenuItem } from "@material-ui/core";
 
 const langs = {
   en: "English",
@@ -22,16 +24,16 @@ const LanguageSwitcher: React.FC = () => {
   
   return (
     <div className="languageButtonContainer">
-      {Object.keys(langs).map((langKey: string) => (
-        <div
-          className={getClassNames(lang === (langKey as  "fr" | "en" | "es") )}
-          key={langKey}
-          // style={{ borderStyle: lang === langKey ? "inset" : "outset" }}
-          onClick={() => setLang((langKey as  "fr" | "en" | "es"))}
-        >
-          {(langs as any)[langKey]}
-        </div>
-      ))}
+      <Select
+        labelId="selectLanguage"
+        id="selectLanguage"
+        value={lang}
+        onChange={(event) =>  setLang((event.target.value as  "fr" | "en" | "es"))}
+      >
+          {Object.keys(langs).map((langKey: string) => (
+             <MenuItem value={langKey}>{(langs as any)[langKey]}</MenuItem>
+          ))}
+      </Select>
     </div>
   );
 };
