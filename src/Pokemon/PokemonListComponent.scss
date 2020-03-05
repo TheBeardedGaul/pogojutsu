@@ -1,8 +1,12 @@
 .tabContainer {
+    margin-top: 1em;
     .tabList {
         .tab[aria-selected="true"] {
             box-shadow: #61dafb 0 0px 20px;
             color: white;
         }
+    }
+    .tabPanel {
+        margin-top: 1em;
     }
 }

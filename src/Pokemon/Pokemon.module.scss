@@ -1,15 +1,20 @@
 .pokemonCard {
-  overflow: hidden;
-  margin: 0.5em;
-  padding: 1em;
-  height: 18em;
-  width: 18em;
-  border-radius: 50%;
-  border-color: #61dafb;
-  border-style: solid;
-  color: #fff;
-  text-align: center;
-  box-shadow: #61dafb 0 0px 20px;
+  // overflow: hidden;
+  // margin: 0.5em;
+  // padding: 1em;
+  // height: 18em;
+  // width: 18em;
+  // border-radius: 50%;
+  // border-color: #61dafb;
+  // border-style: solid;
+  // color: #fff;
+  // text-align: center;
+  // box-shadow: #61dafb 0 0px 20px;
+
+  .CardContent {
+    display: flex !important;
+    padding: 0.5em !important;
+  }
 
   .cardTypes {
     border: solid 0.5px;
@@ -17,8 +22,10 @@
   }
 
   h1 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     text-transform: capitalize;
+    margin: 0em;
+    width: -webkit-fill-available;
   }
   h2 {
     font-size: 1em;
@@ -29,23 +36,40 @@
     height: 96px;
   }
   .cardImage {
-    width: 70%;
+  }
+  .cardText {
+    width: -webkit-fill-available;
   }
   .cardMoves {
     width: 140%;
-    text-align: left;
+    text-align: center;
+    color: lightgrey;
+    display: inline;
+
+    .CardMove {
+      font-size: 0.9rem !important;
+    }
+    .FirstMove {
+      padding-top: 0.4em;
+    }
+  }
+  .CardBottom {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    color: lightgrey;
     font-size: smaller;
-    
-    p {
-      border: solid 0.5px;
-      border-radius: 10px;
-      padding-left: 1em;
-      padding-right: 1em;
-      width: fit-content;
+    .rank {
+      color: #61dafb;
+      text-align: left;
+    }
+    .types {
+      text-align: center;
+    }
+    .score {
+      text-align: right;
     }
   }
   .error {
     color: #ff9f9f;
   }
-
 }

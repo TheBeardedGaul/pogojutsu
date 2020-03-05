@@ -116,20 +116,15 @@
   border: solid 0.5px #61dafb;
 }
 
-.rank {
-  color: #61dafb;
-  font-size: smaller;
-}
-
-.RankData {
-  color: white;
-}
-
 .CardBody {
   display: grid;
   /* grid-auto-columns: 100px; */
   text-align: left;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.MuiPaper-root {
+  background-color: #343d4e !important;
 }
 
 .languageButtonContainer {
