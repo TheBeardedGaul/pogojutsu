@@ -30,9 +30,10 @@ const App: React.FC = () => {
               </div>
               <div />
               <div />
+              <div />
+              <LanguageSwitcher />
             </header>
             <body className="AppBody">
-              <LanguageSwitcher />
               <Switch>
                 <Route exact path="/">
                   <Redirect to="/home" />
