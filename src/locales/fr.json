@@ -223,6 +223,9 @@
     "Dark": "Ténèbre",
     "Unknown": "Inconnu"
   },
+  "form": {
+    "Shadow": " Obscur"
+  },
   "metas": {
     "sinister": "Coupe Sinistre",
     "ferocious": "Coupe Féroce",

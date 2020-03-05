@@ -176,6 +176,14 @@
         }
     },
     {
+        "speciesId": "porygon_z_shadow",
+        "id": 474,
+        "types": ["normal"],
+        "sprites": {
+            "front_default": "https://thesilphroad.com/img/pokemon/icons/96x96/474.png"
+        }
+    },
+    {
         "speciesId": "darmanitan_standard",
         "id": 555,
         "types": ["fire"],

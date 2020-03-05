@@ -223,6 +223,9 @@
     "Fairy": "Hada",
     "Unknown": "Desconocido"
   },
+  "form": {
+    "Shadow": " Shadow"
+  },
   "metas": {
     "sinister": "Sinister Cup",
     "ferocious": "Ferocious Cup",

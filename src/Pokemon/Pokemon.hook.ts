@@ -90,11 +90,12 @@ export function usePokeApi(pokemon: PokemonProps) {
       setError(null);
       // API call
       axios
-        .get(`https://pokeapi.co/api/v2/pokemon/${pokemon.speciesId}/`)
+        .get(`https://pokeapi.co/api/v2/pokemon/${pokemon.speciesId.replace("_shadow", "")}/`)
         // Modification du state avec la réponse de l'API
         .then(apiResult => {
           const resultTypes = getPokemonType(apiResult.data["types"] as []);
-          const result: Pokemon = {id: apiResult.data["id"], speciesId: pokemon.speciesId, score: pokemon.score, sprites: apiResult.data["sprites"], types: resultTypes, fastMove: pokemon.fastMove, chargedMoves: pokemon.chargedMoves};
+          const isShadow: boolean = pokemon.speciesId.indexOf("_shadow") > -1;
+          const result: Pokemon = {id: apiResult.data["id"], speciesId: pokemon.speciesId, score: pokemon.score, sprites: apiResult.data["sprites"], types: resultTypes, fastMove: pokemon.fastMove, chargedMoves: pokemon.chargedMoves, shadow: isShadow};
           setData(result);
         })
         // Gestion des erreurs
