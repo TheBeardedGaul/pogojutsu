@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Pokemon.module.scss";
 import { PokemonProps, Pokemon } from "./Pokemon.model";
-import { usePokeApi /*, useFormatedTypes*/ } from "./Pokemon.hook";
+import { usePokeApi } from "./Pokemon.hook";
 import pokemonTranslate from "pokemon";
 import { Translate } from "../i18n";
 import Context from "../i18n/context";
@@ -24,7 +24,6 @@ interface LocalProps {
 
 export const PokemonCard: React.FC<LocalProps> = ({pokemon, rank}) => {
   const { data, error } = usePokeApi(pokemon);
-  // const formatedTypes = useFormatedTypes((data) ? data.types : []);
 
   return (
     <Card className={styles.pokemonCard}>
@@ -33,11 +32,13 @@ export const PokemonCard: React.FC<LocalProps> = ({pokemon, rank}) => {
         {renderLoader(data, error, pokemon.speciesId)}
         {data !== undefined && (
           <>
-            <img className={styles.cardImage} src={data.sprites.front_default} alt="Sprite" />
+            <div className={styles.CardImage}>
+              <img src={data.sprites.front_default} alt="Sprite" />
+              {data && data.shadow && <img className={styles.ShadowIcon} src="https://silph.gg/img/icon-shadow-purple.png" alt={"shadow"}/>}
+            </div>
             <div className={styles.cardText}>
               <h1>
                 <Context.Consumer>{value => pokemonTranslate.getName(data.id, (value.lang === "es") ? "en" : value.lang)}</Context.Consumer>
-                {data.shadow && <Translate id="form.Shadow" />}
               </h1>
               <div className={styles.cardMoves}>
                 <Typography className={`${styles.CardMove} ${styles.FirstMove}`}>

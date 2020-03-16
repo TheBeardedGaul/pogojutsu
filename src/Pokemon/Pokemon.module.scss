@@ -35,7 +35,15 @@
     width: 96px;
     height: 96px;
   }
-  .cardImage {
+  .ShadowIcon {
+    position: absolute;
+    height: 30px;
+    width: 25px;
+    top: 4em;
+    left: 0em;
+  }
+  .CardImage {
+    position: relative
   }
   .cardText {
     width: -webkit-fill-available;
