@@ -54,7 +54,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta 
     
     return (
       <>
-        <div>
+        <div className="InnerMenu">
           <MetaSwitcher meta={metaState} setMetaFct={metaChangeHandler} />
           <LeagueSwitcher meta={metaState} league={leagueState} setLeagueFct={leagueChangeHandler} />
         </div>
