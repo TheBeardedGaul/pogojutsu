@@ -1,7 +1,7 @@
 import React from "react";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import Link from '@material-ui/core/Link';
-import { ListItem, ListItemAvatar, Avatar, ListItemText, ListItemIcon } from "@material-ui/core";
+import { ListItem, ListItemText, ListItemIcon } from "@material-ui/core";
 
 export const FooterComponent: React.FC = () => {
     return (
