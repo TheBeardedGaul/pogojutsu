@@ -1,5 +1,5 @@
 .tabContainer {
-    margin-top: 1em;
+    margin-top: 6.5em;
     max-width: 60%;
     .tabList {
         .tab[aria-selected="true"] {
@@ -10,4 +10,14 @@
     .tabPanel {
         margin-top: 1em;
     }
+}
+
+.InnerMenu {
+    position: fixed;
+    top: 3.0em;
+    background-color: #282c34;
+    width: 100%;
+    height: 3em;
+    z-index: 1;
+    padding-top: 0.5em;
 }
