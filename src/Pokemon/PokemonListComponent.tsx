@@ -7,6 +7,7 @@ import { MetaSwitcher } from "../Meta/MetaSwitcher";
 import { useHistory } from "react-router-dom";
 import { PokemonCard } from "./PokemonCard";
 import { LeagueSwitcher } from "../League/LeagueSwitcher";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export interface PokemonListComponentProps {
   meta?: Meta;
@@ -18,6 +19,8 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta 
   const [leagueState, setLeagueState] = useState<League>(league);
   const { data, error } = usePvpokeData(metaState, leagueState);
   const history = useHistory();
+
+  const displayProgress: boolean = (!data || data.length <= 1);
 
   function metaChangeHandler(meta: Meta) {
     setMetaState(meta);
@@ -33,6 +36,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({meta 
   function renderPokemons(): JSX.Element {
     return (
       <>
+        {displayProgress && (<CircularProgress />)}
         {data.length > 0 && error === null && (
           <div className={"pokemonCardList"}>
           {data.map((element, index) => {
