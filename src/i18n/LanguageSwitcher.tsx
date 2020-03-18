@@ -21,7 +21,7 @@ const LanguageSwitcher: React.FC = () => {
         onChange={(event) =>  setLang((event.target.value as  "fr" | "en" | "es"))}
       >
           {Object.keys(langs).map((langKey: string) => (
-             <MenuItem value={langKey}>{(langs as any)[langKey]}</MenuItem>
+             <MenuItem className="TextSelect" value={langKey}>{(langs as any)[langKey]}</MenuItem>
           ))}
       </Select>
     </div>

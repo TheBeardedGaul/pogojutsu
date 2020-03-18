@@ -159,3 +159,10 @@
 .PaddingRight {
   padding-right: 0.25em;
 }
+
+.TextSelect {
+  color: #61dafb !important;
+  .MuiSelect-icon {
+      color: #61dafb !important;
+  }
+}

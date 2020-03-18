@@ -13,15 +13,15 @@ export const MetaSwitcher: React.FC<MetaSwitcherProps> = ({meta, setMetaFct}) =>
 
     return (
              <Select
-                className="MetaSelect"
+                className="TextSelect"
                 labelId="selectMeta"
                 id="selectMeta"
                 value={meta}
                 onChange={(event) =>  setMetaFct((event.target.value as  Meta))}
             >
-                <MenuItem className="MetaSelect" value={Meta.GoBattleLeague}>{<Translate id={`metas.${Meta.GoBattleLeague}`} />}</MenuItem>
-                <MenuItem className="MetaSelect" value={Meta.Rose}>{<Translate id={`metas.${Meta.Rose}`} />}</MenuItem>
-                <MenuItem className="MetaSelect" value={Meta.Toxic}>{<Translate id={`metas.${Meta.Toxic}`} />}</MenuItem>
+                <MenuItem className="TextSelect" value={Meta.GoBattleLeague}>{<Translate id={`metas.${Meta.GoBattleLeague}`} />}</MenuItem>
+                <MenuItem className="TextSelect" value={Meta.Rose}>{<Translate id={`metas.${Meta.Rose}`} />}</MenuItem>
+                <MenuItem className="TextSelect" value={Meta.Toxic}>{<Translate id={`metas.${Meta.Toxic}`} />}</MenuItem>
             </Select>
     );
 }
