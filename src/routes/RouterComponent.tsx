@@ -50,6 +50,18 @@ export const RouterComponent: React.FC = props => {
             <Route exact path={`/${Meta.Toxic}/${League.Master}`}>
                 <Redirect to={`/${Meta.Toxic}/${League.Great}`} />
             </Route>
+            <Route exact path={`/${Meta.Voyager}`}>
+                <Redirect to={`/${Meta.Voyager}/${League.Great}`} />
+            </Route>
+            <Route exact path={`/${Meta.Voyager}/${League.Great}`}>
+                <PokemonListComponent meta={Meta.Voyager} league={League.Great}/>
+            </Route>
+            <Route exact path={`/${Meta.Voyager}/${League.Ultra}`}>
+                <Redirect to={`/${Meta.Voyager}/${League.Great}`} />
+            </Route>
+            <Route exact path={`/${Meta.Voyager}/${League.Master}`}>
+                <Redirect to={`/${Meta.Voyager}/${League.Great}`} />
+            </Route>
         </Switch>
     )
 }

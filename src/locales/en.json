@@ -65,7 +65,8 @@
       "TAKE_DOWN": "Take Down",
       "ICE_FANG": "Ice Fang",
       "HIDDEN_POWER_BUG": "Hidden Power [Bug]",
-      "HIDDEN_POWER_FIGHTING": "Hidden Power [Fighting]"
+      "HIDDEN_POWER_FIGHTING": "Hidden Power [Fighting]",
+      "HIDDEN_POWER_WATER": "Hidden Power [Water]"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -199,7 +200,8 @@
       "PSYSTRIKE": "Psystrike",
       "SHADOW_SNEAK": "Shadow Sneak",
       "ROCK_WRECKER": "Rock Wrecker",
-      "WRAP": "Wrap"
+      "WRAP": "Wrap",
+      "FRUSTRATION": "Frustration"
     }
   },
   "types": {
@@ -233,6 +235,7 @@
     "fusion": "Fusion Cup",
     "rose": "Rose Cup",
     "toxic": "Toxic Cup",
+    "voyager": "Voyager Cup",
     "gobattle": "Go Battle"
   },
   "leagues": {

@@ -41,14 +41,6 @@ export const I18nProvider: React.FC<I18nProviderProps> = ({
   return <Context.Provider value={value}>{children}</Context.Provider>;
 };
 
-// Composant pour afficher un texte traduit à partir d'un id
-/* Exemple :
-    const Form = () => (
-      <button>
-        <Translate id="button" />
-      </button>
-    )
-*/
 export const Translate: React.FC<ITranslateProps> = ({ id }) => (
   <Context.Consumer>{value => value.translate(id)}</Context.Consumer>
 );

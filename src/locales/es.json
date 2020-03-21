@@ -65,7 +65,8 @@
       "TAKE_DOWN": "Derribo",
       "ICE_FANG": "Colmillo Hielo",
       "HIDDEN_POWER_BUG": "Poder Oculto [Bicho]",
-      "HIDDEN_POWER_FIGHTING": "Poder Oculto [Lucha]"
+      "HIDDEN_POWER_FIGHTING": "Poder Oculto [Lucha]",
+      "HIDDEN_POWER_WATER": "Poder Oculto [Agua]"
     },
     "chargedMoves": {
       "label": "Movimientos cargados",
@@ -199,7 +200,8 @@
       "PSYSTRIKE": "Psystrike",
       "SHADOW_SNEAK": "Sombra Vil",
       "ROCK_WRECKER": "Romperrocas",
-      "WRAP": "Constricción"
+      "WRAP": "Constricción",
+      "FRUSTRATION": "Frustración"
     }
   },
   "types": {
@@ -233,6 +235,7 @@
     "fusion": "Fusion Cup",
     "rose": "Rose Cup",
     "toxic": "Toxic Cup",
+    "voyager": "Voyager Cup",
     "gobattle": "Go Battle"
   },
   "leagues": {

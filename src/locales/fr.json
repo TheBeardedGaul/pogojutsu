@@ -65,7 +65,8 @@
       "TAKE_DOWN": "Bélier",
       "ICE_FANG": "Crocs Givre",
       "HIDDEN_POWER_BUG": "Puissance Cachée [Insècte]",
-      "HIDDEN_POWER_FIGHTING": "Puissance Cachée [Combat]"
+      "HIDDEN_POWER_FIGHTING": "Puissance Cachée [Combat]",
+      "HIDDEN_POWER_WATER": "Puissance Cachée [Eau]"
     },
     "chargedMoves": {
       "label": "Attaques chargées",
@@ -199,7 +200,8 @@
       "PSYSTRIKE": "Frappe Psy",
       "SHADOW_SNEAK": "Ombre Portée",
       "ROCK_WRECKER": "Roc-Boulet",
-      "WRAP": "Ligotage"
+      "WRAP": "Ligotage",
+      "FRUSTRATION": "Frustration"
     }
   },
   "types": {
@@ -233,6 +235,7 @@
     "fusion": "Coupe Fusion",
     "rose": "Coupe Rose",
     "toxic": "Coupe Toxique",
+    "voyager": "Coupe Voyageur",
     "gobattle": "Go Battle"
   },
   "leagues": {
