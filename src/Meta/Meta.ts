@@ -5,5 +5,6 @@ export enum Meta {
     Fusion = "fusion",
     Rose = "rose",
     Toxic = "toxic",
+    Voyager = "voyager",
     GoBattleLeague = "gobattle"
 }

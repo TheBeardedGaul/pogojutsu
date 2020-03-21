@@ -326,6 +326,13 @@
         "sprites": {
             "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/642.png"
         }
+    },{
+        "speciesId": "landorus_incarnate",
+        "id": 645,
+        "types": ["ground", "flying"],
+        "sprites": {
+            "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/645.png"
+        }
     },
     {
         "speciesId": "deoxys",

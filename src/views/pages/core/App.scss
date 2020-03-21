@@ -55,11 +55,9 @@
   text-align: left;
   font-size: smaller;
   
-}
-
-.FooterCredits {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  a {
+    padding-left: 0.25em;
+  }
 }
 
 .FooterBottom {
@@ -68,19 +66,18 @@
   width: 100%;
 }
 
-.CreditsPartOne, .CreditsPartTwo, .CreditsPartThree {
-  height: 12em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  margin-left: 5em;
+.FooterCredits {
+  // margin-top: 1em;
+  // margin-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
-.CreditsPartOne, .CreditsPartTwo {
-  border-right: #61dafb dashed 0.5px;
-}
+// .CreditsPartTwo {
+//   border-left: #61dafb dashed 0.5px;
+// }
 
 .pokemonCardList {
-  /* max-width: 1200px; */
   margin: 0 auto;
   display: grid;
   gap: 1rem;
@@ -153,4 +150,19 @@
 .selectedButton {
   box-shadow: #61dafb 0 0px 20px;
   color: white;
+}
+
+.MuiSvgIcon-colorPrimary, .MuiTypography-colorPrimary {
+  color: #61dafb !important;
+}
+
+.PaddingRight {
+  padding-right: 0.25em;
+}
+
+.TextSelect {
+  color: #61dafb !important;
+  .MuiSelect-icon {
+      color: #61dafb !important;
+  }
 }
