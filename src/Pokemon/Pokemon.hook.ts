@@ -152,7 +152,11 @@ function parsePokemon(pokemonToParse: PokemonFlux): PokemonProps {
   const movesArray = pokemonToParse.moveStr.split("-");
   (pokemonToParse.moves.fastMoves as []).sort((a,b) => (a["moveId"] > b["moveId"]) ? 1 : ((b["moveId"] > a["moveId"]) ? -1 : 0));
   (pokemonToParse.moves.chargedMoves as []).sort((a,b) => (a["moveId"] > b["moveId"]) ? 1 : ((b["moveId"] > a["moveId"]) ? -1 : 0));
-  const fastMove = pokemonToParse.moves.fastMoves[+movesArray[0]];
+  let fastMoveIndexToUse = +movesArray[0];
+  if (fastMoveIndexToUse >= pokemonToParse.moves.fastMoves.length) {
+    fastMoveIndexToUse = fastMoveIndexToUse-1;
+  }
+  const fastMove = pokemonToParse.moves.fastMoves[fastMoveIndexToUse];
   const chargedMoves: any[] = [];
   chargedMoves.push(pokemonToParse.moves.chargedMoves[Number.parseInt(movesArray[1])-1]);
   chargedMoves.push(pokemonToParse.moves.chargedMoves[Number.parseInt(movesArray[2])-1]);
