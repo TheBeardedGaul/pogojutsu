@@ -6,5 +6,6 @@ export enum Meta {
     Rose = "rose",
     Toxic = "toxic",
     Voyager = "voyager",
+    Forest = "forest",
     GoBattleLeague = "gobattle"
 }
