@@ -9,7 +9,7 @@ export interface PokemonProps {
   sprites?: {
     front_default: string;
   };
-  fastMove: Move;
+  fastMoves: Move[];
   chargedMoves: Move[];
 }
 
@@ -17,10 +17,10 @@ export interface Pokemon {
   speciesId: string;
   id: number;
   score: number;
-  types: Type [];
+  types: Type[];
   sprites: {
     front_default: string;
-  },
+  };
   fastMove: Move;
   chargedMoves: Move[];
   shadow?: boolean;
@@ -30,23 +30,23 @@ export interface PokemonFlux {
   speciesId: string;
   speciesName: string;
   matchups: {
-      opponent: string;
-      rating: number;
-      opRating: number;
+    opponent: string;
+    rating: number;
+    opRating: number;
   }[];
   counters: {
-      opponent: string;
-      rating: number;
-      opRating: number;
+    opponent: string;
+    rating: number;
+    opRating: number;
   }[];
   moves: {
     fastMoves: any[];
     chargedMoves: any[];
-  }
+  };
   moveStr: string;
   score: number;
   scores: number[];
-};
+}
 
 export interface PokemonBackUpFlux {
   speciesId: string;
@@ -54,5 +54,5 @@ export interface PokemonBackUpFlux {
   types: string[];
   sprites: {
     front_default: string;
-  }
+  };
 }

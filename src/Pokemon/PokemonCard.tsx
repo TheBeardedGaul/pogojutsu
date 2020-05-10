@@ -6,9 +6,9 @@ import pokemonTranslate from "pokemon";
 import { Translate } from "../i18n";
 import Context from "../i18n/context";
 import { Type } from "./Type/TypeModel";
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
+import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
+import CardContent from "@material-ui/core/CardContent";
 import { Typography } from "@material-ui/core";
 /*
   Ce composant sert à charger et à afficher les informations d'un Pokemon
@@ -19,14 +19,27 @@ import { Typography } from "@material-ui/core";
 
 interface LocalProps {
   pokemon: PokemonProps;
-  rank: number;
+  rank?: number;
+  onClickPokemonPageHandler?: (
+    event: React.MouseEvent,
+    pokemon: PokemonProps
+  ) => void;
 }
 
-export const PokemonCard: React.FC<LocalProps> = ({pokemon, rank}) => {
+export const PokemonCard: React.FC<LocalProps> = ({
+  pokemon,
+  rank,
+  onClickPokemonPageHandler,
+}) => {
   const { data, error } = usePokeApi(pokemon);
+  function defaultOnClick(
+    event: React.MouseEvent,
+    pokemon: PokemonProps
+  ): void {}
+  const onClickHandler = onClickPokemonPageHandler || defaultOnClick;
 
   return (
-    <Card className={styles.pokemonCard}>
+    <Card className={`${styles.pokemonCard} pokemonCard`}>
       <CardContent className={styles.CardContent}>
         {renderError(error, pokemon.speciesId)}
         {renderLoader(data, error, pokemon.speciesId)}
@@ -34,21 +47,40 @@ export const PokemonCard: React.FC<LocalProps> = ({pokemon, rank}) => {
           <>
             <div className={styles.CardImage}>
               <img src={data.sprites.front_default} alt="Sprite" />
-              {data && data.shadow && <img className={styles.ShadowIcon} src="https://silph.gg/img/icon-shadow-purple.png" alt={"shadow"}/>}
+              {data && data.shadow && (
+                <img
+                  className={styles.ShadowIcon}
+                  src="https://silph.gg/img/icon-shadow-purple.png"
+                  alt={"shadow"}
+                />
+              )}
             </div>
             <div className={styles.cardText}>
-              <h1>
-                <Context.Consumer>{value => pokemonTranslate.getName(data.id, (value.lang === "es") ? "en" : value.lang)}</Context.Consumer>
+              <h1 onClick={(event) => onClickHandler(event, pokemon)}>
+                <Context.Consumer>
+                  {(value) =>
+                    pokemonTranslate.getName(
+                      data.id,
+                      value.lang === "es" ? "en" : value.lang
+                    )
+                  }
+                </Context.Consumer>
               </h1>
               <div className={styles.cardMoves}>
-                <Typography className={`${styles.CardMove} ${styles.FirstMove}`}>
+                <Typography
+                  className={`${styles.CardMove} ${styles.FirstMove}`}
+                >
                   <Translate id={`moves.fastMoves.${data.fastMove.name}`} />
                 </Typography>
                 <Typography className={styles.CardMove}>
-                  <Translate id={`moves.chargedMoves.${data.chargedMoves[0].name}`} />
+                  <Translate
+                    id={`moves.chargedMoves.${data.chargedMoves[0].name}`}
+                  />
                 </Typography>
                 <Typography className={styles.CardMove}>
-                  <Translate id={`moves.chargedMoves.${data.chargedMoves[1].name}`} />
+                  <Translate
+                    id={`moves.chargedMoves.${data.chargedMoves[1].name}`}
+                  />
                 </Typography>
               </div>
             </div>
@@ -56,28 +88,31 @@ export const PokemonCard: React.FC<LocalProps> = ({pokemon, rank}) => {
         )}
       </CardContent>
       <CardActions className={styles.CardBottom}>
-        <div className={styles.rank}>
-          #{rank}
-        </div>
+        <div className={styles.rank}>#{rank}</div>
         <div className={styles.types}>
-          {
-            data && data.types.map((element: Type, index: number) => {
+          {data &&
+            data.types.map((element: Type, index: number) => {
               return (
                 <>
-                  {(index > 0) ? " / " : ""}
-                  <Translate key={`${element.toString()}-${index}}`} id={`types.${element.toString()}`} />
+                  {index > 0 ? " / " : ""}
+                  <Translate
+                    key={`${element.toString()}-${index}}`}
+                    id={`types.${element.toString()}`}
+                  />
                 </>
               );
-            })
-          }
+            })}
         </div>
         <div className={styles.score}>
-          {data && ((data.score.toString().length !==2) ? `${data.score}%` : `${data.score}.0%`)}
+          {data &&
+            (data.score.toString().length !== 2
+              ? `${data.score}%`
+              : `${data.score}.0%`)}
         </div>
       </CardActions>
-  </Card>
+    </Card>
   );
-}
+};
 
 function renderError(error: string | null, speciesId: string): JSX.Element {
   return (
@@ -90,10 +125,14 @@ function renderError(error: string | null, speciesId: string): JSX.Element {
         </div>
       )}
     </>
-  )
+  );
 }
 
-function renderLoader(data: Pokemon | undefined, error: string | null, speciesId: string): JSX.Element {
+function renderLoader(
+  data: Pokemon | undefined,
+  error: string | null,
+  speciesId: string
+): JSX.Element {
   return (
     <>
       {data === undefined && error === null && (

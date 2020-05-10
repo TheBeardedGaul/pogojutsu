@@ -2,12 +2,12 @@
   "title": "PVP is my Nindo!",
   "moves": {
     "fastMoves": {
-      "label": "Fast move",
+      "label": "Fast moves",
       "VINE_WHIP": "Vine Whip",
       "DRAGON_BREATH": "Dragon Breath",
       "FIRE_SPIN": "Fire Spin",
       "BITE": "Bite",
-      "POISON_JAB":"Poison Jab",
+      "POISON_JAB": "Poison Jab",
       "ICE_SHARD": "Ice Shard",
       "CONFUSION": "Confusion",
       "COUNTER": "Counter",

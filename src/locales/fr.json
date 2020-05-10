@@ -2,12 +2,12 @@
   "title": "Le PVP, c'est mon Nindo !",
   "moves": {
     "fastMoves": {
-      "label": "Attaque rapide",
+      "label": "Attaques rapides",
       "VINE_WHIP": "Fouet Lianes",
       "DRAGON_BREATH": "Dracosouffle",
       "FIRE_SPIN": "Danse Flamme",
       "BITE": "Morsure",
-      "POISON_JAB":"Direct Toxik",
+      "POISON_JAB": "Direct Toxik",
       "ICE_SHARD": "Éclats Glace",
       "CONFUSION": "Choc Mental",
       "COUNTER": "Riposte",
