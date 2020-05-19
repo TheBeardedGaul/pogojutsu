@@ -5,7 +5,8 @@
   line-height: 1.7; */
 }
 
-.AppHeader, .AppBody {
+.AppHeader,
+.AppBody {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,7 +17,6 @@
   font-feature-settings: "liga" 0;
   line-height: 1.7;
 }
-
 
 .AppBody {
   padding-bottom: 1em;
@@ -43,7 +43,9 @@
   float: left;
 }
 
-.AppLink, h1 {
+.AppLink,
+h1,
+h2 {
   color: #61dafb;
 }
 
@@ -54,7 +56,7 @@
   box-shadow: black 0 0px 10px;
   text-align: left;
   font-size: smaller;
-  
+
   a {
     padding-left: 0.25em;
   }
@@ -84,19 +86,27 @@
 }
 
 @media (max-width: 800px) {
-  .AppLogo h1 {margin-left: 1em;}
+  .AppLogo h1 {
+    margin-left: 1em;
+  }
 }
 
 @media (min-width: 800px) {
-  .pokemonCardList {grid-template-columns: repeat(2, 1fr);}
+  .pokemonCardList {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 1100px) {
-  .pokemonCardList {grid-template-columns: repeat(3, 1fr);}
+  .pokemonCardList {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 1500px) {
-  .pokemonCardList {grid-template-columns: repeat(4, 1fr);}
+  .pokemonCardList {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 .BadgeContainer {
@@ -152,7 +162,8 @@
   color: white;
 }
 
-.MuiSvgIcon-colorPrimary, .MuiTypography-colorPrimary {
+.MuiSvgIcon-colorPrimary,
+.MuiTypography-colorPrimary {
   color: #61dafb !important;
 }
 
@@ -163,6 +174,6 @@
 .TextSelect {
   color: #61dafb !important;
   .MuiSelect-icon {
-      color: #61dafb !important;
+    color: #61dafb !important;
   }
 }

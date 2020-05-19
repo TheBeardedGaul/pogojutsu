@@ -10,6 +10,7 @@ interface MovesCardProps {
 }
 
 export const MovesCard: React.FC<MovesCardProps> = ({ movesType, moves }) => {
+  const sortMoves = moves.sort((moveA, moveB) => moveB.uses - moveA.uses);
   return (
     <Card className="movesCard">
       <CardContent className="CardContent">
@@ -18,11 +19,14 @@ export const MovesCard: React.FC<MovesCardProps> = ({ movesType, moves }) => {
             <Translate id={`moves.${movesType}.label`} />
           </h2>
           <div className="cardMoves">
-            {moves.map((moveElement: Move) => {
+            {sortMoves.map((moveElement: Move) => {
               return (
                 <>
-                  <Typography className={`CardMove FirstMove`}>
+                  <Typography className={`CardMove`}>
                     <Translate id={`moves.${movesType}.${moveElement.name}`} />
+                    <div className="percentageMoveUsing">
+                      {`${getPercentageOfUse(moves, moveElement)}%`}
+                    </div>
                   </Typography>
                 </>
               );
@@ -33,3 +37,11 @@ export const MovesCard: React.FC<MovesCardProps> = ({ movesType, moves }) => {
     </Card>
   );
 };
+
+function getPercentageOfUse(moves: Move[], currentMove: Move): number {
+  let total = 0;
+  moves.forEach((element) => {
+    total = total + element.uses;
+  });
+  return Math.round((currentMove.uses / total) * 100);
+}

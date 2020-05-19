@@ -240,11 +240,15 @@ function getFastMoves(
   if (speciesId && fastMoves) {
     let moves: Move[] = [];
     fastMoves.forEach((element: any) =>
-      moves.push({ name: element.moveId, type: Type.Unknown })
+      moves.push({
+        name: element.moveId,
+        type: Type.Unknown,
+        uses: element.uses,
+      })
     );
     return moves;
   } else {
-    return [{ name: fastMove.moveId, type: Type.Unknown }];
+    return [{ name: fastMove.moveId, type: Type.Unknown, uses: fastMove.uses }];
   }
 }
 
@@ -256,13 +260,25 @@ function getChargedMoves(
   if (speciesId && chargedMovesPool) {
     let moves: Move[] = [];
     chargedMovesPool.forEach((element: any) =>
-      moves.push({ name: element.moveId, type: Type.Unknown })
+      moves.push({
+        name: element.moveId,
+        type: Type.Unknown,
+        uses: element.uses,
+      })
     );
     return moves;
   } else {
     return [
-      { name: chargedMoves[0].moveId, type: Type.Unknown },
-      { name: chargedMoves[1].moveId, type: Type.Unknown },
+      {
+        name: chargedMoves[0].moveId,
+        type: Type.Unknown,
+        uses: chargedMoves[0].uses,
+      },
+      {
+        name: chargedMoves[1].moveId,
+        type: Type.Unknown,
+        uses: chargedMoves[1].uses,
+      },
     ];
   }
 }

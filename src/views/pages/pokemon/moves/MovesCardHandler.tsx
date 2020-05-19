@@ -1,30 +1,21 @@
 import React from "react";
-import { League } from "../../../../League/League";
-import { Meta } from "../../../../Meta/Meta";
 import { MovesCard } from "./MovesCard";
+import { Move } from "../../../../Pokemon/Move/MoveModel";
 import "./MovesCard.scss";
-import { usePvpokeData } from "../../../../Pokemon/Pokemon.hook";
 
 interface MovesCardHandlerProps {
-  speciesId: string;
-  meta: Meta;
-  league: League;
+  fastMoves: Move[];
+  chargedMoves: Move[];
 }
 
 export const MovesCardHandler: React.FC<MovesCardHandlerProps> = ({
-  speciesId,
-  meta,
-  league,
+  fastMoves,
+  chargedMoves,
 }) => {
-  const { data, error } = usePvpokeData(meta, league, speciesId);
   return (
     <div className="MovesCard">
-      {data && data[0] && (
-        <>
-          <MovesCard movesType="fastMoves" moves={data[0].fastMoves} />
-          <MovesCard movesType="chargedMoves" moves={data[0].chargedMoves} />
-        </>
-      )}
+      <MovesCard movesType="fastMoves" moves={fastMoves} />
+      <MovesCard movesType="chargedMoves" moves={chargedMoves} />
     </div>
   );
 };

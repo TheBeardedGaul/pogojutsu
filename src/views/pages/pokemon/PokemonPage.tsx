@@ -1,11 +1,11 @@
 import React from "react";
 import { PokemonCard } from "../../../Pokemon/PokemonCard";
-import { PokemonProps } from "../../../Pokemon/Pokemon.model";
-import { useHistory, RouteComponentProps } from "react-router-dom";
+import { RouteComponentProps } from "react-router-dom";
 import { League } from "../../../League/League";
 import { Meta } from "../../../Meta/Meta";
 import "./PokemonPage.scss";
 import { MovesCardHandler } from "./moves/MovesCardHandler";
+import { usePvpokeData } from "../../../Pokemon/Pokemon.hook";
 
 type PokemonPageProps = RouteComponentProps<{
   speciesId: string;
@@ -14,18 +14,22 @@ type PokemonPageProps = RouteComponentProps<{
 }>;
 
 export const PokemonPage: React.FC<PokemonPageProps> = (props) => {
-  const history = useHistory();
-  const pokemonFromHistory: any = history.location.state;
-  //   const pokemonFromURL: PokemonProps = props.match.params as PokemonPageProps;
-  const pokemon: PokemonProps = pokemonFromHistory.pokemon as PokemonProps;
+  const { data } = usePvpokeData(
+    props.match.params.meta,
+    props.match.params.league,
+    props.match.params.speciesId
+  );
   return (
     <div className="PokemonPage">
-      <PokemonCard key={`${pokemon.speciesId}`} pokemon={pokemon} />
-      <MovesCardHandler
-        speciesId={pokemon.speciesId}
-        meta={Meta.GoBattleLeague}
-        league={League.Master}
-      />
+      {data && data.length === 1 && (
+        <>
+          <PokemonCard pokemon={data[0]} />
+          <MovesCardHandler
+            fastMoves={data[0].fastMoves}
+            chargedMoves={data[0].chargedMoves}
+          />
+        </>
+      )}
     </div>
   );
 };

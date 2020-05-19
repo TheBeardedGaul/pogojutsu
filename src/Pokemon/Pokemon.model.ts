@@ -11,6 +11,12 @@ export interface PokemonProps {
   };
   fastMoves: Move[];
   chargedMoves: Move[];
+  matchup?: Matchup[];
+}
+
+export interface Matchup {
+  speciesId: string;
+  rating: number;
 }
 
 export interface Pokemon {
