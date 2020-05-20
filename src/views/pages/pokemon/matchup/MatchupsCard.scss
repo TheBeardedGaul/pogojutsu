@@ -1,0 +1,54 @@
+.matchupsCard {
+  margin-top: 1em;
+
+  h1 {
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin: 0em;
+    width: -webkit-fill-available;
+  }
+  h2 {
+    font-size: 1em;
+    margin-top: 0;
+  }
+  .CardContent {
+    display: flex !important;
+    padding: 0.5em !important;
+  }
+  .cardText {
+    width: -webkit-fill-available;
+  }
+  // .cardMatchups {
+  //   width: 140%;
+  //   text-align: left;
+  //   color: lightgrey;
+  //   display: inline;
+
+  .matchupElementCard {
+    .CardMatchup {
+      color: lightgrey;
+      font-size: 0.9em;
+      display: flex;
+      padding-left: 2em;
+      .rating {
+        padding-left: 0.7em;
+      }
+      //   font-size: 0.9rem !important;
+      //   padding-left: 7em;
+      //   display: flex;
+      //   .rating {
+      //     padding-left: 0.5em;
+      //   }
+    }
+  }
+  // }
+  .ShadowIcon {
+    position: absolute;
+    height: 30px;
+    width: 25px;
+    top: 1em;
+    left: 4em;
+    // max-width: 100%;
+    // height: auto;
+  }
+}

@@ -4,6 +4,7 @@ import {
   PokemonProps,
   PokemonFlux,
   PokemonBackUpFlux,
+  Matchup,
 } from "./Pokemon.model";
 import axios from "axios";
 import { Meta } from "../Meta/Meta";
@@ -90,10 +91,8 @@ export function usePokeApi(pokemon: PokemonProps) {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // Reset states
     setData(undefined);
     setError(null);
-    // API call
     axios
       .get(
         `https://pokeapi.co/api/v2/pokemon/${pokemon.speciesId.replace(
@@ -223,13 +222,22 @@ function parsePokemon(
       pokemonToParse.moves.chargedMoves,
       speciesId
     ),
-    // fastMoves: [{ name: fastMove.moveId, type: Type.Unknown }],
-    // chargedMoves: [
-    //   { name: chargedMoves[0].moveId, type: Type.Unknown },
-    //   { name: chargedMoves[1].moveId, type: Type.Unknown },
-    // ],
+    keyMatchups: getMatchups(pokemonToParse.matchups),
+    counters: getMatchups(pokemonToParse.counters),
   };
   return pokemon;
+}
+
+function getMatchups(matchups: any[]): Matchup[] {
+  const resultMatchups: Matchup[] = [];
+  matchups.forEach((element) =>
+    resultMatchups.push({
+      speciesId: element.opponent,
+      rating: element.rating,
+      opRating: element.opRating,
+    })
+  );
+  return resultMatchups;
 }
 
 function getFastMoves(

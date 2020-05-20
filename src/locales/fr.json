@@ -204,6 +204,14 @@
       "FRUSTRATION": "Frustration"
     }
   },
+  "matchup": {
+    "keyMatchup": {
+      "label": "Matchs clés"
+    },
+    "counter": {
+      "label": "Meilleurs contres"
+    }
+  },
   "types": {
     "Normal": "Normal",
     "Fighting": "Combat",

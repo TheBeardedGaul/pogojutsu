@@ -11,24 +11,29 @@ export interface PokemonProps {
   };
   fastMoves: Move[];
   chargedMoves: Move[];
-  matchup?: Matchup[];
+  keyMatchups?: Matchup[];
+  counters?: Matchup[];
 }
 
 export interface Matchup {
   speciesId: string;
   rating: number;
+  opRating: number;
 }
 
-export interface Pokemon {
-  speciesId: string;
-  id: number;
+export interface Pokemon extends ResumePokemon {
   score: number;
   types: Type[];
+  fastMove: Move;
+  chargedMoves: Move[];
+}
+
+export interface ResumePokemon {
+  speciesId: string;
+  id: number;
   sprites: {
     front_default: string;
   };
-  fastMove: Move;
-  chargedMoves: Move[];
   shadow?: boolean;
 }
 

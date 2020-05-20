@@ -204,6 +204,14 @@
       "FRUSTRATION": "Frustration"
     }
   },
+  "matchup": {
+    "keyMatchup": {
+      "label": "Key matchups"
+    },
+    "counter": {
+      "label": "Counters"
+    }
+  },
   "types": {
     "Normal": "Normal",
     "Fighting": "Fighting",
