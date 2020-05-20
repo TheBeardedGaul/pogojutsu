@@ -31,16 +31,13 @@ export const MatchupElement: React.FC<MatchupElementProps> = ({
     <>
       {data !== undefined && (
         <ListItem className="matchupElementCard">
-          <ListItemAvatar className="CardImage">
+          <ListItemAvatar className="cardImage">
             <Avatar>
-              <img src={data.sprites.front_default} alt="Sprite" />
-              {/* {data && data.shadow && (
-                <img
-                  className={"ShadowIcon"}
-                  src="https://silph.gg/img/icon-shadow-purple.png"
-                  alt={"shadow"}
-                />
-              )} */}
+              <img
+                className="avatar"
+                src={data.sprites.front_default}
+                alt="Sprite"
+              />
             </Avatar>
           </ListItemAvatar>
           <ListItemText>
