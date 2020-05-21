@@ -1,5 +1,7 @@
 {
   "title": "Le PVP, c'est mon Nindo !",
+  "home": "Accueil",
+  "ranking": "Classement",
   "moves": {
     "fastMoves": {
       "label": "Attaques rapides",

@@ -1,5 +1,7 @@
 {
   "title": "PVP is my Nindo!",
+  "home": "Home",
+  "ranking": "Ranking",
   "moves": {
     "fastMoves": {
       "label": "Fast moves",

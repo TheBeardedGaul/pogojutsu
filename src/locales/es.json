@@ -1,5 +1,7 @@
 {
   "title": "Pvp es mi nindo!",
+  "home": "Portada",
+  "ranking": "Clasificación",
   "moves": {
     "fastMoves": {
       "label": "Movimientos rápidos",
