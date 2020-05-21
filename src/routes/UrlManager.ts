@@ -1,2 +1,1 @@
-export const PokemonPageRootURL = "/pokemon";
-export const PokemonPageURL = `${PokemonPageRootURL}/:meta/:league/:speciesId`;
+export const PokemonPageURL = "/:meta/:league/:speciesId";

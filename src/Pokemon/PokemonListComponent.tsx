@@ -8,7 +8,6 @@ import { useHistory } from "react-router-dom";
 import { PokemonCard } from "./PokemonCard";
 import { LeagueSwitcher } from "../League/LeagueSwitcher";
 import CircularProgress from "@material-ui/core/CircularProgress";
-import { PokemonPageRootURL } from "../routes/UrlManager";
 import { PokemonProps } from "./Pokemon.model";
 
 export interface PokemonListComponentProps {
@@ -38,7 +37,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
   }
 
   const getURLToPokemonDetails = (pokemon: PokemonProps) => {
-    return `${PokemonPageRootURL}/${metaState}/${leagueState}/${pokemon.speciesId}`;
+    return `/${metaState}/${leagueState}/${pokemon.speciesId}`;
   };
 
   function renderPokemons(): JSX.Element {
