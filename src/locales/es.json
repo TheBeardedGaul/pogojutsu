@@ -80,7 +80,8 @@
       "HIDDEN_POWER_POISON": "Poder Oculto [Veneno]",
       "HIDDEN_POWER_PSYCHIC": "Poder Oculto [Psíquico]",
       "FROST_BREATH": "Vaho Gélido",
-      "CUT": "Corte"
+      "CUT": "Corte",
+      "IRON_TAIL": "Cola Férrea"
     },
     "chargedMoves": {
       "label": "Movimientos cargados",

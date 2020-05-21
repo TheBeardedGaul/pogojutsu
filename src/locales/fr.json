@@ -80,7 +80,8 @@
       "HIDDEN_POWER_POISON": "Hidden Power [Poison]",
       "HIDDEN_POWER_PSYCHIC": "Hidden Power [Psy]",
       "FROST_BREATH": "Souffle Glacé",
-      "CUT": "Coupe"
+      "CUT": "Coupe",
+      "IRON_TAIL": "Queue de Fer"
     },
     "chargedMoves": {
       "label": "Attaques chargées",

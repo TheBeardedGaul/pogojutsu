@@ -80,7 +80,8 @@
       "HIDDEN_POWER_POISON": "Hidden Power [Poison]",
       "HIDDEN_POWER_PSYCHIC": "Hidden Power [Psychic]",
       "FROST_BREATH": "Frost Breath",
-      "CUT": "Cut"
+      "CUT": "Cut",
+      "IRON_TAIL": "Iron Tail"
     },
     "chargedMoves": {
       "label": "Charged moves",
