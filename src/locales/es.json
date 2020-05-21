@@ -66,7 +66,19 @@
       "ICE_FANG": "Colmillo Hielo",
       "HIDDEN_POWER_BUG": "Poder Oculto [Bicho]",
       "HIDDEN_POWER_FIGHTING": "Poder Oculto [Lucha]",
-      "HIDDEN_POWER_WATER": "Poder Oculto [Agua]"
+      "HIDDEN_POWER_WATER": "Poder Oculto [Agua]",
+      "STEEL_WING": "Ala de Acero",
+      "HIDDEN_POWER_GRASS": "Poder Oculto [Planta]",
+      "HIDDEN_POWER_ROCK": "Poder Oculto [Roca]",
+      "HIDDEN_POWER_DARK": "Poder Oculto [Siniestro]",
+      "HIDDEN_POWER_ICE": "Poder Oculto [Hielo]",
+      "HIDDEN_POWER_STEEL": "Poder Oculto [Acero]",
+      "HIDDEN_POWER_DRAGON": "Poder Oculto [Dragón]",
+      "HIDDEN_POWER_GHOST": "Poder Oculto [Fantasma]",
+      "HIDDEN_POWER_POISON": "Poder Oculto [Veneno]",
+      "HIDDEN_POWER_PSYCHIC": "Poder Oculto [Psíquico]",
+      "FROST_BREATH": "Vaho Gélido",
+      "CUT": "Corte"
     },
     "chargedMoves": {
       "label": "Movimientos cargados",
@@ -201,7 +213,8 @@
       "SHADOW_SNEAK": "Sombra Vil",
       "ROCK_WRECKER": "Romperrocas",
       "WRAP": "Constricción",
-      "FRUSTRATION": "Frustración"
+      "FRUSTRATION": "Frustración",
+      "SUBMISSION": "Sumisión"
     }
   },
   "matchup": {

@@ -37,17 +37,9 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
     history.push(`/${metaState}/${league}`);
   }
 
-  function onClickPokemonPageHandler(
-    event: React.MouseEvent,
-    pokemon: PokemonProps
-  ) {
-    history.push(
-      `${PokemonPageRootURL}/${metaState}/${leagueState}/${pokemon.speciesId}`,
-      {
-        pokemon,
-      }
-    );
-  }
+  const getURLToPokemonDetails = (pokemon: PokemonProps) => {
+    return `${PokemonPageRootURL}/${metaState}/${leagueState}/${pokemon.speciesId}`;
+  };
 
   function renderPokemons(): JSX.Element {
     return (
@@ -61,7 +53,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
                   key={`${element.speciesId}-${index}`}
                   pokemon={element}
                   rank={index + 1}
-                  onClickPokemonPageHandler={onClickPokemonPageHandler}
+                  getURLToPokemonDetails={getURLToPokemonDetails}
                 />
               );
             })}

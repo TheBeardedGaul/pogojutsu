@@ -20,23 +20,15 @@ import { Typography } from "@material-ui/core";
 interface LocalProps {
   pokemon: PokemonProps;
   rank?: number;
-  onClickPokemonPageHandler?: (
-    event: React.MouseEvent,
-    pokemon: PokemonProps
-  ) => void;
+  getURLToPokemonDetails?: (pokemon: PokemonProps) => string;
 }
 
 export const PokemonCard: React.FC<LocalProps> = ({
   pokemon,
   rank,
-  onClickPokemonPageHandler,
+  getURLToPokemonDetails,
 }) => {
   const { data, error } = usePokeApi(pokemon);
-  function defaultOnClick(
-    event: React.MouseEvent,
-    pokemon: PokemonProps
-  ): void {}
-  const onClickHandler = onClickPokemonPageHandler || defaultOnClick;
 
   return (
     <Card className={`${styles.pokemonCard} pokemonCard`}>
@@ -56,15 +48,30 @@ export const PokemonCard: React.FC<LocalProps> = ({
               )}
             </div>
             <div className={styles.cardText}>
-              <h1 onClick={(event) => onClickHandler(event, pokemon)}>
-                <Context.Consumer>
-                  {(value) =>
-                    pokemonTranslate.getName(
-                      data.id,
-                      value.lang === "es" ? "en" : value.lang
-                    )
-                  }
-                </Context.Consumer>
+              <h1>
+                {getURLToPokemonDetails && (
+                  <a href={getURLToPokemonDetails(pokemon)}>
+                    {/* TODO factor this code with duplicate just after*/}
+                    <Context.Consumer>
+                      {(value) =>
+                        pokemonTranslate.getName(
+                          data.id,
+                          value.lang === "es" ? "en" : value.lang
+                        )
+                      }
+                    </Context.Consumer>
+                  </a>
+                )}
+                {!getURLToPokemonDetails && (
+                  <Context.Consumer>
+                    {(value) =>
+                      pokemonTranslate.getName(
+                        data.id,
+                        value.lang === "es" ? "en" : value.lang
+                      )
+                    }
+                  </Context.Consumer>
+                )}
               </h1>
               <div className={styles.cardMoves}>
                 <Typography
