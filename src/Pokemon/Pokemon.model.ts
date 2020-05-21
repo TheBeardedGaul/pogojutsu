@@ -9,20 +9,31 @@ export interface PokemonProps {
   sprites?: {
     front_default: string;
   };
+  fastMoves: Move[];
+  chargedMoves: Move[];
+  keyMatchups?: Matchup[];
+  counters?: Matchup[];
+}
+
+export interface Matchup {
+  speciesId: string;
+  rating: number;
+  opRating: number;
+}
+
+export interface Pokemon extends ResumePokemon {
+  score: number;
+  types: Type[];
   fastMove: Move;
   chargedMoves: Move[];
 }
 
-export interface Pokemon {
+export interface ResumePokemon {
   speciesId: string;
   id: number;
-  score: number;
-  types: Type [];
   sprites: {
     front_default: string;
-  },
-  fastMove: Move;
-  chargedMoves: Move[];
+  };
   shadow?: boolean;
 }
 
@@ -30,23 +41,23 @@ export interface PokemonFlux {
   speciesId: string;
   speciesName: string;
   matchups: {
-      opponent: string;
-      rating: number;
-      opRating: number;
+    opponent: string;
+    rating: number;
+    opRating: number;
   }[];
   counters: {
-      opponent: string;
-      rating: number;
-      opRating: number;
+    opponent: string;
+    rating: number;
+    opRating: number;
   }[];
   moves: {
     fastMoves: any[];
     chargedMoves: any[];
-  }
+  };
   moveStr: string;
   score: number;
   scores: number[];
-};
+}
 
 export interface PokemonBackUpFlux {
   speciesId: string;
@@ -54,5 +65,5 @@ export interface PokemonBackUpFlux {
   types: string[];
   sprites: {
     front_default: string;
-  }
+  };
 }

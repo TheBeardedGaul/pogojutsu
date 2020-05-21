@@ -1,0 +1,49 @@
+.matchupsCard {
+  margin-top: 1em;
+
+  h1 {
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin: 0em;
+    width: -webkit-fill-available;
+  }
+  h2 {
+    font-size: 1em;
+    margin-top: 0;
+  }
+  .CardContent {
+    display: flex !important;
+    padding: 0.5em !important;
+  }
+  .cardText {
+    width: -webkit-fill-available;
+  }
+
+  .matchupElementCard {
+    .CardMatchup {
+      color: lightgrey;
+      font-size: 0.9em;
+      display: flex;
+      padding-left: 2em;
+      .rating {
+        padding-left: 0.7em;
+      }
+    }
+    .cardImage {
+      .MuiAvatar-colorDefault {
+        background-color: #282c34;
+      }
+      .avatar {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+  }
+  .ShadowIcon {
+    position: absolute;
+    height: 25px;
+    width: 20px;
+    top: 1.5em;
+    left: 1em;
+  }
+}

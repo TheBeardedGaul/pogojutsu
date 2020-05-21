@@ -1,13 +1,15 @@
 {
   "title": "PVP is my Nindo!",
+  "home": "Home",
+  "ranking": "Ranking",
   "moves": {
     "fastMoves": {
-      "label": "Fast move",
+      "label": "Fast moves",
       "VINE_WHIP": "Vine Whip",
       "DRAGON_BREATH": "Dragon Breath",
       "FIRE_SPIN": "Fire Spin",
       "BITE": "Bite",
-      "POISON_JAB":"Poison Jab",
+      "POISON_JAB": "Poison Jab",
       "ICE_SHARD": "Ice Shard",
       "CONFUSION": "Confusion",
       "COUNTER": "Counter",
@@ -66,7 +68,20 @@
       "ICE_FANG": "Ice Fang",
       "HIDDEN_POWER_BUG": "Hidden Power [Bug]",
       "HIDDEN_POWER_FIGHTING": "Hidden Power [Fighting]",
-      "HIDDEN_POWER_WATER": "Hidden Power [Water]"
+      "HIDDEN_POWER_WATER": "Hidden Power [Water]",
+      "STEEL_WING": "Steel Wing",
+      "HIDDEN_POWER_GRASS": "Hidden Power [Grass]",
+      "HIDDEN_POWER_ROCK": "Hidden Power [Rock]",
+      "HIDDEN_POWER_DARK": "Hidden Power [Dark]",
+      "HIDDEN_POWER_ICE": "Hidden Power [Ice]",
+      "HIDDEN_POWER_STEEL": "Hidden Power [Steel]",
+      "HIDDEN_POWER_DRAGON": "Hidden Power [Dragon]",
+      "HIDDEN_POWER_GHOST": "Hidden Power [Ghost]",
+      "HIDDEN_POWER_POISON": "Hidden Power [Poison]",
+      "HIDDEN_POWER_PSYCHIC": "Hidden Power [Psychic]",
+      "FROST_BREATH": "Frost Breath",
+      "CUT": "Cut",
+      "IRON_TAIL": "Iron Tail"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -201,7 +216,16 @@
       "SHADOW_SNEAK": "Shadow Sneak",
       "ROCK_WRECKER": "Rock Wrecker",
       "WRAP": "Wrap",
-      "FRUSTRATION": "Frustration"
+      "FRUSTRATION": "Frustration",
+      "SUBMISSION": "Submission"
+    }
+  },
+  "matchup": {
+    "keyMatchup": {
+      "label": "Key matchups"
+    },
+    "counter": {
+      "label": "Counters"
     }
   },
   "types": {

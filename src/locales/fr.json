@@ -1,13 +1,15 @@
 {
   "title": "Le PVP, c'est mon Nindo !",
+  "home": "Accueil",
+  "ranking": "Classement",
   "moves": {
     "fastMoves": {
-      "label": "Attaque rapide",
+      "label": "Attaques rapides",
       "VINE_WHIP": "Fouet Lianes",
       "DRAGON_BREATH": "Dracosouffle",
       "FIRE_SPIN": "Danse Flamme",
       "BITE": "Morsure",
-      "POISON_JAB":"Direct Toxik",
+      "POISON_JAB": "Direct Toxik",
       "ICE_SHARD": "Éclats Glace",
       "CONFUSION": "Choc Mental",
       "COUNTER": "Riposte",
@@ -66,7 +68,20 @@
       "ICE_FANG": "Crocs Givre",
       "HIDDEN_POWER_BUG": "Puissance Cachée [Insècte]",
       "HIDDEN_POWER_FIGHTING": "Puissance Cachée [Combat]",
-      "HIDDEN_POWER_WATER": "Puissance Cachée [Eau]"
+      "HIDDEN_POWER_WATER": "Puissance Cachée [Eau]",
+      "STEEL_WING": "Ailes d’Acier",
+      "HIDDEN_POWER_GRASS": "Puissance Cachée [Plante]",
+      "HIDDEN_POWER_ROCK": "Puissance Cachée [Roche]",
+      "HIDDEN_POWER_DARK": "Hidden Power [Ténèbre]",
+      "HIDDEN_POWER_ICE": "Hidden Power [Glace]",
+      "HIDDEN_POWER_STEEL": "Hidden Power [Acier]",
+      "HIDDEN_POWER_DRAGON": "Hidden Power [Dragon]",
+      "HIDDEN_POWER_GHOST": "Hidden Power [Spèctre]",
+      "HIDDEN_POWER_POISON": "Hidden Power [Poison]",
+      "HIDDEN_POWER_PSYCHIC": "Hidden Power [Psy]",
+      "FROST_BREATH": "Souffle Glacé",
+      "CUT": "Coupe",
+      "IRON_TAIL": "Queue de Fer"
     },
     "chargedMoves": {
       "label": "Attaques chargées",
@@ -201,7 +216,16 @@
       "SHADOW_SNEAK": "Ombre Portée",
       "ROCK_WRECKER": "Roc-Boulet",
       "WRAP": "Ligotage",
-      "FRUSTRATION": "Frustration"
+      "FRUSTRATION": "Frustration",
+      "SUBMISSION": "Sacrifice"
+    }
+  },
+  "matchup": {
+    "keyMatchup": {
+      "label": "Matchs clés"
+    },
+    "counter": {
+      "label": "Meilleurs contres"
     }
   },
   "types": {

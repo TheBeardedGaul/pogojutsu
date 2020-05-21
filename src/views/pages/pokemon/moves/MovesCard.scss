@@ -1,0 +1,36 @@
+.movesCard {
+  margin-top: 1em;
+
+  h1 {
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin: 0em;
+    width: -webkit-fill-available;
+  }
+  h2 {
+    font-size: 1em;
+    margin-top: 0;
+  }
+  .CardContent {
+    display: flex !important;
+    padding: 0.5em !important;
+  }
+  .cardText {
+    width: -webkit-fill-available;
+  }
+  .cardMoves {
+    width: 140%;
+    text-align: left;
+    color: lightgrey;
+    display: inline;
+
+    .CardMove {
+      font-size: 0.9rem !important;
+      padding-left: 7em;
+      display: flex;
+      .percentageMoveUsing {
+        padding-left: 0.5em;
+      }
+    }
+  }
+}

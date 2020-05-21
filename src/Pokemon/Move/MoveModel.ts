@@ -1,7 +1,7 @@
 import { Type } from "../Type/TypeModel";
 
 export interface Move {
-    name: string;
-    type: Type;
-  }
-  
+  name: string;
+  type: Type;
+  uses: number;
+}
