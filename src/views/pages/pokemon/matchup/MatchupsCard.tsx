@@ -5,17 +5,27 @@ import { CardContent } from "@material-ui/core";
 import { Matchup } from "../../../../Pokemon/Pokemon.model";
 import { MatchupElement } from "./MatchupElement";
 import List from "@material-ui/core/List";
+import { League } from "../../../../League/League";
+import { Meta } from "../../../../Meta/Meta";
 
 export type MatchupType = "keyMatchup" | "counter";
 
 interface MatchupsCardProps {
+  speciesId: string;
   matchupType: MatchupType;
   matchups: Matchup[];
+  moveStr: string;
+  meta: Meta;
+  league: League;
 }
 
 export const MatchupsCard: React.FC<MatchupsCardProps> = ({
+  speciesId,
   matchupType,
   matchups,
+  moveStr,
+  meta,
+  league,
 }) => {
   const sortedMatchups = matchups.sort((matchupA, matchupB) => {
     if (matchupType === "keyMatchup") {
@@ -28,15 +38,19 @@ export const MatchupsCard: React.FC<MatchupsCardProps> = ({
     <Card className="matchupsCard">
       <CardContent className="CardContent">
         <div className="cardText">
-          <h2>
+          <h3>
             <Translate id={`matchup.${matchupType}.label`} />
-          </h2>
+          </h3>
           <List>
             {sortedMatchups.map((matchupElement: Matchup) => {
               return (
                 <MatchupElement
+                  speciesId={speciesId}
                   matchupType={matchupType}
                   matchup={matchupElement}
+                  moveStr={moveStr}
+                  meta={meta}
+                  league={league}
                 />
               );
             })}

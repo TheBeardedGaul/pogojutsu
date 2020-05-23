@@ -9,6 +9,7 @@ export interface PokemonProps {
   sprites?: {
     front_default: string;
   };
+  moveStr: string;
   fastMoves: Move[];
   chargedMoves: Move[];
   keyMatchups?: Matchup[];

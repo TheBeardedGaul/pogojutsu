@@ -15,9 +15,9 @@ export const MovesCard: React.FC<MovesCardProps> = ({ movesType, moves }) => {
     <Card className="movesCard">
       <CardContent className="CardContent">
         <div className="cardText">
-          <h2>
+          <h3>
             <Translate id={`moves.${movesType}.label`} />
-          </h2>
+          </h3>
           <div className="cardMoves">
             {sortMoves.map((moveElement: Move) => {
               return (

@@ -3,7 +3,7 @@ import Context from "./context";
 import {
   I18nProviderProps,
   ITranslateProps,
-  IContextValue
+  IContextValue,
 } from "./interfaces";
 
 // Provider utilisant à la racine de l'application
@@ -21,26 +21,31 @@ import {
 export const I18nProvider: React.FC<I18nProviderProps> = ({
   defaultLang,
   messages,
-  children
+  children,
 }) => {
   const [lang, setLang] = useState(defaultLang);
 
   if (!messages[lang]) throw new Error(`Language not found: ${lang}`);
   const value: IContextValue = {
     lang,
-    translate: (id: string) => {
+    translate: (id: string, values?: string[]) => {
       const keys = id.split(".");
       let node: any = messages[lang];
       keys.forEach((element: string) => {
-          node = node[element];
+        node = node[element];
       });
-      return node || `⚠ ${id}`
+      if (values && node) {
+        values.forEach((value, index) => {
+          node = node.replace("${" + index + "}", value);
+        });
+      }
+      return node || `⚠ ${id}`;
     },
-    setLang
+    setLang,
   };
   return <Context.Provider value={value}>{children}</Context.Provider>;
 };
 
-export const Translate: React.FC<ITranslateProps> = ({ id }) => (
-  <Context.Consumer>{value => value.translate(id)}</Context.Consumer>
+export const Translate: React.FC<ITranslateProps> = ({ id, values }) => (
+  <Context.Consumer>{(value) => value.translate(id, values)}</Context.Consumer>
 );

@@ -18,24 +18,37 @@ export const PokemonPage: React.FC<PokemonPageProps> = (props) => {
   const [speciesIdState] = useState<string>(props.match.params.speciesId);
   const [metaState] = useState<Meta>(props.match.params.meta);
   const [leagueState] = useState<League>(props.match.params.league);
-  const { data } = usePvpokeData(metaState, leagueState, speciesIdState);
+  const { pvpokeData } = usePvpokeData(metaState, leagueState, speciesIdState);
   return (
     <>
       {console.log("Pokemon Page render", JSON.stringify(props))}
       <div className="PokemonPage">
-        {data && data.length === 1 && (
+        {pvpokeData && pvpokeData.length === 1 && (
           <>
-            <PokemonCard pokemon={data[0]} />
-            <MovesCardHandler
-              fastMoves={data[0].fastMoves}
-              chargedMoves={data[0].chargedMoves}
-            />
-            {data[0].keyMatchups && data[0].counters && (
-              <MatchupsCardHandler
-                keyMatchups={data[0].keyMatchups}
-                counters={data[0].counters}
+            {/* <h1>
+              <Translate
+                id="pages.pokemon.title"
+                values={[
+                  pvpokeData[0].speciesId,
+                  translate(`metas.${metaState}`),
+                  translate(`leagues.${leagueState}`),
+                ]}
               />
-            )}
+            </h1> */}
+            <div className="pokemonPageBody">
+              <PokemonCard pokemon={pvpokeData[0]} />
+              <MovesCardHandler
+                fastMoves={pvpokeData[0].fastMoves}
+                chargedMoves={pvpokeData[0].chargedMoves}
+              />
+              {pvpokeData[0].keyMatchups && pvpokeData[0].counters && (
+                <MatchupsCardHandler
+                  pokemon={pvpokeData[0]}
+                  meta={metaState}
+                  league={leagueState}
+                />
+              )}
+            </div>
           </>
         )}
       </div>

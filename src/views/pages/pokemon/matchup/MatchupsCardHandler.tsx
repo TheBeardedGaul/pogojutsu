@@ -1,21 +1,39 @@
 import React from "react";
-import { Matchup } from "../../../../Pokemon/Pokemon.model";
+import { PokemonProps } from "../../../../Pokemon/Pokemon.model";
 import { MatchupsCard } from "./MatchupsCard";
 import "./MatchupsCard.scss";
+import { League } from "../../../../League/League";
+import { Meta } from "../../../../Meta/Meta";
 
 interface MatchupsCardHandlerProps {
-  keyMatchups: Matchup[];
-  counters: Matchup[];
+  pokemon: PokemonProps;
+  meta: Meta;
+  league: League;
 }
 
 export const MatchupsCardHandler: React.FC<MatchupsCardHandlerProps> = ({
-  keyMatchups,
-  counters,
+  pokemon,
+  meta,
+  league,
 }) => {
   return (
     <div className="MatchupCard">
-      <MatchupsCard matchupType="keyMatchup" matchups={keyMatchups} />
-      <MatchupsCard matchupType="counter" matchups={counters} />
+      <MatchupsCard
+        speciesId={pokemon.speciesId}
+        matchupType="keyMatchup"
+        matchups={pokemon.keyMatchups ? pokemon.keyMatchups : []}
+        moveStr={pokemon.moveStr}
+        meta={meta}
+        league={league}
+      />
+      <MatchupsCard
+        speciesId={pokemon.speciesId}
+        matchupType="counter"
+        matchups={pokemon.counters ? pokemon.counters : []}
+        moveStr={pokemon.moveStr}
+        meta={meta}
+        league={league}
+      />
     </div>
   );
 };

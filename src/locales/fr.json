@@ -220,6 +220,11 @@
       "SUBMISSION": "Sacrifice"
     }
   },
+  "pages": {
+    "pokemon": {
+      "title": "Utiliser ${0} en ${1} ${2}"
+    }
+  },
   "matchup": {
     "keyMatchup": {
       "label": "Matchs clés"

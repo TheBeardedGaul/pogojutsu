@@ -61,11 +61,21 @@
 
 .AppLink,
 h1,
-h2 {
+h2,
+h3 {
   color: #61dafb;
   a {
     color: #61dafb;
   }
+}
+
+h2 {
+  font-size: 1em;
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1em;
 }
 
 .AppFooter {

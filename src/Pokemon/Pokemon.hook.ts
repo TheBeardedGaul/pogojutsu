@@ -147,7 +147,7 @@ export function usePvpokeData(
   league: League = League.Great,
   speciesId?: string
 ) {
-  const [data, setData] = useState<PokemonProps[]>([]);
+  const [pvpokeData, setPvpokeData] = useState<PokemonProps[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   const leagueStr =
@@ -159,20 +159,20 @@ export function usePvpokeData(
   const metaStr = meta === Meta.GoBattleLeague ? "all" : meta;
 
   useEffect(() => {
-    setData([]);
+    setPvpokeData([]);
     setError(null);
     axios
       .get(
         `https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/${metaStr}/overall/rankings-${leagueStr}.json`
       )
       .then((apiResult) => {
-        setData(parseFlux(apiResult.data, speciesId));
+        setPvpokeData(parseFlux(apiResult.data, speciesId));
       })
       .catch((apiError) => {
         setError(apiError.message);
       });
   }, [metaStr, leagueStr, speciesId]);
-  return { data, error };
+  return { pvpokeData, error };
 }
 
 export function useFormatedTypes(types: Type[]): string {
@@ -212,6 +212,7 @@ function parsePokemon(
   const pokemon: PokemonProps = {
     speciesId: pokemonToParse.speciesId,
     score: pokemonToParse.score,
+    moveStr: pokemonToParse.moveStr,
     fastMoves: getFastMoves(
       fastMove,
       pokemonToParse.moves.fastMoves,
