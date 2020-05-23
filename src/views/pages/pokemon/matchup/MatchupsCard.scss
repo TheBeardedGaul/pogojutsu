@@ -1,15 +1,12 @@
 .matchupsCard {
   margin-top: 1em;
+  width: 20em !important;
 
   h1 {
     font-size: 1.1em;
     text-transform: capitalize;
     margin: 0em;
     width: -webkit-fill-available;
-  }
-  h2 {
-    font-size: 1em;
-    margin-top: 0;
   }
   .CardContent {
     display: flex !important;
@@ -28,6 +25,11 @@
       .rating {
         padding-left: 0.7em;
       }
+    }
+    .pvpokeLinkToBattle {
+      height: 1.4em;
+      position: absolute;
+      right: 2em;
     }
     .cardImage {
       .MuiAvatar-colorDefault {

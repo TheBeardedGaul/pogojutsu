@@ -9,16 +9,17 @@ export interface I18nProviderProps {
   };
 }
 
-export type ITranslate = (id: string) => string;
+export type ITranslate = (id: string, values?: string[]) => string;
 
 export interface IContextValue {
-  lang:  "fr" | "en" | "es";
+  lang: "fr" | "en" | "es";
   translate: ITranslate;
-  setLang: (lang:  "fr" | "en" | "es") => void;
+  setLang: (lang: "fr" | "en" | "es") => void;
 }
 
 export interface ITranslateProps {
   id: string;
+  values?: string[];
 }
 
 export interface IInjectedTranslateProps {

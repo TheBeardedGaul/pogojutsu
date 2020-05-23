@@ -21,10 +21,10 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
 }) => {
   const [metaState, setMetaState] = useState<Meta>(meta);
   const [leagueState, setLeagueState] = useState<League>(league);
-  const { data, error } = usePvpokeData(metaState, leagueState);
+  const { pvpokeData, error } = usePvpokeData(metaState, leagueState);
   const history = useHistory();
 
-  const displayProgress: boolean = !data || data.length <= 1;
+  const displayProgress: boolean = !pvpokeData || pvpokeData.length <= 1;
 
   function metaChangeHandler(meta: Meta) {
     setMetaState(meta);
@@ -44,9 +44,9 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
     return (
       <>
         {displayProgress && <CircularProgress />}
-        {data.length > 0 && error === null && (
+        {pvpokeData.length > 0 && error === null && (
           <div className={"pokemonCardList"}>
-            {data.map((element, index) => {
+            {pvpokeData.map((element, index) => {
               return (
                 <PokemonCard
                   key={`${element.speciesId}-${index}`}
