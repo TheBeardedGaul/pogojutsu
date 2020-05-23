@@ -80,6 +80,7 @@ export const MatchupElement: React.FC<MatchupElementProps> = ({
                   : matchup.opRating}
               </div>
               <a
+                // eslint-disable-next-line react/jsx-no-target-blank
                 target="_blank"
                 href={`https://www.pvpoke.com/battle/${leagueUriPath}/${speciesId}/${matchup.speciesId}/11/${moveStr}/${pvpokeData[0].moveStr}`}
               >
