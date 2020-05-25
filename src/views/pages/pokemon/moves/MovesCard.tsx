@@ -2,7 +2,7 @@ import React from "react";
 import { Move } from "../../../../Pokemon/Move/MoveModel";
 import { Translate } from "../../../../i18n/components";
 import Card from "@material-ui/core/Card";
-import { CardContent, Typography } from "@material-ui/core";
+import { CardContent, Typography, Divider } from "@material-ui/core";
 
 interface MovesCardProps {
   movesType: "fastMoves" | "chargedMoves";
@@ -19,9 +19,10 @@ export const MovesCard: React.FC<MovesCardProps> = ({ movesType, moves }) => {
             <Translate id={`moves.${movesType}.label`} />
           </h3>
           <div className="cardMoves">
-            {sortMoves.map((moveElement: Move) => {
+            {sortMoves.map((moveElement: Move, index: number) => {
               return (
                 <>
+                  {index > 0 && <Divider variant="middle" />}
                   <Typography className={`CardMove`}>
                     <Translate id={`moves.${movesType}.${moveElement.name}`} />
                     <div className="percentageMoveUsing">

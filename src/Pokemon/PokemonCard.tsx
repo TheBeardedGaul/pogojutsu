@@ -9,7 +9,7 @@ import { Type } from "./Type/TypeModel";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import { Typography } from "@material-ui/core";
+import { Typography, Divider } from "@material-ui/core";
 /*
   Ce composant sert à charger et à afficher les informations d'un Pokemon
   sous la forme d'une carte.
@@ -79,11 +79,13 @@ export const PokemonCard: React.FC<LocalProps> = ({
                 >
                   <Translate id={`moves.fastMoves.${data.fastMove.name}`} />
                 </Typography>
+                <Divider variant="middle" />
                 <Typography className={styles.CardMove}>
                   <Translate
                     id={`moves.chargedMoves.${data.chargedMoves[0].name}`}
                   />
                 </Typography>
+                <Divider variant="middle" />
                 <Typography className={styles.CardMove}>
                   <Translate
                     id={`moves.chargedMoves.${data.chargedMoves[1].name}`}
