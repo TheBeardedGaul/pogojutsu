@@ -1,7 +1,7 @@
 import React from "react";
 import { Translate } from "../../../../i18n/components";
 import Card from "@material-ui/core/Card";
-import { CardContent } from "@material-ui/core";
+import { CardContent, Divider } from "@material-ui/core";
 import { Matchup } from "../../../../Pokemon/Pokemon.model";
 import { MatchupElement } from "./MatchupElement";
 import List from "@material-ui/core/List";
@@ -42,16 +42,19 @@ export const MatchupsCard: React.FC<MatchupsCardProps> = ({
             <Translate id={`matchup.${matchupType}.label`} />
           </h3>
           <List>
-            {sortedMatchups.map((matchupElement: Matchup) => {
+            {sortedMatchups.map((matchupElement: Matchup, index: number) => {
               return (
-                <MatchupElement
-                  speciesId={speciesId}
-                  matchupType={matchupType}
-                  matchup={matchupElement}
-                  moveStr={moveStr}
-                  meta={meta}
-                  league={league}
-                />
+                <>
+                  {index > 0 && <Divider variant="middle" />}
+                  <MatchupElement
+                    speciesId={speciesId}
+                    matchupType={matchupType}
+                    matchup={matchupElement}
+                    moveStr={moveStr}
+                    meta={meta}
+                    league={league}
+                  />
+                </>
               );
             })}
           </List>

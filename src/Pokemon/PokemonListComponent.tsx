@@ -4,20 +4,25 @@ import { Meta } from "../Meta/Meta";
 import { League } from "../League/League";
 import "./PokemonListComponent.scss";
 import { MetaSwitcher } from "../Meta/MetaSwitcher";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 import { PokemonCard } from "./PokemonCard";
 import { LeagueSwitcher } from "../League/LeagueSwitcher";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { PokemonProps } from "./Pokemon.model";
+import { Translate } from "../i18n";
 
 export interface PokemonListComponentProps {
   meta?: Meta;
   league?: League;
+  limit?: number;
+  readOnly?: boolean;
 }
 
 export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
   meta = Meta.GoBattleLeague,
   league = League.Master,
+  limit,
+  readOnly = false,
 }) => {
   const [metaState, setMetaState] = useState<Meta>(meta);
   const [leagueState, setLeagueState] = useState<League>(league);
@@ -41,22 +46,44 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
   };
 
   function renderPokemons(): JSX.Element {
+    let pokemonList = pvpokeData;
+    if (limit) {
+      pokemonList = pvpokeData.slice(0, limit);
+    }
     return (
       <>
         {displayProgress && <CircularProgress />}
         {pvpokeData.length > 0 && error === null && (
-          <div className={"pokemonCardList"}>
-            {pvpokeData.map((element, index) => {
-              return (
-                <PokemonCard
-                  key={`${element.speciesId}-${index}`}
-                  pokemon={element}
-                  rank={index + 1}
-                  getURLToPokemonDetails={getURLToPokemonDetails}
-                />
-              );
-            })}
-          </div>
+          <>
+            {readOnly && (
+              <h2 className="metaLeagueTitle">
+                <Translate id={`metas.${metaState}`} />
+                <Translate id="pages.home.rankingTitle" />
+                <Translate id={`leagues.${leagueState}`} />
+              </h2>
+            )}
+            <div className={"pokemonCardList"}>
+              {pokemonList.map((element, index) => {
+                return (
+                  <PokemonCard
+                    key={`${element.speciesId}-${index}`}
+                    pokemon={element}
+                    rank={index + 1}
+                    getURLToPokemonDetails={getURLToPokemonDetails}
+                  />
+                );
+              })}
+            </div>
+            {readOnly && (
+              <Link
+                to={`/${metaState}/${leagueState}`}
+                className="more"
+                href={`/${metaState}/${leagueState}`}
+              >
+                <Translate id="pages.home.seeMore" />
+              </Link>
+            )}
+          </>
         )}
 
         {error !== null && (
@@ -72,14 +99,16 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
 
   return (
     <>
-      <div className="InnerMenu">
-        <MetaSwitcher meta={metaState} setMetaFct={metaChangeHandler} />
-        <LeagueSwitcher
-          meta={metaState}
-          league={leagueState}
-          setLeagueFct={leagueChangeHandler}
-        />
-      </div>
+      {!readOnly && (
+        <div className="InnerMenu">
+          <MetaSwitcher meta={metaState} setMetaFct={metaChangeHandler} />
+          <LeagueSwitcher
+            meta={metaState}
+            league={leagueState}
+            setLeagueFct={leagueChangeHandler}
+          />
+        </div>
+      )}
       <div className="tabContainer">{renderPokemons()}</div>
     </>
   );
