@@ -70,12 +70,12 @@ h3 {
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.2em;
   margin-top: 0;
 }
 
 h3 {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 .AppFooter {
@@ -118,11 +118,17 @@ h3 {
   .AppLogo h1 {
     margin-left: 1em;
   }
+  .homeCard {
+    max-width: 15.15em;
+  }
 }
 
 @media (min-width: 800px) {
   .pokemonCardList {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .homeCard {
+    max-width: 33.5em;
   }
 }
 
@@ -130,11 +136,17 @@ h3 {
   .pokemonCardList {
     grid-template-columns: repeat(3, 1fr);
   }
+  .homeCard {
+    max-width: 51.5em;
+  }
 }
 
 @media (min-width: 1500px) {
   .pokemonCardList {
     grid-template-columns: repeat(4, 1fr);
+  }
+  .homeCard {
+    max-width: 70em;
   }
 }
 

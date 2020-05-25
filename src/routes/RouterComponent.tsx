@@ -5,6 +5,7 @@ import { Meta } from "../Meta/Meta";
 import { League } from "../League/League";
 import { PokemonPage } from "../views/pages/pokemon/PokemonPage";
 import { PokemonPageURL } from "./UrlManager";
+import { HomePage } from "../views/pages/home/HomePage";
 
 export const RouterComponent: React.FC = (props) => {
   return (
@@ -13,7 +14,7 @@ export const RouterComponent: React.FC = (props) => {
         <Redirect to="/home" />
       </Route>
       <Route exact path="/home">
-        <PokemonListComponent />
+        <HomePage />
       </Route>
       <Route exact path={PokemonPageURL} component={PokemonPage} />
       <Route exact path={`/${Meta.GoBattleLeague}`}>

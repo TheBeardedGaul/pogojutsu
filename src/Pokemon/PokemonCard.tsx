@@ -48,7 +48,7 @@ export const PokemonCard: React.FC<LocalProps> = ({
               )}
             </div>
             <div className={styles.cardText}>
-              <h2>
+              <h3>
                 {getURLToPokemonDetails && (
                   <a href={getURLToPokemonDetails(pokemon)}>
                     {/* TODO factor this code with duplicate just after*/}
@@ -72,7 +72,7 @@ export const PokemonCard: React.FC<LocalProps> = ({
                     }
                   </Context.Consumer>
                 )}
-              </h2>
+              </h3>
               <div className={styles.cardMoves}>
                 <Typography
                   className={`${styles.CardMove} ${styles.FirstMove}`}

@@ -221,6 +221,12 @@
     }
   },
   "pages": {
+    "home": {
+      "welcome": "Bienvenu sur PogoJutsu jeune battler !",
+      "presentation": "Ce site est dédié au pvp et te donne la liste des meilleurs pokemons pour le jeu Pokemon GO. Que tu souhaites combattre en pvp dans la Go Battle League ou dans les tournois de la Silph Arena, nous listons ici tous les meilleurs pokemons pour ces différentes métas. Comprend bien que chaque méta possède son propre classement des meilleurs pokemons en pvp. Nous conseillons pour chacune d'elle, la meilleure combinaison d'attaque que doit avoir tes pokemons.",
+      "rankingTitle": " ",
+      "seeMore": "Tout voir >>"
+    },
     "pokemon": {
       "title": "Utiliser ${0} en ${1} ${2}"
     }
