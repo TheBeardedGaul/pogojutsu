@@ -30,39 +30,26 @@ export const PokemonCard: React.FC<LocalProps> = ({
 }) => {
   const { data, error } = usePokeApi(pokemon);
 
-  return (
-    <Card className={`${styles.pokemonCard} pokemonCard`}>
-      <CardContent className={styles.CardContent}>
-        {renderError(error, pokemon.speciesId)}
-        {renderLoader(data, error, pokemon.speciesId)}
-        {data !== undefined && (
-          <>
-            <div className={styles.CardImage}>
-              <img src={data.sprites.front_default} alt="Sprite" />
-              {data && data.shadow && (
-                <img
-                  className={styles.ShadowIcon}
-                  src="https://silph.gg/img/icon-shadow-purple.png"
-                  alt={"shadow"}
-                />
-              )}
-            </div>
-            <div className={styles.cardText}>
-              <h3>
-                {getURLToPokemonDetails && (
-                  <a href={getURLToPokemonDetails(pokemon)}>
-                    {/* TODO factor this code with duplicate just after*/}
-                    <Context.Consumer>
-                      {(value) =>
-                        pokemonTranslate.getName(
-                          data.id,
-                          value.lang === "es" ? "en" : value.lang
-                        )
-                      }
-                    </Context.Consumer>
-                  </a>
+  const renderCard = () => {
+    return (
+      <Card className={`${styles.pokemonCard} pokemonCard`}>
+        <CardContent className={styles.CardContent}>
+          {renderError(error, pokemon.speciesId)}
+          {renderLoader(data, error, pokemon.speciesId)}
+          {data !== undefined && (
+            <>
+              <div className={styles.CardImage}>
+                <img src={data.sprites.front_default} alt="Sprite" />
+                {data && data.shadow && (
+                  <img
+                    className={styles.ShadowIcon}
+                    src="https://silph.gg/img/icon-shadow-purple.png"
+                    alt={"shadow"}
+                  />
                 )}
-                {!getURLToPokemonDetails && (
+              </div>
+              <div className={styles.cardText}>
+                <h3>
                   <Context.Consumer>
                     {(value) =>
                       pokemonTranslate.getName(
@@ -71,55 +58,66 @@ export const PokemonCard: React.FC<LocalProps> = ({
                       )
                     }
                   </Context.Consumer>
-                )}
-              </h3>
-              <div className={styles.cardMoves}>
-                <Typography
-                  className={`${styles.CardMove} ${styles.FirstMove}`}
-                >
-                  <Translate id={`moves.fastMoves.${data.fastMove.name}`} />
-                </Typography>
-                <Divider variant="middle" />
-                <Typography className={styles.CardMove}>
-                  <Translate
-                    id={`moves.chargedMoves.${data.chargedMoves[0].name}`}
-                  />
-                </Typography>
-                <Divider variant="middle" />
-                <Typography className={styles.CardMove}>
-                  <Translate
-                    id={`moves.chargedMoves.${data.chargedMoves[1].name}`}
-                  />
-                </Typography>
+                </h3>
+                <div className={styles.cardMoves}>
+                  <Typography
+                    className={`${styles.CardMove} ${styles.FirstMove}`}
+                  >
+                    <Translate id={`moves.fastMoves.${data.fastMove.name}`} />
+                  </Typography>
+                  <Divider variant="middle" />
+                  <Typography className={styles.CardMove}>
+                    <Translate
+                      id={`moves.chargedMoves.${data.chargedMoves[0].name}`}
+                    />
+                  </Typography>
+                  <Divider variant="middle" />
+                  <Typography className={styles.CardMove}>
+                    <Translate
+                      id={`moves.chargedMoves.${data.chargedMoves[1].name}`}
+                    />
+                  </Typography>
+                </div>
               </div>
-            </div>
-          </>
-        )}
-      </CardContent>
-      <CardActions className={styles.CardBottom}>
-        <div className={styles.rank}>#{rank}</div>
-        <div className={styles.types}>
-          {data &&
-            data.types.map((element: Type, index: number) => {
-              return (
-                <>
-                  {index > 0 ? " / " : ""}
-                  <Translate
-                    key={`${element.toString()}-${index}}`}
-                    id={`types.${element.toString()}`}
-                  />
-                </>
-              );
-            })}
-        </div>
-        <div className={styles.score}>
-          {data &&
-            (data.score.toString().length !== 2
-              ? `${data.score}%`
-              : `${data.score}.0%`)}
-        </div>
-      </CardActions>
-    </Card>
+            </>
+          )}
+        </CardContent>
+        <CardActions className={styles.CardBottom}>
+          <div className={styles.rank}>#{rank}</div>
+          <div className={styles.types}>
+            {data &&
+              data.types.map((element: Type, index: number) => {
+                return (
+                  <>
+                    {index > 0 ? " / " : ""}
+                    <Translate
+                      key={`${element.toString()}-${index}}`}
+                      id={`types.${element.toString()}`}
+                    />
+                  </>
+                );
+              })}
+          </div>
+          <div className={styles.score}>
+            {data &&
+              (data.score.toString().length !== 2
+                ? `${data.score}%`
+                : `${data.score}.0%`)}
+          </div>
+        </CardActions>
+      </Card>
+    );
+  };
+
+  return (
+    <>
+      {getURLToPokemonDetails && (
+        <a className="pokemonCardLink" href={getURLToPokemonDetails(pokemon)}>
+          {renderCard()}
+        </a>
+      )}
+      {!getURLToPokemonDetails && <>{renderCard()}</>}
+    </>
   );
 };
 

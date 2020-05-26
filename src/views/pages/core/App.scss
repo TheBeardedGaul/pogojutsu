@@ -112,6 +112,9 @@ h3 {
   margin: 0 auto;
   display: grid;
   gap: 1rem;
+  a.pokemonCardLink:link {
+    text-decoration: none !important;
+  }
 }
 
 @media (max-width: 800px) {
