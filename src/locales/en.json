@@ -224,6 +224,7 @@
     "home": {
       "welcome": "Welcome on PogoJutsu young battler!",
       "presentation": "This web app is dedicated to the best pokemons for Pokemon Go Pvp. To Go Battle League and Silph Arena battlers, find the best pokemons for specific metas. Each pvp meta got its own best pokemons ranking. For all those metas we provide the best pokemons' movesets you should use.",
+      "title": "Rankings",
       "rankingTitle": " ",
       "seeMore": "See more >>"
     }
