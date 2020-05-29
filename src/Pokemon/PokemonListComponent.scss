@@ -10,6 +10,16 @@
   .tabPanel {
     margin-top: 1em;
   }
+
+  .search {
+    display: inline-flex;
+    .MuiInputBase-input {
+      color: lightgrey;
+    }
+    .searchIcon {
+      margin-top: 0.5em;
+    }
+  }
 }
 
 .InnerMenu {
