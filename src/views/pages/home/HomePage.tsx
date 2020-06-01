@@ -17,6 +17,9 @@ export const HomePage: React.FC = () => {
           <Translate id="pages.home.presentation" />
         </p>
       </Paper>
+      <h1>
+        <Translate id="pages.home.title" />
+      </h1>
       <PokemonListComponent
         meta={Meta.GoBattleLeague}
         league={League.Great}

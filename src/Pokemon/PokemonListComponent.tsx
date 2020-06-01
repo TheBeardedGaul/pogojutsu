@@ -10,6 +10,8 @@ import { LeagueSwitcher } from "../League/LeagueSwitcher";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { PokemonProps } from "./Pokemon.model";
 import { Translate } from "../i18n";
+import { InputBase } from "@material-ui/core";
+import SearchIcon from "@material-ui/icons/Search";
 
 export interface PokemonListComponentProps {
   meta?: Meta;
@@ -52,6 +54,24 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
     }
     return (
       <>
+        {!readOnly && (
+          <>
+            <div className="search">
+              <div className="searchIcon">
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search…"
+                classes={{
+                  root: "inputRoot",
+                  input: "inputInput",
+                }}
+                inputProps={{ "aria-label": "search" }}
+              />
+            </div>
+            <br />
+          </>
+        )}
         {displayProgress && <CircularProgress />}
         {pvpokeData.length > 0 && error === null && (
           <>

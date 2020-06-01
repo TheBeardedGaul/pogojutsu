@@ -1,8 +1,4 @@
 .App {
-  /* text-align: center;
-  font-family: "IBM Plex Mono,monospace";
-  font-feature-settings: "liga" 0;
-  line-height: 1.7; */
 }
 
 .AppHeader,
@@ -98,20 +94,17 @@ h3 {
 }
 
 .FooterCredits {
-  // margin-top: 1em;
-  // margin-bottom: 1em;
   padding-left: 1em;
   padding-right: 1em;
 }
-
-// .CreditsPartTwo {
-//   border-left: #61dafb dashed 0.5px;
-// }
 
 .pokemonCardList {
   margin: 0 auto;
   display: grid;
   gap: 1rem;
+  a.pokemonCardLink:link {
+    text-decoration: none !important;
+  }
 }
 
 @media (max-width: 800px) {
@@ -169,7 +162,6 @@ h3 {
 
 .CardBody {
   display: grid;
-  /* grid-auto-columns: 100px; */
   text-align: left;
   grid-template-columns: repeat(2, 1fr);
 }
