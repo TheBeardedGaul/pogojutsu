@@ -33,6 +33,8 @@ export const MatchupElement: React.FC<MatchupElementProps> = ({
   const [matchupState] = useState<any>({
     speciesId: matchup.speciesId,
     score: 0,
+    recommandedFastMoves: [],
+    recommandedChargedMoves: [],
     fastMoves: [],
     chargedMoves: [],
   });

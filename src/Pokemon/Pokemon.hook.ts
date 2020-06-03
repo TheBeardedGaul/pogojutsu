@@ -110,8 +110,8 @@ export function usePokeApi(pokemon: PokemonProps) {
           score: pokemon.score,
           sprites: apiResult.data["sprites"],
           types: resultTypes,
-          fastMove: pokemon.fastMoves[0],
-          chargedMoves: pokemon.chargedMoves,
+          fastMove: pokemon.recommandedFastMoves[0],
+          chargedMoves: pokemon.recommandedChargedMoves,
           shadow: isShadow,
         };
         setData(result);
@@ -213,6 +213,8 @@ function parsePokemon(
     speciesId: pokemonToParse.speciesId,
     score: pokemonToParse.score,
     moveStr: pokemonToParse.moveStr,
+    recommandedFastMoves: getFastMoves(fastMove),
+    recommandedChargedMoves: getChargedMoves(chargedMoves),
     fastMoves: getFastMoves(
       fastMove,
       pokemonToParse.moves.fastMoves,

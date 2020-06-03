@@ -10,6 +10,8 @@ export interface PokemonProps {
     front_default: string;
   };
   moveStr: string;
+  recommandedFastMoves: Move[];
+  recommandedChargedMoves: Move[];
   fastMoves: Move[];
   chargedMoves: Move[];
   keyMatchups?: Matchup[];
