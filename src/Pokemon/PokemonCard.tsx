@@ -50,14 +50,16 @@ export const PokemonCard: React.FC<LocalProps> = ({
               </div>
               <div className={styles.cardText}>
                 <h3>
-                  <Context.Consumer>
-                    {(value) =>
-                      pokemonTranslate.getName(
-                        data.id,
-                        value.lang === "es" ? "en" : value.lang
-                      )
-                    }
-                  </Context.Consumer>
+                  {data.id <= 810 && (
+                    <Context.Consumer>
+                      {(value) =>
+                        pokemonTranslate.getName(
+                          data.id,
+                          value.lang === "es" ? "en" : value.lang
+                        )
+                      }
+                    </Context.Consumer>
+                  )}
                 </h3>
                 <div className={styles.cardMoves}>
                   <Typography
