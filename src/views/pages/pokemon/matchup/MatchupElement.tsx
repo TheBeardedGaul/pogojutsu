@@ -68,14 +68,23 @@ export const MatchupElement: React.FC<MatchupElementProps> = ({
                   alt={"shadow"}
                 />
               )}
-              <Context.Consumer>
-                {(value) =>
-                  pokemonTranslate.getName(
-                    data.id,
-                    value.lang === "es" ? "en" : value.lang
-                  )
-                }
-              </Context.Consumer>
+              <a
+                className="more"
+                href={`/${meta}/${league}/${matchupState.speciesId}`}
+              >
+                <>
+                  {data.id <= 810 && (
+                    <Context.Consumer>
+                      {(value) =>
+                        pokemonTranslate.getName(
+                          data.id,
+                          value.lang === "es" ? "en" : value.lang
+                        )
+                      }
+                    </Context.Consumer>
+                  )}
+                </>
+              </a>
               <div className="rating">
                 {matchupType === "keyMatchup"
                   ? matchup.rating
