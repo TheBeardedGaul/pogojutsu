@@ -9,7 +9,7 @@ export interface PokemonProps {
   sprites?: {
     front_default: string;
   };
-  moveStr: string;
+  moveStr: string | string[];
   recommandedFastMoves: Move[];
   recommandedChargedMoves: Move[];
   fastMoves: Move[];
@@ -57,7 +57,8 @@ export interface PokemonFlux {
     fastMoves: any[];
     chargedMoves: any[];
   };
-  moveStr: string;
+  moveStr?: string;
+  moveset?: string[];
   score: number;
   scores: number[];
 }

@@ -14,7 +14,7 @@ interface MatchupsCardProps {
   speciesId: string;
   matchupType: MatchupType;
   matchups: Matchup[];
-  moveStr: string;
+  moveStr: string | string[];
   meta: Meta;
   league: League;
 }

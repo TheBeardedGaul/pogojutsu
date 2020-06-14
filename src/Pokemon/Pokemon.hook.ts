@@ -190,29 +190,48 @@ function parsePokemon(
   pokemonToParse: PokemonFlux,
   speciesId?: string
 ): PokemonProps {
-  const movesArray = pokemonToParse.moveStr.split("-");
+  let movesArray: string[] = [];
+  if (pokemonToParse.moveStr) {
+    movesArray = pokemonToParse.moveStr.split("-");
+  } else if (pokemonToParse.moveset) {
+    movesArray = pokemonToParse.moveset;
+  }
   (pokemonToParse.moves.fastMoves as []).sort((a, b) =>
     a["moveId"] > b["moveId"] ? 1 : b["moveId"] > a["moveId"] ? -1 : 0
   );
   (pokemonToParse.moves.chargedMoves as []).sort((a, b) =>
     a["moveId"] > b["moveId"] ? 1 : b["moveId"] > a["moveId"] ? -1 : 0
   );
-  let fastMoveIndexToUse = +movesArray[0];
-  if (fastMoveIndexToUse >= pokemonToParse.moves.fastMoves.length) {
-    fastMoveIndexToUse = fastMoveIndexToUse - 1;
+  let fastMove;
+  if (pokemonToParse.moveStr) {
+    let fastMoveIndexToUse = +movesArray[0];
+    if (fastMoveIndexToUse >= pokemonToParse.moves.fastMoves.length) {
+      fastMoveIndexToUse = fastMoveIndexToUse - 1;
+    }
+    fastMove = pokemonToParse.moves.fastMoves[fastMoveIndexToUse];
+  } else {
+    fastMove = pokemonToParse.moves.fastMoves.filter(
+      (element) => element.moveId === movesArray[0]
+    )[0];
   }
-  const fastMove = pokemonToParse.moves.fastMoves[fastMoveIndexToUse];
-  const chargedMoves: any[] = [];
-  chargedMoves.push(
-    pokemonToParse.moves.chargedMoves[Number.parseInt(movesArray[1]) - 1]
-  );
-  chargedMoves.push(
-    pokemonToParse.moves.chargedMoves[Number.parseInt(movesArray[2]) - 1]
-  );
+  let chargedMoves: any[] = [];
+  if (pokemonToParse.moveStr) {
+    chargedMoves.push(
+      pokemonToParse.moves.chargedMoves[Number.parseInt(movesArray[1]) - 1]
+    );
+    chargedMoves.push(
+      pokemonToParse.moves.chargedMoves[Number.parseInt(movesArray[2]) - 1]
+    );
+  } else {
+    chargedMoves = pokemonToParse.moves.chargedMoves.filter(
+      (element) =>
+        element.moveId === movesArray[1] || element.moveId === movesArray[2]
+    );
+  }
   const pokemon: PokemonProps = {
     speciesId: pokemonToParse.speciesId,
     score: pokemonToParse.score,
-    moveStr: pokemonToParse.moveStr,
+    moveStr: pokemonToParse.moveStr || pokemonToParse.moveset || [],
     recommandedFastMoves: getFastMoves(fastMove),
     recommandedChargedMoves: getChargedMoves(chargedMoves),
     fastMoves: getFastMoves(

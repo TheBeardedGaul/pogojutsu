@@ -17,7 +17,7 @@ interface MatchupElementProps {
   speciesId: string;
   matchupType: MatchupType;
   matchup: Matchup;
-  moveStr: string;
+  moveStr: string | string[];
   meta: Meta;
   league: League;
 }
