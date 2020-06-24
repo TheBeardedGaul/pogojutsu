@@ -256,7 +256,7 @@ function getMatchups(matchups: any[]): Matchup[] {
     resultMatchups.push({
       speciesId: element.opponent,
       rating: element.rating,
-      opRating: element.opRating,
+      opRating: 1000 - element.rating,
     })
   );
   return resultMatchups;
