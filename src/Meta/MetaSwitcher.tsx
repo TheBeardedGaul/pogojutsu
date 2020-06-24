@@ -39,6 +39,9 @@ export const MetaSwitcher: React.FC<MetaSwitcherProps> = ({
       <MenuItem className="TextSelect" value={Meta.Sorcerous}>
         {<Translate id={`metas.${Meta.Sorcerous}`} />}
       </MenuItem>
+      <MenuItem className="TextSelect" value={Meta.Catacomb}>
+        {<Translate id={`metas.${Meta.Catacomb}`} />}
+      </MenuItem>
     </Select>
   );
 };

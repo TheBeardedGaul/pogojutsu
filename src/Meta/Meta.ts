@@ -8,5 +8,6 @@ export enum Meta {
   Voyager = "voyager",
   Forest = "forest",
   Sorcerous = "sorcerous",
+  Catacomb = "catacomb",
   GoBattleLeague = "gobattle",
 }

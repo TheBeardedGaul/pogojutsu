@@ -98,6 +98,18 @@ export const RouterComponent: React.FC = (props) => {
       <Route exact path={`/${Meta.Sorcerous}/${League.Master}`}>
         <Redirect to={`/${Meta.Sorcerous}/${League.Great}`} />
       </Route>
+      <Route exact path={`/${Meta.Catacomb}`}>
+        <Redirect to={`/${Meta.Catacomb}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Catacomb}/${League.Great}`}>
+        <PokemonListComponent meta={Meta.Catacomb} league={League.Great} />
+      </Route>
+      <Route exact path={`/${Meta.Catacomb}/${League.Ultra}`}>
+        <Redirect to={`/${Meta.Catacomb}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Catacomb}/${League.Master}`}>
+        <Redirect to={`/${Meta.Catacomb}/${League.Great}`} />
+      </Route>
     </Switch>
   );
 };
