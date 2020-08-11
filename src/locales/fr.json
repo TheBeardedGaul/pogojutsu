@@ -276,7 +276,8 @@
     "forest": "Coupe Forêt",
     "sorcerous": "Coupe Sorcellerie",
     "catacomb": "Coupe des Catacombes",
-    "gobattle": "Go Battle"
+    "gobattle": "Go Battle",
+    "premier": "Coupe Majeure"
   },
   "leagues": {
     "great": "Ligue Super",

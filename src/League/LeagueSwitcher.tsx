@@ -24,19 +24,29 @@ export const LeagueSwitcher: React.FC<LeagueSwitcherProps> = ({
       value={league}
       onChange={(event) => setLeagueFct(event.target.value as League)}
     >
-      <MenuItem className="TextSelect" value={League.Great}>
-        {<Translate id={`leagues.${League.Great}`} />}
-      </MenuItem>
-      {meta === Meta.GoBattleLeague && (
-        <MenuItem className="TextSelect" value={League.Ultra}>
-          {<Translate id={`leagues.${League.Ultra}`} />}
+      {isMetaAllowedForGreatLeague(meta) && (
+        <MenuItem className="TextSelect" value={League.Great}>
+          {<Translate id={`leagues.${League.Great}`} />}
         </MenuItem>
       )}
-      {meta === Meta.GoBattleLeague && (
-        <MenuItem className="TextSelect" value={League.Master}>
-          {<Translate id={`leagues.${League.Master}`} />}
-        </MenuItem>
+      {isMetaAllowedForLeagues(meta) && (
+        <>
+          <MenuItem className="TextSelect" value={League.Ultra}>
+            {<Translate id={`leagues.${League.Ultra}`} />}
+          </MenuItem>
+          <MenuItem className="TextSelect" value={League.Master}>
+            {<Translate id={`leagues.${League.Master}`} />}
+          </MenuItem>
+        </>
       )}
     </Select>
   );
+};
+
+const isMetaAllowedForLeagues = (meta: Meta) => {
+  return meta === Meta.GoBattleLeague || meta === Meta.Premier;
+};
+
+const isMetaAllowedForGreatLeague = (meta: Meta) => {
+  return meta !== Meta.Premier;
 };
