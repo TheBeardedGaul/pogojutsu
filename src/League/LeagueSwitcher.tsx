@@ -24,15 +24,17 @@ export const LeagueSwitcher: React.FC<LeagueSwitcherProps> = ({
       value={league}
       onChange={(event) => setLeagueFct(event.target.value as League)}
     >
-      <MenuItem className="TextSelect" value={League.Great}>
-        {<Translate id={`leagues.${League.Great}`} />}
-      </MenuItem>
-      {meta === Meta.GoBattleLeague && (
+      {meta !== Meta.Premier && (
+        <MenuItem className="TextSelect" value={League.Great}>
+          {<Translate id={`leagues.${League.Great}`} />}
+        </MenuItem>
+      )}
+      {(meta === Meta.GoBattleLeague || meta === Meta.Premier) && (
         <MenuItem className="TextSelect" value={League.Ultra}>
           {<Translate id={`leagues.${League.Ultra}`} />}
         </MenuItem>
       )}
-      {meta === Meta.GoBattleLeague && (
+      {(meta === Meta.GoBattleLeague || meta === Meta.Premier) && (
         <MenuItem className="TextSelect" value={League.Master}>
           {<Translate id={`leagues.${League.Master}`} />}
         </MenuItem>
