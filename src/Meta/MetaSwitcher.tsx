@@ -24,9 +24,6 @@ export const MetaSwitcher: React.FC<MetaSwitcherProps> = ({
       <MenuItem className="TextSelect" value={Meta.GoBattleLeague}>
         {<Translate id={`metas.${Meta.GoBattleLeague}`} />}
       </MenuItem>
-      <MenuItem className="TextSelect" value={Meta.Premier}>
-        {<Translate id={`metas.${Meta.Premier}`} />}
-      </MenuItem>
       <MenuItem className="TextSelect" value={Meta.Rose}>
         {<Translate id={`metas.${Meta.Rose}`} />}
       </MenuItem>
