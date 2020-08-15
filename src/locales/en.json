@@ -81,7 +81,8 @@
       "HIDDEN_POWER_PSYCHIC": "Hidden Power [Psychic]",
       "FROST_BREATH": "Frost Breath",
       "CUT": "Cut",
-      "IRON_TAIL": "Iron Tail"
+      "IRON_TAIL": "Iron Tail",
+      "THUNDER_FANG": "Thunder Fang"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -218,7 +219,10 @@
       "WRAP": "Wrap",
       "FRUSTRATION": "Frustration",
       "SUBMISSION": "Submission",
-      "FLAME_WHEEL": "Flame Wheel"
+      "FLAME_WHEEL": "Flame Wheel",
+      "SCALD": "Scald",
+      "BRINE": "Brine",
+      "VICE_GRIP": "Vise Grip"
     }
   },
   "pages": {
