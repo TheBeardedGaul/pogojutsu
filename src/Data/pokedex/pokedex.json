@@ -398,5 +398,13 @@
     "sprites": {
       "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/rotom-wash.png"
     }
+  },
+  {
+    "speciesId": "farfetchd_galarian",
+    "id": 83,
+    "types": ["fighting"],
+    "sprites": {
+      "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/farfetchd-galar.png"
+    }
   }
 ]
