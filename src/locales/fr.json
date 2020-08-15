@@ -81,7 +81,8 @@
       "HIDDEN_POWER_PSYCHIC": "Hidden Power [Psy]",
       "FROST_BREATH": "Souffle Glacé",
       "CUT": "Coupe",
-      "IRON_TAIL": "Queue de Fer"
+      "IRON_TAIL": "Queue de Fer",
+      "THUNDER_FANG": "Crocs Éclair"
     },
     "chargedMoves": {
       "label": "Attaques chargées",
@@ -218,7 +219,10 @@
       "WRAP": "Ligotage",
       "FRUSTRATION": "Frustration",
       "SUBMISSION": "Sacrifice",
-      "FLAME_WHEEL": "Roue de Feu"
+      "FLAME_WHEEL": "Roue de Feu",
+      "SCALD": "Ébullition",
+      "BRINE": "Saumure",
+      "VICE_GRIP": "Force Poigne"
     }
   },
   "pages": {

@@ -81,7 +81,8 @@
       "HIDDEN_POWER_PSYCHIC": "Poder Oculto [Psíquico]",
       "FROST_BREATH": "Vaho Gélido",
       "CUT": "Corte",
-      "IRON_TAIL": "Cola Férrea"
+      "IRON_TAIL": "Cola Férrea",
+      "THUNDER_FANG": "Colmillo Rayo"
     },
     "chargedMoves": {
       "label": "Movimientos cargados",
@@ -218,7 +219,10 @@
       "WRAP": "Constricción",
       "FRUSTRATION": "Frustración",
       "SUBMISSION": "Sumisión",
-      "FLAME_WHEEL": "Rueda Fuego"
+      "FLAME_WHEEL": "Rueda Fuego",
+      "SCALD": "Escaldar",
+      "BRINE": "Salmuera",
+      "VICE_GRIP": "Agarre"
     }
   },
   "pages": {
