@@ -74,6 +74,18 @@ export const RouterComponent: React.FC = (props) => {
       <Route exact path={`/${Meta.Voyager}/${League.Master}`}>
         <Redirect to={`/${Meta.Voyager}/${League.Great}`} />
       </Route>
+      <Route exact path={`/${Meta.Ferocious}`}>
+        <Redirect to={`/${Meta.Ferocious}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Ferocious}/${League.Great}`}>
+        <PokemonListComponent meta={Meta.Ferocious} league={League.Great} />
+      </Route>
+      <Route exact path={`/${Meta.Ferocious}/${League.Ultra}`}>
+        <Redirect to={`/${Meta.Ferocious}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Ferocious}/${League.Master}`}>
+        <Redirect to={`/${Meta.Ferocious}/${League.Great}`} />
+      </Route>
       <Route exact path={`/${Meta.Forest}`}>
         <Redirect to={`/${Meta.Forest}/${League.Great}`} />
       </Route>
@@ -85,6 +97,18 @@ export const RouterComponent: React.FC = (props) => {
       </Route>
       <Route exact path={`/${Meta.Forest}/${League.Master}`}>
         <Redirect to={`/${Meta.Forest}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Sinister}`}>
+        <Redirect to={`/${Meta.Sinister}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Sinister}/${League.Great}`}>
+        <PokemonListComponent meta={Meta.Sinister} league={League.Great} />
+      </Route>
+      <Route exact path={`/${Meta.Sinister}/${League.Ultra}`}>
+        <Redirect to={`/${Meta.Sinister}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Sinister}/${League.Master}`}>
+        <Redirect to={`/${Meta.Sinister}/${League.Great}`} />
       </Route>
       <Route exact path={`/${Meta.Sorcerous}`}>
         <Redirect to={`/${Meta.Sorcerous}/${League.Great}`} />
@@ -109,6 +133,18 @@ export const RouterComponent: React.FC = (props) => {
       </Route>
       <Route exact path={`/${Meta.Catacomb}/${League.Master}`}>
         <Redirect to={`/${Meta.Catacomb}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Timeless}`}>
+        <Redirect to={`/${Meta.Timeless}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Timeless}/${League.Great}`}>
+        <PokemonListComponent meta={Meta.Timeless} league={League.Great} />
+      </Route>
+      <Route exact path={`/${Meta.Timeless}/${League.Ultra}`}>
+        <Redirect to={`/${Meta.Timeless}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Timeless}/${League.Master}`}>
+        <Redirect to={`/${Meta.Timeless}/${League.Great}`} />
       </Route>
       <Route exact path={`/${Meta.Premier}`}>
         <Redirect to={`/${Meta.Premier}/${League.Master}`} />

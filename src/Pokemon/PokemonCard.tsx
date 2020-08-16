@@ -9,7 +9,7 @@ import { Type } from "./Type/TypeModel";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
-import { Typography, Divider } from "@material-ui/core";
+import { MoveSet } from "./Move/MoveSet";
 /*
   Ce composant sert à charger et à afficher les informations d'un Pokemon
   sous la forme d'une carte.
@@ -19,12 +19,14 @@ import { Typography, Divider } from "@material-ui/core";
 
 interface LocalProps {
   pokemon: PokemonProps;
+  movesData?: any[];
   rank?: number;
   getURLToPokemonDetails?: (pokemon: PokemonProps) => string;
 }
 
 export const PokemonCard: React.FC<LocalProps> = ({
   pokemon,
+  movesData,
   rank,
   getURLToPokemonDetails,
 }) => {
@@ -39,7 +41,10 @@ export const PokemonCard: React.FC<LocalProps> = ({
           {data !== undefined && (
             <>
               <div className={styles.CardImage}>
-                <img src={data.sprites.front_default} alt="Sprite" />
+                <img
+                  src={data.sprites.front_default}
+                  alt={`Sprite for ${pokemon.speciesId}`}
+                />
                 {data && data.shadow && (
                   <img
                     className={styles.ShadowIcon}
@@ -61,25 +66,12 @@ export const PokemonCard: React.FC<LocalProps> = ({
                     </Context.Consumer>
                   )}
                 </h3>
-                <div className={styles.cardMoves}>
-                  <Typography
-                    className={`${styles.CardMove} ${styles.FirstMove}`}
-                  >
-                    <Translate id={`moves.fastMoves.${data.fastMove.name}`} />
-                  </Typography>
-                  <Divider variant="middle" />
-                  <Typography className={styles.CardMove}>
-                    <Translate
-                      id={`moves.chargedMoves.${data.chargedMoves[0].name}`}
-                    />
-                  </Typography>
-                  <Divider variant="middle" />
-                  <Typography className={styles.CardMove}>
-                    <Translate
-                      id={`moves.chargedMoves.${data.chargedMoves[1].name}`}
-                    />
-                  </Typography>
-                </div>
+                <MoveSet
+                  fastMove={data.fastMove}
+                  firstChargedMove={data.chargedMoves[0]}
+                  secondChargedMove={data.chargedMoves[1]}
+                  moves={movesData}
+                />
               </div>
             </>
           )}
