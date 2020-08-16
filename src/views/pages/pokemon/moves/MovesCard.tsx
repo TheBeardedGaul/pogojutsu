@@ -2,7 +2,8 @@ import React from "react";
 import { Move } from "../../../../Pokemon/Move/MoveModel";
 import { Translate } from "../../../../i18n/components";
 import Card from "@material-ui/core/Card";
-import { CardContent, Typography, Divider } from "@material-ui/core";
+import { CardContent } from "@material-ui/core";
+import { MoveCard } from "./MoveCard";
 
 interface MovesCardProps {
   movesType: "fastMoves" | "chargedMoves";
@@ -21,15 +22,12 @@ export const MovesCard: React.FC<MovesCardProps> = ({ movesType, moves }) => {
           <div className="cardMoves">
             {sortMoves.map((moveElement: Move, index: number) => {
               return (
-                <>
-                  {index > 0 && <Divider variant="middle" />}
-                  <Typography className={`CardMove`}>
-                    <Translate id={`moves.${movesType}.${moveElement.name}`} />
-                    <div className="percentageMoveUsing">
-                      {`${getPercentageOfUse(moves, moveElement)}%`}
-                    </div>
-                  </Typography>
-                </>
+                <MoveCard
+                  movesType={movesType}
+                  moves={moves}
+                  moveElement={moveElement}
+                  position={index}
+                />
               );
             })}
           </div>
@@ -38,11 +36,3 @@ export const MovesCard: React.FC<MovesCardProps> = ({ movesType, moves }) => {
     </Card>
   );
 };
-
-function getPercentageOfUse(moves: Move[], currentMove: Move): number {
-  let total = 0;
-  moves.forEach((element) => {
-    total = total + element.uses;
-  });
-  return Math.round((currentMove.uses / total) * 100);
-}

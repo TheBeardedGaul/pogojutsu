@@ -12,6 +12,7 @@ import { PokemonProps } from "./Pokemon.model";
 import { Translate } from "../i18n";
 import { InputBase } from "@material-ui/core";
 import SearchIcon from "@material-ui/icons/Search";
+import { useMovesDataPvPoke } from "./Move/MoveHook";
 
 export interface PokemonListComponentProps {
   meta?: Meta;
@@ -29,6 +30,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
   const [metaState, setMetaState] = useState<Meta>(meta);
   const [leagueState, setLeagueState] = useState<League>(league);
   const { pvpokeData, error } = usePvpokeData(metaState, leagueState);
+  const { movesData } = useMovesDataPvPoke();
   const history = useHistory();
 
   const displayProgress: boolean = !pvpokeData || pvpokeData.length <= 1;
@@ -73,7 +75,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
           </>
         )}
         {displayProgress && <CircularProgress />}
-        {pvpokeData.length > 0 && error === null && (
+        {pvpokeData.length > 0 && error === null && movesData !== undefined && (
           <>
             {readOnly && (
               <h2 className="metaLeagueTitle">
@@ -90,6 +92,7 @@ export const PokemonListComponent: React.FC<PokemonListComponentProps> = ({
                     pokemon={element}
                     rank={index + 1}
                     getURLToPokemonDetails={getURLToPokemonDetails}
+                    movesData={movesData}
                   />
                 );
               })}
