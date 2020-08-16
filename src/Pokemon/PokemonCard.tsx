@@ -41,7 +41,10 @@ export const PokemonCard: React.FC<LocalProps> = ({
           {data !== undefined && (
             <>
               <div className={styles.CardImage}>
-                <img src={data.sprites.front_default} alt="Sprite" />
+                <img
+                  src={data.sprites.front_default}
+                  alt={`Sprite for ${pokemon.speciesId}`}
+                />
                 {data && data.shadow && (
                   <img
                     className={styles.ShadowIcon}
