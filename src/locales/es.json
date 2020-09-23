@@ -82,7 +82,8 @@
       "FROST_BREATH": "Vaho Gélido",
       "CUT": "Corte",
       "IRON_TAIL": "Cola Férrea",
-      "THUNDER_FANG": "Colmillo Rayo"
+      "THUNDER_FANG": "Colmillo Rayo",
+      "GUST": "Tornado"
     },
     "chargedMoves": {
       "label": "Movimientos cargados",
@@ -222,7 +223,9 @@
       "FLAME_WHEEL": "Rueda Fuego",
       "SCALD": "Escaldar",
       "BRINE": "Salmuera",
-      "VICE_GRIP": "Agarre"
+      "VICE_GRIP": "Agarre",
+      "V_CREATE": "V de Fuego",
+      "LUNGE": "Plancha"
     }
   },
   "pages": {
@@ -277,6 +280,7 @@
     "forest": "Forest Cup",
     "sorcerous": "Sorcerous Cup",
     "catacomb": "Catacomb Cup",
+    "sunrise": "Sunrise Cup",
     "gobattle": "Go Battle",
     "premier": "Premier Cup"
   },
