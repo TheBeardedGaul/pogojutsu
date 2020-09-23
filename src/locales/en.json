@@ -82,7 +82,8 @@
       "FROST_BREATH": "Frost Breath",
       "CUT": "Cut",
       "IRON_TAIL": "Iron Tail",
-      "THUNDER_FANG": "Thunder Fang"
+      "THUNDER_FANG": "Thunder Fang",
+      "GUST": "Gust"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -222,7 +223,9 @@
       "FLAME_WHEEL": "Flame Wheel",
       "SCALD": "Scald",
       "BRINE": "Brine",
-      "VICE_GRIP": "Vise Grip"
+      "VICE_GRIP": "Vise Grip",
+      "V_CREATE": "V-Create",
+      "LUNGE": "Lunge"
     }
   },
   "pages": {
@@ -277,6 +280,7 @@
     "forest": "Forest Cup",
     "sorcerous": "Sorcerous Cup",
     "catacomb": "Catacomb Cup",
+    "sunrise": "Sunrise Cup",
     "gobattle": "Go Battle",
     "premier": "Premier Cup"
   },

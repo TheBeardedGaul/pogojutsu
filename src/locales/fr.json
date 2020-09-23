@@ -82,7 +82,8 @@
       "FROST_BREATH": "Souffle Glacé",
       "CUT": "Coupe",
       "IRON_TAIL": "Queue de Fer",
-      "THUNDER_FANG": "Crocs Éclair"
+      "THUNDER_FANG": "Crocs Éclair",
+      "GUST": "Tornade"
     },
     "chargedMoves": {
       "label": "Attaques chargées",
@@ -222,7 +223,9 @@
       "FLAME_WHEEL": "Roue de Feu",
       "SCALD": "Ébullition",
       "BRINE": "Saumure",
-      "VICE_GRIP": "Force Poigne"
+      "VICE_GRIP": "Force Poigne",
+      "V_CREATE": "Coup Victoire",
+      "LUNGE": "Furie-Bond"
     }
   },
   "pages": {
@@ -279,6 +282,7 @@
     "voyager": "Coupe Voyageur",
     "forest": "Coupe Forêt",
     "sorcerous": "Coupe Sorcellerie",
+    "sunrise": "Coupe Aurore",
     "catacomb": "Coupe des Catacombes",
     "gobattle": "Go Battle",
     "premier": "Coupe Majeure"
