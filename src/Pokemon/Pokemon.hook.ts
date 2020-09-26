@@ -163,7 +163,7 @@ export function usePvpokeData(
     setError(null);
     axios
       .get(
-        `https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/${metaStr}/overall/rankings-${leagueStr}.json`
+        `https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/rankings/${metaStr}/overall/rankings-${leagueStr}.json`
       )
       .then((apiResult) => {
         setPvpokeData(parseFlux(apiResult.data, speciesId));
