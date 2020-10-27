@@ -11,6 +11,7 @@ export enum Meta {
   Catacomb = "catacomb",
   Sunrise = "sunrise",
   Halloween = "halloween",
+  Marsh = "marsh",
   GoBattleLeague = "gobattle",
   Premier = "premier",
 }
