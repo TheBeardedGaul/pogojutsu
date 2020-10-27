@@ -10,6 +10,8 @@ export enum Meta {
   Sorcerous = "sorcerous",
   Catacomb = "catacomb",
   Sunrise = "sunrise",
+  Halloween = "halloween",
+  Marsh = "marsh",
   GoBattleLeague = "gobattle",
   Premier = "premier",
 }

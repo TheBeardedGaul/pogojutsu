@@ -170,6 +170,30 @@ export const RouterComponent: React.FC = (props) => {
       <Route exact path={`/${Meta.Sunrise}/${League.Master}`}>
         <Redirect to={`/${Meta.Sunrise}/${League.Great}`} />
       </Route>
+      <Route exact path={`/${Meta.Halloween}`}>
+        <Redirect to={`/${Meta.Halloween}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Halloween}/${League.Great}`}>
+        <PokemonListComponent meta={Meta.Halloween} league={League.Great} />
+      </Route>
+      <Route exact path={`/${Meta.Halloween}/${League.Ultra}`}>
+        <Redirect to={`/${Meta.Halloween}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Halloween}/${League.Master}`}>
+        <Redirect to={`/${Meta.Halloween}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Marsh}`}>
+        <Redirect to={`/${Meta.Marsh}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Marsh}/${League.Great}`}>
+        <PokemonListComponent meta={Meta.Marsh} league={League.Great} />
+      </Route>
+      <Route exact path={`/${Meta.Marsh}/${League.Ultra}`}>
+        <Redirect to={`/${Meta.Marsh}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Marsh}/${League.Master}`}>
+        <Redirect to={`/${Meta.Marsh}/${League.Great}`} />
+      </Route>
     </Switch>
   );
 };
