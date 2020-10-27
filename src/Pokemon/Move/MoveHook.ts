@@ -14,7 +14,7 @@ export function useMoveDataPvPoke(move: Move, moves?: any[]) {
     } else {
       axios
         .get(
-          `https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/gamemaster-mega.json`
+          `https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/gamemaster.json`
         )
         .then((apiResult) => {
           setData(getMove(move, apiResult.data.moves as any[]));
@@ -49,7 +49,7 @@ export function useMovesDataPvPoke() {
     setError(null);
     axios
       .get(
-        `https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/gamemaster-mega.json`
+        `https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/gamemaster.json`
       )
       .then((apiResult) => {
         setMovesData(apiResult.data.moves as any[]);
