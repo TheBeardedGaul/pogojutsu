@@ -45,9 +45,9 @@ export const MetaSwitcher: React.FC<MetaSwitcherProps> = ({
       <MenuItem className="TextSelect" value={Meta.Sorcerous}>
         {<Translate id={`metas.${Meta.Sorcerous}`} />}
       </MenuItem> */}
-      <MenuItem className="TextSelect" value={Meta.Halloween}>
+      {/* <MenuItem className="TextSelect" value={Meta.Halloween}>
         {<Translate id={`metas.${Meta.Halloween}`} />}
-      </MenuItem>
+      </MenuItem> */}
       <MenuItem className="TextSelect" value={Meta.Flying}>
         {<Translate id={`metas.${Meta.Flying}`} />}
       </MenuItem>
@@ -57,9 +57,9 @@ export const MetaSwitcher: React.FC<MetaSwitcherProps> = ({
       <MenuItem className="TextSelect" value={Meta.Sunrise}>
         {<Translate id={`metas.${Meta.Sunrise}`} />}
       </MenuItem>
-      <MenuItem className="TextSelect" value={Meta.GoTeamUp}>
+      {/* <MenuItem className="TextSelect" value={Meta.GoTeamUp}>
         {<Translate id={`metas.${Meta.GoTeamUp}`} />}
-      </MenuItem>
+      </MenuItem> */}
       {/* <MenuItem className="TextSelect" value={Meta.Timeless}>
         {<Translate id={`metas.${Meta.Timeless}`} />}
       </MenuItem>
