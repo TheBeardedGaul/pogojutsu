@@ -406,5 +406,13 @@
     "sprites": {
       "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/farfetchd-galar.png"
     }
+  },
+  {
+    "speciesId": "sirfetchd",
+    "id": 865,
+    "types": ["fighting"],
+    "sprites": {
+      "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/865.png"
+    }
   }
 ]
