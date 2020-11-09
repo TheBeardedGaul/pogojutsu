@@ -16,5 +16,6 @@ export enum Meta {
   GoBattleLeague = "gobattle",
   Premier = "premier",
   Little = "little",
+  Kanto = "kanto",
   GoTeamUp = "goteamup",
 }
