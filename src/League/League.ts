@@ -1,5 +1,6 @@
 export enum League {
-    Great = "great",
-    Ultra = "ultra",
-    Master = "master"
+  Little = "little",
+  Great = "great",
+  Ultra = "ultra",
+  Master = "master",
 }

@@ -150,12 +150,14 @@ export function usePvpokeData(
   const [pvpokeData, setPvpokeData] = useState<PokemonProps[]>([]);
   const [error, setError] = useState<string | null>(null);
 
-  const leagueStr =
-    league === League.Great
-      ? "1500"
-      : league === League.Ultra
-      ? "2500"
-      : "10000";
+  let leagueStr = "1500";
+  if (league === League.Little) {
+    leagueStr = "500";
+  } else if (league === League.Ultra) {
+    leagueStr = "2500";
+  } else if (league === League.Master) {
+    leagueStr = "10000";
+  }
   const metaStr = meta === Meta.GoBattleLeague ? "all" : meta;
 
   useEffect(() => {
@@ -298,18 +300,28 @@ function getChargedMoves(
     );
     return moves;
   } else {
-    return [
-      {
-        name: chargedMoves[0].moveId,
-        type: Type.Unknown,
-        uses: chargedMoves[0].uses,
-      },
-      {
-        name: chargedMoves[1].moveId,
-        type: Type.Unknown,
-        uses: chargedMoves[1].uses,
-      },
-    ];
+    if (chargedMoves.length > 1) {
+      return [
+        {
+          name: chargedMoves[0].moveId,
+          type: Type.Unknown,
+          uses: chargedMoves[0].uses,
+        },
+        {
+          name: chargedMoves[1].moveId,
+          type: Type.Unknown,
+          uses: chargedMoves[1].uses,
+        },
+      ];
+    } else {
+      return [
+        {
+          name: chargedMoves[0].moveId,
+          type: Type.Unknown,
+          uses: chargedMoves[0].uses,
+        },
+      ];
+    }
   }
 }
 

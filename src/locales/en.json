@@ -287,9 +287,11 @@
     "marsh": "Marsh Cup",
     "gobattle": "Go Battle",
     "premier": "Premier Cup",
+    "little": "Little Cup",
     "goteamup": "Go team up"
   },
   "leagues": {
+    "little": "Little League",
     "great": "Great League",
     "ultra": "Ultra League",
     "master": "Master League"
