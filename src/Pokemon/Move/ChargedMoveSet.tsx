@@ -28,13 +28,19 @@ export const ChargedMoveSet: React.FC<LocalProps> = ({
           className="ChargedMoveEnergyBadge"
         >
           <Typography className={styles.CardMove}>
-            <Translate id={`moves.chargedMoves.${chargedMove.name}`} />
+            {chargedMove && (
+              <Translate id={`moves.chargedMoves.${chargedMove.name}`} />
+            )}
+            {!chargedMove && "-"}
           </Typography>
         </Badge>
       )}
       {data === undefined && (
         <Typography className={styles.CardMove}>
-          <Translate id={`moves.chargedMoves.${chargedMove.name}`} />
+          {chargedMove && (
+            <Translate id={`moves.chargedMoves.${chargedMove.name}`} />
+          )}
+          {!chargedMove && "-"}
         </Typography>
       )}
     </>

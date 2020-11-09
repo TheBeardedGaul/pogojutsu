@@ -25,6 +25,11 @@ export const LeagueSwitcher: React.FC<LeagueSwitcherProps> = ({
       onChange={(event) => setLeagueFct(event.target.value as League)}
     >
       {meta !== Meta.Premier && (
+        <MenuItem className="TextSelect" value={League.Little}>
+          {<Translate id={`leagues.${League.Little}`} />}
+        </MenuItem>
+      )}
+      {meta !== Meta.Premier && (
         <MenuItem className="TextSelect" value={League.Great}>
           {<Translate id={`leagues.${League.Great}`} />}
         </MenuItem>

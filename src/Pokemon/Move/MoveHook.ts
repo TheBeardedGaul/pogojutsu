@@ -9,20 +9,22 @@ export function useMoveDataPvPoke(move: Move, moves?: any[]) {
   useEffect(() => {
     setData(undefined);
     setError(null);
-    if (moves) {
-      setData(getMove(move, moves));
-    } else {
-      axios
-        .get(
-          `https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/gamemaster.json`
-        )
-        .then((apiResult) => {
-          setData(getMove(move, apiResult.data.moves as any[]));
-        })
-        // Gestion des erreurs
-        .catch((apiError) => {
-          setError(apiError.message);
-        });
+    if (move) {
+      if (moves) {
+        setData(getMove(move, moves));
+      } else {
+        axios
+          .get(
+            `https://raw.githubusercontent.com/pvpoke/pvpoke/master/src/data/gamemaster.json`
+          )
+          .then((apiResult) => {
+            setData(getMove(move, apiResult.data.moves as any[]));
+          })
+          // Gestion des erreurs
+          .catch((apiError) => {
+            setError(apiError.message);
+          });
+      }
     }
   }, [move, moves]);
   return { data, error };

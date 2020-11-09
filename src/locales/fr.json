@@ -290,9 +290,11 @@
     "catacomb": "Coupe des Catacombes",
     "gobattle": "Go Battle",
     "premier": "Coupe Majeure",
+    "little": "Coupe Petite",
     "goteamup": "Go team up"
   },
   "leagues": {
+    "little": "Ligue Petite",
     "great": "Ligue Super",
     "ultra": "Ligue Hyper",
     "master": "Ligue Master"
