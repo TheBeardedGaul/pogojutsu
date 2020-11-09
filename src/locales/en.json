@@ -226,7 +226,8 @@
       "VICE_GRIP": "Vise Grip",
       "V_CREATE": "V-Create",
       "LUNGE": "Lunge",
-      "AEROBLAST": "Aeroblast"
+      "AEROBLAST": "Aeroblast",
+      "SHADOW_BONE": "Shadow Bone"
     }
   },
   "pages": {
@@ -288,6 +289,7 @@
     "gobattle": "Go Battle",
     "premier": "Premier Cup",
     "little": "Little Cup",
+    "kanto": "Kanto Cup",
     "goteamup": "Go team up"
   },
   "leagues": {

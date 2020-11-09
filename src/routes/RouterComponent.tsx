@@ -230,6 +230,21 @@ export const RouterComponent: React.FC = (props) => {
       <Route exact path={`/${Meta.Little}/${League.Master}`}>
         <Redirect to={`/${Meta.Little}/${League.Little}`} />
       </Route>
+      <Route exact path={`/${Meta.Kanto}`}>
+        <Redirect to={`/${Meta.Kanto}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Kanto}/${League.Little}`}>
+        <Redirect to={`/${Meta.Kanto}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Kanto}/${League.Great}`}>
+        <PokemonListComponent meta={Meta.Kanto} league={League.Great} />
+      </Route>
+      <Route exact path={`/${Meta.Kanto}/${League.Ultra}`}>
+        <Redirect to={`/${Meta.Kanto}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Kanto}/${League.Master}`}>
+        <Redirect to={`/${Meta.Kanto}/${League.Great}`} />
+      </Route>
     </Switch>
   );
 };

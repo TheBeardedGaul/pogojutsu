@@ -226,7 +226,8 @@
       "VICE_GRIP": "Agarre",
       "V_CREATE": "V de Fuego",
       "LUNGE": "Plancha",
-      "AEROBLAST": "Aerochorro"
+      "AEROBLAST": "Aerochorro",
+      "SHADOW_BONE": "Hueso Sombrío"
     }
   },
   "pages": {
@@ -288,6 +289,7 @@
     "gobattle": "Go Battle",
     "premier": "Premier Cup",
     "little": "Little Cup",
+    "kanto": "Kanto Cup",
     "goteamup": "Go team up"
   },
   "leagues": {
