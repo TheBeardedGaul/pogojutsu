@@ -13,6 +13,7 @@ export enum Meta {
   Halloween = "halloween",
   Flying = "flying",
   Marsh = "marsh",
+  Nightfall = "nightfall",
   GoBattleLeague = "gobattle",
   Premier = "premier",
   Little = "little",

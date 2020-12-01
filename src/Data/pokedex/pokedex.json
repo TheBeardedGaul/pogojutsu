@@ -414,5 +414,37 @@
     "sprites": {
       "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/865.png"
     }
+  },
+  {
+    "speciesId": "meowstic_female",
+    "id": 678,
+    "types": ["psychic"],
+    "sprites": {
+      "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/meowstic-female.png"
+    }
+  },
+  {
+    "speciesId": "meowstic",
+    "id": 678,
+    "types": ["psychic"],
+    "sprites": {
+      "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/meowstic-male.png"
+    }
+  },
+  {
+    "speciesId": "ponyta_galarian",
+    "id": 77,
+    "types": ["psychic"],
+    "sprites": {
+      "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/ponyta-galar.png"
+    }
+  },
+  {
+    "speciesId": "rapidash_galarian",
+    "id": 78,
+    "types": ["psychic", "fairy"],
+    "sprites": {
+      "front_default": "https://assets.thesilphroad.com/img/pokemon/icons/96x96/rapidash-galar.png"
+    }
   }
 ]

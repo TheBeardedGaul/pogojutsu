@@ -58,10 +58,10 @@ export const PokemonCard: React.FC<LocalProps> = ({
                   {data.id <= 810 && (
                     <Context.Consumer>
                       {(value) =>
-                        pokemonTranslate.getName(
+                        `${pokemonTranslate.getName(
                           data.id,
                           value.lang === "es" ? "en" : value.lang
-                        )
+                        )} ${data.isXl ? "XL" : ""}`
                       }
                     </Context.Consumer>
                   )}

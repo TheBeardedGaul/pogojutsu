@@ -38,6 +38,7 @@ export interface ResumePokemon {
     front_default: string;
   };
   shadow?: boolean;
+  isXl?: boolean;
 }
 
 export interface PokemonFlux {
