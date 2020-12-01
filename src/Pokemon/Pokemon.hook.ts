@@ -90,11 +90,10 @@ export function usePokeApi(pokemon: PokemonProps) {
   const [data, setData] = useState<Pokemon | undefined>();
   const [error, setError] = useState<string | null>(null);
 
-  const speciesIdToUse = pokemon.speciesId
-    .replace("_shadow", "")
-    .replace("_xl", "");
-
   useEffect(() => {
+    const speciesIdToUse = pokemon.speciesId
+      .replace("_shadow", "")
+      .replace("_xl", "");
     setData(undefined);
     setError(null);
     axios
