@@ -90,20 +90,20 @@ export function usePokeApi(pokemon: PokemonProps) {
   const [data, setData] = useState<Pokemon | undefined>();
   const [error, setError] = useState<string | null>(null);
 
+  const speciesIdToUse = pokemon.speciesId
+    .replace("_shadow", "")
+    .replace("_xl", "");
+
   useEffect(() => {
     setData(undefined);
     setError(null);
     axios
-      .get(
-        `https://pokeapi.co/api/v2/pokemon/${pokemon.speciesId.replace(
-          "_shadow",
-          ""
-        )}/`
-      )
+      .get(`https://pokeapi.co/api/v2/pokemon/${speciesIdToUse}/`)
       // Modification du state avec la réponse de l'API
       .then((apiResult) => {
         const resultTypes = getPokemonType(apiResult.data["types"] as []);
         const isShadow: boolean = pokemon.speciesId.indexOf("_shadow") > -1;
+        const isXl: boolean = pokemon.speciesId.indexOf("_xl") > -1;
         const result: Pokemon = {
           id: apiResult.data["id"],
           speciesId: pokemon.speciesId,
@@ -113,6 +113,7 @@ export function usePokeApi(pokemon: PokemonProps) {
           fastMove: pokemon.recommandedFastMoves[0],
           chargedMoves: pokemon.recommandedChargedMoves,
           shadow: isShadow,
+          isXl: isXl,
         };
         setData(result);
       })
@@ -122,7 +123,7 @@ export function usePokeApi(pokemon: PokemonProps) {
         const backUpApiResult: PokemonBackUpFlux[] = backUpApi as PokemonBackUpFlux[];
         backUpApiResult
           .filter((element) => {
-            return element.speciesId === pokemon.speciesId;
+            return element.speciesId === pokemon.speciesId.replace("_xl", "");
           })
           .forEach((apiResult) => {
             const resultTypes = getPokemonType(apiResult.types);
