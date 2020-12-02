@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: pogojutsu.com
+Token: d9f65f18d9566d22f99b0e5c363271ba51001c59438e1d0a6ae7a08365e190f5
