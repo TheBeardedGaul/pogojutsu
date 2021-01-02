@@ -39,7 +39,13 @@ export const HomePage: React.FC = () => {
         readOnly={true}
       />
       <PokemonListComponent
-        meta={Meta.Nightfall}
+        meta={Meta.Premier}
+        league={League.Master}
+        limit={4}
+        readOnly={true}
+      />
+      <PokemonListComponent
+        meta={Meta.Holiday}
         league={League.Great}
         limit={4}
         readOnly={true}

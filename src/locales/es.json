@@ -83,7 +83,8 @@
       "CUT": "Corte",
       "IRON_TAIL": "Cola Férrea",
       "THUNDER_FANG": "Colmillo Rayo",
-      "GUST": "Tornado"
+      "GUST": "Tornado",
+      "INCINERATE": "Calcinación"
     },
     "chargedMoves": {
       "label": "Movimientos cargados",
@@ -287,6 +288,7 @@
     "flying": "Flying Cup",
     "marsh": "Marsh Cup",
     "nightfall": "Nightfall Cup",
+    "holiday": "Holiday Cup",
     "gobattle": "Go Battle",
     "premier": "Premier Cup",
     "little": "Little Cup",

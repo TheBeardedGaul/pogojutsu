@@ -83,7 +83,8 @@
       "CUT": "Cut",
       "IRON_TAIL": "Iron Tail",
       "THUNDER_FANG": "Thunder Fang",
-      "GUST": "Gust"
+      "GUST": "Gust",
+      "INCINERATE": "Incinerate"
     },
     "chargedMoves": {
       "label": "Charged moves",
@@ -287,6 +288,7 @@
     "flying": "Flying Cup",
     "marsh": "Marsh Cup",
     "nightfall": "Nightfall Cup",
+    "holiday": "Holiday Cup",
     "gobattle": "Go Battle",
     "premier": "Premier Cup",
     "little": "Little Cup",

@@ -14,6 +14,7 @@ export enum Meta {
   Flying = "flying",
   Marsh = "marsh",
   Nightfall = "nightfall",
+  Holiday = "holiday",
   GoBattleLeague = "gobattle",
   Premier = "premier",
   Little = "little",

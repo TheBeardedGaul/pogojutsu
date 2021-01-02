@@ -230,6 +230,21 @@ export const RouterComponent: React.FC = (props) => {
       <Route exact path={`/${Meta.Nightfall}/${League.Master}`}>
         <Redirect to={`/${Meta.Nightfall}/${League.Great}`} />
       </Route>
+      <Route exact path={`/${Meta.Holiday}`}>
+        <Redirect to={`/${Meta.Holiday}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Holiday}/${League.Little}`}>
+        <Redirect to={`/${Meta.Holiday}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Holiday}/${League.Great}`}>
+        <PokemonListComponent meta={Meta.Holiday} league={League.Great} />
+      </Route>
+      <Route exact path={`/${Meta.Holiday}/${League.Ultra}`}>
+        <Redirect to={`/${Meta.Holiday}/${League.Great}`} />
+      </Route>
+      <Route exact path={`/${Meta.Holiday}/${League.Master}`}>
+        <Redirect to={`/${Meta.Holiday}/${League.Great}`} />
+      </Route>
       <Route exact path={`/${Meta.Little}`}>
         <Redirect to={`/${Meta.Little}/${League.Little}`} />
       </Route>
