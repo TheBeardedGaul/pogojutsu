@@ -83,7 +83,8 @@
       "CUT": "Coupe",
       "IRON_TAIL": "Queue de Fer",
       "THUNDER_FANG": "Crocs Éclair",
-      "GUST": "Tornade"
+      "GUST": "Tornade",
+      "INCINERATE": "Calcination"
     },
     "chargedMoves": {
       "label": "Attaques chargées",
@@ -289,6 +290,7 @@
     "flying": "Coupe Vol",
     "marsh": "Marsh Cup",
     "nightfall": "Coupe Crépuscule",
+    "holiday": "Coupe des Fêtes",
     "catacomb": "Coupe des Catacombes",
     "gobattle": "Go Battle",
     "premier": "Coupe Majeure",
